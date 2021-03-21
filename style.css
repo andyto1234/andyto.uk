@@ -13,7 +13,7 @@ h1 {
 }
 h2 {
   line-height: 0.96em;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #6b727c;
   font-weight: 500;
   opacity: 0.8;
@@ -90,7 +90,7 @@ main {
   left: 10%;
 } */
 .dashboard {
-  flex: 0.8;
+  flex: 1;
   border-radius: 2rem;
   color: white;
   padding: 1rem;
@@ -100,7 +100,7 @@ main {
     rgba(255, 255, 255, 0.7),
     rgba(255, 255, 255, 0.3)
   );
-  border-radius: 2rem;
+  /* border-radius: 2rem; */
 }
 /* .dashboard div {
   margin-top: 300px; 
@@ -124,7 +124,7 @@ main {
   justify-content: initial;
   /* margin-bottom: 300px ; */
   /* justify-content: initial; */
-  margin: 0.5rem 0rem;
+  margin: 0.3rem 0rem;
   padding: 1rem 5rem;
 
   align-items: center;
@@ -135,7 +135,7 @@ main {
 }
 
 .games {
-  flex: 2;
+  flex: 3;
 }
 
 .pro {
@@ -175,7 +175,7 @@ main {
 }
 
 .games {
-  margin: 5rem;
+  margin: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
