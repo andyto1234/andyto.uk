@@ -7,18 +7,20 @@
 h1 {
   color: #345179;
   font-weight: 600;
-  font-size: 3rem;
+  font-size: 2rem;
   opacity: 0.8;
   margin-bottom: -0.5em;
 }
 h2 {
-  line-height: 1.2em;
+  line-height: 0.96em;
+  font-size: 1rem;
   color: #6b727c;
   font-weight: 500;
   opacity: 0.8;
 }
 p {
-  margin-top: 0.5em;
+  margin-top: 0.4em;
+  font-size: 0.8rem;
   line-height: 1.3em;
   color: #6b727c;
   font-weight: 500;
@@ -26,17 +28,17 @@ p {
 }
 
 h3 {
-  margin-top: 1em;
+  margin-top: 0.8em;
   color: #426696;
   font-weight: 600;
   opacity: 0.8;
 }
 
 h4 {
-  margin-top: 1.2em;
+  margin-top: 0.96em;
   color: #426696;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.4rem;
   opacity: 0.8;
 }
 
@@ -88,6 +90,7 @@ main {
   left: 10%;
 } */
 .dashboard {
+  flex: 0.8;
   border-radius: 2rem;
   color: white;
   padding: 1rem;
