@@ -104,9 +104,23 @@ a:hover h2 {
   color: #eecb6a;
 }
 
+button {
+  border: none;
+  padding: 8px 18px;
+  font-weight: 600;
+  
+  color: #6b727c;
+  font-weight: bold;
+  background: linear-gradient(to right top, #f1e86b88, #e7c0a1);
+  border-radius: 1rem;
+  box-shadow: -1px 2px 10px rgba(0, 0, 0, 0.199);
+  display: block;
+}
+
 .nav__links {
   list-style: none;
   text-decoration: none; 
+
 }
 
 .nav__links li{
@@ -311,3 +325,5 @@ a:hover h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+
