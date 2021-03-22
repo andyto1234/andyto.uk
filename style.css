@@ -45,7 +45,7 @@ h2 {
   line-height: 1.2em;
   margin-right: 5px;
   font-size: 0.95rem;
-  color: #595f68;
+  color: #34434d;
   font-weight: 510;
   opacity: 0.8;
 }
@@ -94,7 +94,7 @@ a h2{
 
 a:link {
   transition: all 0.3s ease 0s;
-  color: #6b727c;
+  color: #445864;
   text-decoration: none;
 }
 
@@ -311,9 +311,8 @@ button {
   display: flex;
   background: linear-gradient(
     to left top,
-    rgba(255, 255, 255, 0.85),
-    rgba(255, 255, 255, 0.6),
-    rgba(255, 255, 255, 0.5)
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.4)
   );
   border-radius: 1rem;
   margin: 0.7rem 0rem;
