@@ -312,7 +312,8 @@ button {
   background: linear-gradient(
     to left top,
     rgba(255, 255, 255, 0.85),
-    rgba(255, 255, 255, 0.6)
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.5)
   );
   border-radius: 1rem;
   margin: 0.7rem 0rem;
