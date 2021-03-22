@@ -29,8 +29,8 @@ header {
   /* margin-top: 20px; */
   margin-bottom: -10px;
   align-items: center;
-  padding: 15px 12%;
-  /* box-shadow: 5px 6px 25px rgba(43, 43, 43, 0.212); */
+  padding: 15px 13%;
+  box-shadow: 0px 0px 25px rgba(43, 43, 43, 0.055);
 }
 h1 {
   color: #833440;
@@ -137,7 +137,7 @@ a:hover h2 {
   z-index: 2;
   backdrop-filter: blur(2rem);
   display: flex;
-  box-shadow: 0px 0px 15px rgba(122, 122, 122, 0.212);
+  box-shadow: 0px 0px 20px rgba(122, 122, 122, 0.212);
 }
 .circle1,
 .circle2 {
@@ -196,8 +196,8 @@ a:hover h2 {
   justify-content: initial;
   /* margin-bottom: 300px ; */
   /* justify-content: initial; */
-  margin: -0.5rem 0rem;
-  padding: 1rem 15%;
+  margin: -1rem 0rem;
+  padding: 1rem 14%;
   align-items: center;
 }
 .link h2 {
