@@ -208,11 +208,27 @@ button {
   display: flex;
   text-decoration: none; 
   justify-content: initial;
+
   /* margin-bottom: 300px ; */
   /* justify-content: initial; */
   margin: -1rem 0rem;
   padding: 1rem 14%;
   align-items: center;
+}
+.link:hover {
+  /* display: flex; */
+  /* padding: -10rem; */
+  /* margin: -1rem 0rem; */
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.4)
+  );
+  transition: all 0.3s ease 0s;
+
+  box-shadow: 0px 0px 20px rgba(122, 122, 122, 0.212);
+  border-radius: 1rem;
+  
 }
 .link h2 {
   text-decoration: none; 
