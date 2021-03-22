@@ -10,7 +10,6 @@
   border-radius: 1rem;
 } */
 header {
-
   /* border-radius: 1rem; */
   font-weight: bold;
   background: linear-gradient(
@@ -72,7 +71,7 @@ h4 {
 }
 
 body {
-  background: linear-gradient(to right top, #f1e86b88, #e6a168);
+  background: linear-gradient(to right top, #f1e86b88, #e7c0a1);
 }
 
 main {
@@ -83,7 +82,7 @@ main {
   justify-content: center;
 }
 
-a {
+a h2 {
   transition: all 0.3s ease 0s;
 }
 
@@ -99,7 +98,7 @@ a:visited {
 }
 
 
-a:hover {
+a:hover h2 {
   color: #eecb6a;
 }
 
@@ -145,20 +144,20 @@ a:hover {
     rgba(255, 255, 255, 0.8),
     rgba(255, 255, 255, 0.3)
   );
-  height: 15rem;
+  height: 20rem;
   width: 20rem;
   position: absolute;
   border-radius: 50%;
 }
 
-/* .circle1 {
-  top: 5%;
-  right: 15%;
+.circle1 {
+  top: 7%;
+  right: 5%;
 }
 .circle2 {
   bottom: 5%;
   left: 10%;
-} */
+}
 .dashboard {
   flex: 1;
   border-radius: 2rem;
