@@ -41,7 +41,7 @@ h1 {
 }
 h2 {
   line-height: 1.2em;
-  margin-right: 4px;
+  margin-right: 5px;
   font-size: 0.95rem;
   color: #6b727c;
   font-weight: 500;
@@ -49,6 +49,7 @@ h2 {
 }
 p {
   margin-top: 0.4em;
+  margin-right: 3em;
   font-size: 0.7rem;
   line-height: 1.3em;
   color: #6b727c;
@@ -219,11 +220,10 @@ button {
   display: flex;
   text-decoration: none; 
   justify-content: initial;
-
   /* margin-bottom: 300px ; */
   /* justify-content: initial; */
-  margin: -1rem 0rem;
-  padding: 1rem 14%;
+  /* margin: 0rem 0rem; */
+  padding: 0.5rem 14%;
   align-items: center;
 }
 
