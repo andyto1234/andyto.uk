@@ -33,7 +33,7 @@ header {
   /* box-shadow: 5px 6px 25px rgba(43, 43, 43, 0.212); */
 }
 h1 {
-  color: #345179;
+  color: #833440;
   font-weight: 600;
   font-size: 2rem;
   opacity: 0.8;
@@ -58,21 +58,21 @@ p {
 
 h3 {
   margin-top: 0.8em;
-  color: #426696;
+  color: #b14757;
   font-weight: 600;
   opacity: 0.8;
 }
 
 h4 {
   margin-top: 0.96em;
-  color: #426696;
+  color: #b14757;
   font-weight: 600;
   font-size: 1.4rem;
   opacity: 0.8;
 }
 
 body {
-  background: linear-gradient(to right top, #ffffff, #f1d987);
+  background: linear-gradient(to right top, #f1e86b88, #e6a168);
 }
 
 main {
