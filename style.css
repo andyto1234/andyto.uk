@@ -14,8 +14,8 @@ header {
   font-weight: bold;
   background: linear-gradient(
     to right bottom,
-    rgba(255, 255, 255, 0.7),
-    rgba(255, 255, 255, 0.5)
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.6)
   );
   /* height: 0px; */
   /* width: 80%; */
@@ -24,9 +24,10 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  /* margin-top: 0px; */
-  margin: 0 auto 0px;
-  /* margin-top: 30px; */
+  /* margin-top: 20px; */
+  margin: auto ;
+  /* margin-top: 20px; */
+  margin-bottom: -10px;
   align-items: center;
   padding: 15px 12%;
   /* box-shadow: 5px 6px 25px rgba(43, 43, 43, 0.212); */
@@ -41,7 +42,7 @@ h1 {
 h2 {
   line-height: 1.2em;
   margin-right: 4px;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #6b727c;
   font-weight: 500;
   opacity: 0.8;
@@ -82,11 +83,12 @@ main {
   justify-content: center;
 }
 
-a h2 {
+a h2{
   transition: all 0.3s ease 0s;
 }
 
 a:link {
+  transition: all 0.3s ease 0s;
   color: #6b727c;
   text-decoration: none;
 }
@@ -128,8 +130,8 @@ a:hover h2 {
   margin-bottom: 3%;
   background: linear-gradient(
     to right bottom,
-    rgba(255, 255, 255, 0.7),
-    rgba(255, 255, 255, 0.3)
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.2)
   );
   border-radius: 2rem;
   z-index: 2;
@@ -141,7 +143,7 @@ a:hover h2 {
   background: white;
   background: linear-gradient(
     to right bottom,
-    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.6),
     rgba(255, 255, 255, 0.3)
   );
   height: 20rem;
@@ -166,8 +168,8 @@ a:hover h2 {
   position: relative;
   background: linear-gradient(
     to right bottom,
-    rgba(255, 255, 255, 0.7),
-    rgba(255, 255, 255, 0.3)
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.25)
   );
   /* border-radius: 2rem; */
 }
@@ -261,14 +263,22 @@ a:hover h2 {
   display: flex;
   background: linear-gradient(
     to left top,
-    rgba(255, 255, 255, 0.8),
-    rgba(255, 255, 255, 0.5)
+    rgba(255, 255, 255, 0.85),
+    rgba(255, 255, 255, 0.6)
   );
   border-radius: 1rem;
   margin: 0.7rem 0rem;
   padding: 1.2rem;
   box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
   justify-content: space-between;
+}
+
+.card:hover {
+  transition: all 0.3s ease 0s;
+  -ms-transform: scale(1.02); /* IE 9 */
+  -webkit-transform: scale(1.02); /* Safari 3-8 */
+  transform: scale(1.02); 
+
 }
 
 .progress {
