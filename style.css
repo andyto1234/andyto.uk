@@ -33,17 +33,18 @@ header {
   box-shadow: 0px 0px 25px rgba(43, 43, 43, 0.2);
 }
 h1 {
-  color: #833440;
+  color: #ffffff;
   font-weight: 600;
   font-size: 2rem;
   opacity: 0.8;
   margin-bottom: -1.2em;
+  text-shadow: 0px 0px 15px rgba(43, 43, 43, 0.349);
 }
 h2 {
   line-height: 1.2em;
   margin-right: 5px;
   font-size: 0.95rem;
-  color: #6b727c;
+  color: #595f68;
   font-weight: 510;
   opacity: 0.8;
 }
@@ -52,28 +53,30 @@ p {
   margin-right: 3em;
   font-size: 0.7rem;
   line-height: 1.3em;
-  color: #6b727c;
+  color: #5e5e5e;
   font-weight: 500;
   opacity: 0.8;
 }
 
 h3 {
   margin-top: 0.8em;
-  color: #b14757;
+  color: #1f6797;
   font-weight: 600;
   opacity: 0.8;
 }
 
 h4 {
   margin-top: 0.96em;
-  color: #b14757;
+  color: #ffffff;
   font-weight: 600;
   font-size: 1.4rem;
   opacity: 0.8;
+  text-shadow: 0px 0px 15px rgba(43, 43, 43, 0.322);
 }
 
 body {
-  background: linear-gradient(to right top, #f1e86b88, #e7c0a1);
+  /* background: linear-gradient(to right top, #f1e86b41,#e4735f6e,#e68a3f63); */
+  background: linear-gradient(to right top, #00000041,#313131b6,#c0c0c063);
 }
 
 main {
@@ -95,14 +98,14 @@ a:link {
 }
 
 a:visited {
-  color: #6b727c;
+  color: #445864;
   background-color: transparent;
   text-decoration: none;
 }
 
 
 a:hover h2 {
-  color: #eecb6a;
+  color: #1f6797;
 }
 
 button {
@@ -134,7 +137,7 @@ button {
 } */
 
 .nav__links li a:hover {
-  color: #f77f3a;
+  color: #1f6797;
 }
 
 .glass {
@@ -145,12 +148,12 @@ button {
   margin-bottom: 3%;
   background: linear-gradient(
     to right bottom,
-    rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0.2)
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.1)
   );
   border-radius: 2rem;
   z-index: 2;
-  backdrop-filter: blur(2rem);
+  backdrop-filter: blur(1rem);
   display: flex;
   box-shadow: 0px 0px 20px rgba(122, 122, 122, 0.212);
 }
@@ -162,19 +165,19 @@ button {
     rgba(255, 255, 255, 0.6),
     rgba(255, 255, 255, 0.3)
   );
-  height: 20rem;
-  width: 20rem;
+  height: 5rem;
+  width: 5rem;
   position: absolute;
   border-radius: 50%;
 }
 
 .circle1 {
-  top: 7%;
-  right: 5%;
+  top: 9%;
+  right: 10%;
 }
 .circle2 {
   bottom: 5%;
-  left: 10%;
+  left: 5%;
 }
 .dashboard {
   flex: 1;
@@ -248,11 +251,9 @@ button {
     rgba(255, 255, 255, 0.6),
     rgba(255, 255, 255, 0.4)
   );
-  transition: all 0.3s ease 0s;
-
   box-shadow: 0px 0px 20px rgba(122, 122, 122, 0.212);
   border-radius: 1rem;
-  
+  /* transition: all 0.3s ease 0s; */
 }
 .link h2 {
   text-decoration: none; 
@@ -264,7 +265,7 @@ button {
 }
 
 .link a:hover {
-  color: #f77f3a;
+  color: #1f6797;
 }
 
 .games {
@@ -323,7 +324,7 @@ button {
   );
   border-radius: 1rem;
   margin: 0.7rem 0rem;
-  padding: 1.2rem;
+  padding: 1.05rem;
   box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
   justify-content: space-between;
 }
@@ -361,7 +362,7 @@ button {
 .percentage {
   font-weight: bold;
   /* float: right; */
-  background: linear-gradient(to right top, #e9ac5c, #f77f3a);
+  background: linear-gradient(to right top, #3081b8, #185ca8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
