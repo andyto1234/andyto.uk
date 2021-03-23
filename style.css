@@ -281,9 +281,11 @@ button {
 }
 
 .pro {
-  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  background: linear-gradient(to right top,#00000041,#436e8a);
+  margin-top: 50px;
   border-radius: 2rem;
   color: white;
+  margin: 15px;
   padding: 1rem;
   position: relative;
 }
