@@ -156,7 +156,9 @@ button {
 .glass {
   background: white;
   min-height: 80vh;
-  width: 75%;
+  width: auto;
+  margin-right: 13%;
+  margin-left: 13%;
   margin-top: 3%;
   margin-bottom: 3%;
   background: linear-gradient(
@@ -197,6 +199,7 @@ button {
   border-radius: 2rem;
   color: white;
   padding: 1rem;
+  width:auto;
   position: relative;
   background: linear-gradient(
     to right bottom,
@@ -240,6 +243,7 @@ button {
   text-decoration: none; 
   justify-content: initial;
   color: #445864;
+  width: auto;
   /* margin-bottom: 300px ; */
   /* justify-content: initial; */
   /* margin: 0rem 0rem; */
@@ -342,7 +346,7 @@ button {
 
 .progress {
   background: linear-gradient(to right top, #e9ac5c, #f77f3a);
-  width: 100%;
+  width: auto;
   height: 25%;
   border-radius: 1rem;
   position: relative;
