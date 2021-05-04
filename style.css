@@ -334,8 +334,8 @@ button {
   );
   border-radius: 1rem;
   width: auto;
-  margin: 0.7rem auto;
-  padding: 1.05rem;
+  margin: 0.6rem auto;
+  padding: 1rem;
   box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
   justify-content: space-between;
   transition: all 0.3s ease 0s;
