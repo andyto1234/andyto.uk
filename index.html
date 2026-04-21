@@ -3,345 +3,418 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Andy Shu Ho To</title>
-    <meta property="og:title" content="Andy Shu Ho To">
-    <meta name="description" content="Andy Shu Ho To Personal Website" />
-    <meta name="keywords" content="Solar, Physics, MSSL, UCL, PhD Student, CV, abundances" />
-    <meta name="google-site-verification" content="GYroXijlEkQSH9XShxmo2-V3HmiU0wqvxQRwXc6STMg" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <title>Andy Shu Ho To | Solar Physics</title>
+    <meta
+      name="description"
+      content="Academic homepage of Andy Shu Ho To, ESA Research Fellow in Space Science working on coronal plasma composition, flare spectroscopy, and coordinated solar observations."
+    />
+    <meta property="og:title" content="Andy Shu Ho To | Solar Physics" />
+    <meta
+      property="og:description"
+      content="Research profile, selected publications, and academic activity."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:wght@400;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
-    <div id="wrap">
-      <header>
-        <h5>ASHT</h5>
-        <nav>
-          <ul class="nav__links">
-            <!-- <li><a href="#" style="text-decoration: none">Services</a></li> -->
-            <li><a href="https://github.com/andyto1234">GitHub</a></li>
-            <li><a href="https://andyto1234.github.io/andyto.uk/">CV</a></li>
-            <li><a href="mailto:shu.to.18@ucl.ac.uk">Contact Me</a></li>
-          </ul>
-        </nav>
-        <!-- <a class="cta" href=href="mailto:shu.to.18@ucl.ac.uk"><button>Contact</button></a> -->
+  <body class="page-home">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="site-header__inner container">
+          <a class="site-mark" href="./" aria-label="Andy Shu Ho To home">ASHT</a>
+          <nav class="site-nav" aria-label="Primary">
+            <a href="#research">Research</a>
+            <a href="#selected-publications">Selected publications</a>
+            <a href="#activity">Academic activity</a>
+            <a href="./publications.html">Full bibliography</a>
+            <a href="./documents/andy-shu-ho-to-cv.pdf" download>CV</a>
+          </nav>
+        </div>
       </header>
+
+      <main id="main-content">
+        <section class="section section--hero">
+          <div class="container">
+            <p class="eyebrow">Andy Shu Ho To</p>
+            <div class="hero-marker" aria-hidden="true">
+              <span class="hero-marker__rule"></span>
+              <span class="hero-marker__square"></span>
+            </div>
+
+            <h1 class="display-title">
+              <span>Solar</span>
+              <span>Composition</span>
+            </h1>
+
+            <div class="hero-grid">
+              <div class="hero-copy">
+                <p class="lede dropcap">
+                  I am an ESA Research Fellow in Space Science at ESTEC, where I
+                  study coronal plasma composition, flare dynamics, and the
+                  spectroscopic signatures that connect solar activity across
+                  atmospheric layers. This site is a selective overview of
+                  current work, recent publications, and academic activity.
+                </p>
+                <div class="button-row">
+                  <a class="button button--primary" href="./publications.html"
+                    >View publications</a
+                  >
+                  <a
+                    class="button button--secondary"
+                    href="./documents/andy-shu-ho-to-cv.pdf"
+                    download
+                    >Download CV</a
+                  >
+                  <a class="button button--ghost" href="mailto:andysh.to@esa.int"
+                    >Contact</a
+                  >
+                </div>
+              </div>
+
+              <aside class="hero-aside">
+                <p class="meta-label">Current appointment</p>
+                <p class="hero-aside__text">
+                  ESA Research Fellow in Space Science<br />
+                  Directorate of Science, European Space Agency<br />
+                  ESTEC, Noordwijk, Netherlands
+                </p>
+
+                <p class="meta-label">Research scope</p>
+                <ul class="bullet-list">
+                  <li>Coronal plasma composition and the FIP effect</li>
+                  <li>Flare spectroscopy and non-thermal diagnostics</li>
+                  <li>Coordinated observation planning and reusable datasets</li>
+                </ul>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--grid" id="research">
+          <div class="container">
+            <div class="section-heading">
+              <p class="eyebrow">Research</p>
+              <h2>Questions grounded in spectroscopy, coordination, and solar activity.</h2>
+              <p>
+                The work centres on how elemental composition evolves through
+                active regions, flares, and coordinated observing campaigns, and
+                on how those changes can be measured reliably across different
+                instruments and timescales.
+              </p>
+            </div>
+
+            <div class="theme-grid">
+              <article class="theme-card">
+                <p class="meta-label">Theme 01</p>
+                <h3>Coronal composition and the FIP effect</h3>
+                <p>
+                  I study how elemental abundances evolve in active regions and
+                  transient events, with particular attention to fractionation
+                  signatures seen in EUV spectroscopy.
+                </p>
+                <ul class="bullet-list">
+                  <li>Elemental abundance diagnostics in flare and quiet-Sun environments</li>
+                  <li>Composition evolution through solar activity cycles and active regions</li>
+                  <li>Links between coronal fractionation and lower-atmosphere processes</li>
+                </ul>
+              </article>
+
+              <article class="theme-card">
+                <p class="meta-label">Theme 02</p>
+                <h3>Flare dynamics and spectroscopic diagnostics</h3>
+                <p>
+                  Recent work examines non-thermal velocity evolution,
+                  reconnection outflows, and other flare-related signatures that
+                  can be traced in spectroscopic data before and during energy
+                  release.
+                </p>
+                <ul class="bullet-list">
+                  <li>Pre-flare behaviour in Hinode/EIS spectroscopy</li>
+                  <li>Spatially resolved composition changes in flare structures</li>
+                  <li>Interpretation of line broadening and plasma turbulence</li>
+                </ul>
+              </article>
+
+              <article class="theme-card">
+                <p class="meta-label">Theme 03</p>
+                <h3>Coordinated observations, data products, and instrumentation</h3>
+                <p>
+                  I contribute to joint campaigns that connect space- and
+                  ground-based facilities, and I publish reusable data products
+                  to support comparative studies of solar variability.
+                </p>
+                <ul class="bullet-list">
+                  <li>Solar Orbiter, Hinode, and IRIS coordination</li>
+                  <li>Joint campaigns with JVLA, GREGOR, and SST</li>
+                  <li>Public datasets for flare spectroscopy and footpoint analysis</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="selected-publications">
+          <div class="container">
+            <div class="section-heading">
+              <p class="eyebrow">Selected publications</p>
+              <h2>Recent first-author papers and current directions.</h2>
+              <p>
+                A fuller bibliography is available on the publications page and
+                in the PDF CV. The selection below foregrounds current research
+                threads rather than a complete record.
+              </p>
+            </div>
+
+            <div class="publication-grid">
+              <article class="publication-card">
+                <p class="meta-label">Accepted | Philosophical Transactions A</p>
+                <h3>Chromospheric dynamics and turbulence regulate the solar FIP effect</h3>
+                <p class="publication-card__authors">
+                  With J. M. Laming, J. Reep, and A. J. Finley.
+                </p>
+                <p>
+                  A current first-author study on how chromospheric dynamics and
+                  turbulence regulate fractionation signatures seen higher in the
+                  solar atmosphere.
+                </p>
+              </article>
+
+              <article class="publication-card">
+                <p class="meta-label">2025 | The Astrophysical Journal</p>
+                <h3>
+                  <a
+                    href="https://doi.org/10.3847/1538-4357/ae07de"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >Systematic non-thermal velocity increase preceding soft
+                    X-ray flare onset</a
+                  >
+                </h3>
+                <p class="publication-card__authors">
+                  With A. Burden, D. Baker, H. Eklund, D. H. Brooks, and collaborators.
+                </p>
+                <p>
+                  A large-scale Hinode/EIS study identifying a systematic
+                  spectroscopic increase before flare onset across a broad event
+                  sample.
+                </p>
+              </article>
+
+              <article class="publication-card">
+                <p class="meta-label">2024 | Astronomy and Astrophysics</p>
+                <h3>Spatially resolved plasma composition evolution in a solar flare</h3>
+                <p class="publication-card__authors">
+                  With D. H. Brooks, S. Imada, R. J. French, L. van
+                  Driel-Gesztelyi, and collaborators.
+                </p>
+                <p>
+                  A flare-focused paper tracing composition changes through
+                  reconnection outflow regions with spatially resolved analysis.
+                </p>
+              </article>
+
+              <article class="publication-card">
+                <p class="meta-label">2023 | The Astrophysical Journal</p>
+                <h3>Understanding the relationship between solar coronal abundances and F10.7 cm radio emission</h3>
+                <p class="publication-card__authors">
+                  With A. W. James, T. S. Bastian, L. van Driel-Gesztelyi, and collaborators.
+                </p>
+                <p>
+                  A study connecting coronal abundance diagnostics with the
+                  long-used radio proxy and testing how robustly the two track
+                  one another.
+                </p>
+              </article>
+
+              <article class="publication-card">
+                <p class="meta-label">2021 | The Astrophysical Journal</p>
+                <h3>The evolution of plasma composition during a solar flare</h3>
+                <p class="publication-card__authors">
+                  With D. M. Long, D. Baker, D. H. Brooks, L. van Driel-Gesztelyi, J. M. Laming, and G. Valori.
+                </p>
+                <p>
+                  The first first-author paper in this area, following
+                  composition changes through a solar flare and establishing a
+                  longer-running research thread.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--inverted">
+          <div class="container">
+            <div class="section-heading section-heading--inverted">
+              <p class="eyebrow">Current academic signals</p>
+              <h2>Present responsibilities, observing work, and reusable outputs.</h2>
+              <p>
+                These are included as context for the current scope of the work,
+                not as a replacement for the full CV.
+              </p>
+            </div>
+
+            <div class="signal-grid">
+              <article class="signal-card">
+                <p class="meta-label">Role</p>
+                <h3>ESA Research Fellow</h3>
+                <p>
+                  Research Fellow in Space Science at ESA/ESTEC since September
+                  2023.
+                </p>
+              </article>
+
+              <article class="signal-card">
+                <p class="meta-label">Coordination</p>
+                <h3>Solar Orbiter, Hinode, IRIS</h3>
+                <p>
+                  Co-observation coordinator since 2024, with IRIS planning work
+                  across 2024 and 2025.
+                </p>
+              </article>
+
+              <article class="signal-card">
+                <p class="meta-label">Observing</p>
+                <h3>PI-awarded radio time</h3>
+                <p>
+                  JVLA S-band time for work on solar abundances and F10.7, with
+                  joint observations involving GREGOR, SST, IRIS, and Hinode.
+                </p>
+              </article>
+
+              <article class="signal-card">
+                <p class="meta-label">Dataset</p>
+                <h3>Reusable flare spectroscopy product</h3>
+                <p>
+                  Public Zenodo release of the Hinode/EIS solar flare footpoint
+                  non-thermal velocity dataset spanning 2011 to 2024.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--diagonal" id="activity">
+          <div class="container">
+            <div class="section-heading">
+              <p class="eyebrow">Academic activity</p>
+              <h2>Teaching, supervision, service, and invited talks.</h2>
+              <p>
+                The emphasis here is on current academic responsibilities and
+                recent activity. The CV contains fuller chronological detail.
+              </p>
+            </div>
+
+            <div class="activity-grid">
+              <article class="activity-block">
+                <p class="meta-label">Teaching and mentoring</p>
+                <h3>Teaching roles</h3>
+                <ul class="activity-list">
+                  <li>Guest lecturer, "Space Weather", Leiden University (2025, 2026)</li>
+                  <li>Mentor, Solar Orbiter Hackathon, ESA/ESTEC (2025)</li>
+                  <li>Python tutor, MSSL work experience week (2020-2022)</li>
+                  <li>Lecturer assistant, UCL Solar Physics Course (2021-2022)</li>
+                </ul>
+              </article>
+
+              <article class="activity-block">
+                <p class="meta-label">Supervision</p>
+                <h3>Student supervision</h3>
+                <ul class="activity-list">
+                  <li>Internship and project supervision at ESA/ESTEC and Dublin City University (2024-2026)</li>
+                  <li>Abigail Burden - statistical analysis of Hinode observations</li>
+                  <li>Eva Sola Viladesau - multi-spectral characterisation of solar atmospheric dynamics</li>
+                  <li>Despina Ioannide - flare prediction in spectroscopic data</li>
+                  <li>Dominik Orlovskij and Anna Bauernfeind - composition diagnostics across atmospheric layers</li>
+                </ul>
+              </article>
+
+              <article class="activity-block">
+                <p class="meta-label">Service and coordination</p>
+                <h3>Community roles</h3>
+                <ul class="activity-list">
+                  <li>Reviewer for Astronomy and Astrophysics, Philosophical Transactions A, and The Astrophysical Journal</li>
+                  <li>SunPy advisory board</li>
+                  <li>Solar Orbiter, Hinode, IRIS co-observation coordinator</li>
+                  <li>Local and Scientific Organising Committee, ESA Space Science Workshop 17</li>
+                </ul>
+              </article>
+
+              <article class="activity-block">
+                <p class="meta-label">Talks and visits</p>
+                <h3>Selected recent activity</h3>
+                <ul class="activity-list">
+                  <li>Invited talks at Hinode 18/IRIS 16 and the Royal Society Theo Murphy Meeting (2025)</li>
+                  <li>Seminars at LMSAL, NRL, Dublin City University, and the ESA Heliophysics Seminar series</li>
+                  <li>Research visits to the University of Hawaii Institute for Astronomy, LMSAL, NRL, and the University of Tokyo</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer" id="contact">
+        <div class="container">
+          <div class="footer-grid">
+            <div>
+              <p class="eyebrow">Contact</p>
+              <h2>Andy Shu Ho To</h2>
+              <p class="footer-note">
+                Based at the European Space Agency, ESTEC, in Noordwijk. This
+                site is intentionally selective; the downloadable CV contains
+                the fuller record of talks, publications, teaching, visits, and
+                service.
+              </p>
+            </div>
+
+            <ul class="contact-list">
+              <li>
+                <span class="meta-label">Email</span>
+                <a href="mailto:andysh.to@esa.int">andysh.to@esa.int</a>
+              </li>
+              <li>
+                <span class="meta-label">ORCID</span>
+                <a
+                  href="https://orcid.org/0000-0003-0774-9084"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >0000-0003-0774-9084</a
+                >
+              </li>
+              <li>
+                <span class="meta-label">GitHub</span>
+                <a
+                  href="https://github.com/andyto1234"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >github.com/andyto1234</a
+                >
+              </li>
+              <li>
+                <span class="meta-label">LinkedIn</span>
+                <a
+                  href="https://www.linkedin.com/in/shuhoto/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >linkedin.com/in/shuhoto</a
+                >
+              </li>
+              <li>
+                <span class="meta-label">CV</span>
+                <a href="./documents/andy-shu-ho-to-cv.pdf" download
+                  >Download PDF CV</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </div>
-    <main>
-      <section class="glass">
-        <div class="dashboard">
-          <div class="avatar">
-            <img src="./images/avatar.png" alt="" />
-            <h3>Andy To</h3>
-            <p>Solar Physics PhD Student</p>
-          </div>
-          <div class="links">
-            <div class="link">
-              <img src="./images/twitter-logo.png" alt="" />
-              <h2><a href="https://twitter.com/toshuho" target="_blank" rel="noreferrer noopener">Twitter</a></h2>
-            </div>
-            <div class="link">
-              <img src="./images/facebook-logo.png" alt="" />
-              <h2><a href="https://www.facebook.com/Andeeto" target="_blank" rel="noreferrer noopener">Facebook</a> </h2>
-            </div>
-            <div class="link">
-              <img src="./images/instagram-logo.png" alt="" />
-              <h2><a href="https://www.instagram.com/andy_tosh/" target="_blank" rel="noreferrer noopener">Instagram</a> </h2>
-            </div>
-            <div class="link">
-              <img src="./images/linkedin-logo.png" alt="" />
-              <h2><a href="https://www.linkedin.com/in/shuhoto/" target="_blank" rel="noreferrer noopener">LinkedIn</a></h2>
-            </div>
-            <!-- <div class="link">
-              <img src="./images/library.png" alt="" />
-              <h2>Library</h2>
-            </div> -->
-          </div>
-          <!-- <div class="pro">
-            <h2>Feel free to contact me!</h2>
-            <img src="./images/controller.png" alt="" />
-          </div> -->
-        </div>
-        <div class="games">
-          <div class="status">
-            <h1>Curriculum Vitae</h1>
-            <!-- <input type="text" /> -->
-          </div>
-          <div class="Education">
-            <h4>Education</h4>            
-          </div>
-          <div class="education_cards">
-            <div class="card">
-              <!-- <img src="./images/assassins.png" alt="" /> -->
-              <div class="card-info">
-                <h2>Mullard Space Science Laboratory, University College London</h2>
-                <p>PhD in Solar Physics</p>
-                <div class="progress"></div>
-              </div>
-              <h2 class="percentage">2019-</h2>
-            </div>
-            <div class="card">
-              <!-- <img src="./images/sackboy.png" alt="" /> -->
-              <div class="card-info">
-                <h2>King's College London</h2>
-                <p>MSc in Theoretical Physics</p>
-                <div class="progress"></div>
-              </div>
-              <h2 class="percentage">2018-2019</h2>
-            </div>
-            <div class="card">
-              <!-- <img src="./images/spiderman.png" alt="" /> -->
-              <div class="card-info">
-                <h2>Imperial College London</h2>
-                <p>BSc in Physics</p>
-                <div class="progress"></div>
-              </div>
-              <h2 class="percentage">2015-2018</h2>
-            </div>
-          </div>
-          <div class="publications">
-            <h4>Publications</h4>
-          
-            <div class="card">
-              <a href="https://iopscience.iop.org/article/10.3847/1538-4357/abe85a" target="_blank" rel="noreferrer noopener">
-                <div class="card-info">
-                  <h2>The Evolution of Plasma Composition During a Solar Flare</h2>
-                  <p>Andy S.H. To, David M Long, Deborah Baker, David H Brooks, Lidia van Driel-Gesztelyi, J Martin Laming, Gherardo Valori</p>
-                </div>
-              </a>
-              <h2 class="percentage">2021</h2>
-            </div>
-            <div class="card">
-              <a href="https://iopscience.iop.org/article/10.3847/1538-4357/abcafd/meta" target="_blank" rel="noreferrer noopener">
-                <div class="card-info">
-                  <h2>Alfvénic Perturbations in a Sunspot Chromosphere Linked to Fractionated Plasma in the Corona</h2>
-                  <p>Deborah Baker, Marco Stangalini, Gherardo Valori, David H Brooks, Andy S.H. To, Lidia van Driel-Gesztelyi, Pascal Démoulin, David Stansby, David B Jess, Shahin Jafarzadeh</p>
-                </div>
-              </a>
-              <h2 class="percentage">2021</h2>
-            </div>
-            <div class="card">
-              <a href="https://royalsocietypublishing.org/doi/abs/10.1098/rsta.2020.0216" target="_blank" rel="noreferrer noopener">
-                <div class="card-info">
-                  <h2>Spectropolarimetric Fluctuations in a Sunspot Chromosphere</h2>
-                  <p>Marco Stangalini, D Baker, G Valori, David B Jess, Shahin Jafarzadeh, M Murabito, Andy S.H. To, DH Brooks, I Ermolli, F Giorgi, CD MacBride</p>
-                </div>
-              </a>
-              <h2 class="percentage">2021</h2>
-            </div>
-            <div class="card">
-              <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ab7dcb/meta" target="_blank" rel="noreferrer noopener">
-                <div class="card-info">
-                  <h2>Can Sub-chromospheric Magnetic Reconnection Change the Elemental Composition in the Solar Corona?</h2>
-                  <p>Deborah Baker, Lidia Van Driel-Gesztelyi, David H. Brooks, Pascal Demoulin, David M. Long, J. Martin Laming, Andy S.H. To, Gherardo Valori and Alexander W. James</p>
-                </div>
-              </a>
-              <h2 class="percentage">2020</h2>
-            </div>
-            <div class="fundings">
-              <h4>Fundings</h4>
-              <div class="card">
-                <div class="card-info">
-                  <h2>STFC Long Term Attachement Funding</h2>
-                  <p>Four months of overseas fieldwork will be conducted in JAXA, Japan</p>
-                </div>
-                <h2 class="percentage">2020</h2>
-              </div>
-            </div>
-          </div>
-          <div class="conferences">
-            <h4>Conferences and Meetings</h4>
-            <div class="card">
-              <div class="card-info">
-                <h2>Hinode 14/IRIS-11 Joint Science Meeting</h2>
-                <p>Presented my first paper on a small flare in AR 11967</p>
-              </div>
-              <h2 class="percentage">2021</h2>
-            </div>
-            <div class="card">
-              <div class="card-info">
-                <h2>Hinode 14/IRIS-11 Joint Science Meeting</h2>
-                <p>Presented a poster about my second paper on linking VLA F10.7 flux to coronal composition</p>
-              </div>
-              <h2 class="percentage">2021</h2>
-            </div>
-
-            <div class="card">
-              <div class="card-info">
-                <h2>XVIIth Hvar Astrophysical Colloquium</h2>
-                <p>Presented a poster on my first paper on a small flare in AR 11967</p>
-              </div>
-              <h2 class="percentage">2021</h2>
-            </div>
-            <div class="card">
-              <div class="card-info">
-                <h2>16th European Solar Physics Meeting</h2>
-                <p>Presented a poster on my supervisor, Dr Baker's paper, regarding links between chromospheric Alfvénic perturbations and plasma fractionation</p>
-              </div>
-              <h2 class="percentage">2021</h2>
-            </div>
-            <div class="card">
-              <div class="card-info">
-                <h2>16th European Solar Physics Meeting</h2>
-                <p>Presented a poster about my first paper on a small flare in AR 11967</p>
-              </div>
-              <h2 class="percentage">2021</h2>
-            </div>
-            <div class="card">
-              <div class="card-info">
-                <h2>Solarnet Summer School - High Resolution Solar Physics</h2>
-                <p>Talk given about my first paper on a small flare in AR 11967</p>
-              </div>
-              <h2 class="percentage">2021</h2>
-            </div>
-            <div class="card">
-              <div class="card-info">
-                <h2>National Astronomy Meeting 2021</h2>
-                <p>Talk given about my first paper on a small flare in AR 11967</p>
-              </div>
-              <h2 class="percentage">2021</h2>
-            </div>
-            <div class="card">
-              <div class="card-info">
-                <h2>SolFER Spring 2021 Meeting on Solar Flare Energy Release</h2>
-                <p>Talk given about my first paper on a small flare in AR 11967</p>
-              </div>
-              <h2 class="percentage">2021</h2>
-            </div>
-
-            <div class="card">
-              <div class="card-info">
-                <h2>Preamble to the Solar Orbiter Les Houches School</h2>
-                <p>Talk given about my first paper on a small flare in AR 11967</p>
-              </div>
-              <h2 class="percentage">2021</h2>
-            </div>
-            <div class="card">
-              <div class="card-info">
-                <h2>MSSL Journal Club 2020-2021</h2>
-                <p>Talk given about my first paper on a small flare in AR 11967</p>
-              </div>
-              <h2 class="percentage">2021</h2>
-            </div>
-            <div class="card">
-              <div class="card-info">
-                <h2>MSSL Solar Group Meeting 2020-2021</h2>
-                <p>Talk given about my first paper on a small flare in AR 11967</p>
-              </div>
-              <h2 class="percentage">2020</h2>
-            </div>
-            <div class="card">
-              <div class="card-info">
-                <h2>UKSP Specialist Discussion Day</h2>
-                <p>Talk given regarding the plasma composition evolution of a small flare in AR 11967</p>
-              </div>
-              <h2 class="percentage">2020</h2>
-            </div>
-            <div class="card">
-              <div class="card-info">
-                <h2>Royal Astronomical Society Early Career Poster Exhibition</h2>
-                <p>Created poster about the plasma composition evolution of AR 11967</p>
-              </div>
-              <h2 class="percentage">2020</h2>
-            </div>
-            <div class="card">
-              <div class="card-info">
-                <h2>MSSL Solar Group Meeting 2019-2020</h2>
-                <p>Talk given regarding the plasma composition evolution of AR 11967</p>
-              </div>
-              <h2 class="percentage">2020</h2>
-            </div>
-            <div class="card">
-              <div class="card-info">
-                <h2>Solar Orbiter Workshop 2020 - University of St Andrews</h2>
-                <p>Talk given regarding the plasma composition evolution of AR 11967</p>
-              </div>
-              <h2 class="percentage">2020</h2>
-            </div>
-          </div>
-
-          <div class="teachings">
-            <h4>Teachings</h4>
-            <div class="card">
-              <div class="card-info">
-                <h2>MSSL Work Experience Week Helper</h2>
-                <p>Tought year 12-13 python basics</p>
-              </div>
-              <h2 class="percentage">2021</h2>
-            </div>
-
-            <div class="card">
-              <div class="card-info">
-                <h2>UCL Solar Physics Course Lecturer Assistant</h2>
-                <p>Helped marking the Solar Physics course problem sheets</p>
-              </div>
-              <h2 class="percentage">2021</h2>
-            </div>
-            <div class="card">
-              <div class="card-info">
-                <h2>Supervision</h2>
-                <p>Helped with the supervision of a MSc Space Physics student</p>
-              </div>
-              <h2 class="percentage">2020</h2>
-            </div>
-            <div class="card">
-              <div class="card-info">
-                <h2>SOLARNET School 2020</h2>
-                <p>Helped with the organisation of the SOLARNET school</p>
-              </div>
-              <h2 class="percentage">2020</h2>
-            </div>
-            <div class="card">
-              <div class="card-info">
-                <h2>Mullard Space Science Laboratory Tour</h2>
-                <p>Gave  a  tour  to  UCL  Master’s  students  around  Mullard  Space  Science  Laboratory  andintroduced my work in the solar group</p>
-              </div>
-              <h2 class="percentage">2020</h2>
-            </div>
-          </div>
-
-          <div class="observations">
-            <h4>Observations</h4>
-            <div class="card">
-              <div class="card-info">
-                <h2>VLA-IRIS-Hinode Joint Observation Plan</h2>
-                <p>Constructed a VLA-IRIS-Hinode joint observing plan for the investigation of the correlation between solar variability and radio signal</p>
-              </div>
-              <h2 class="percentage">2020</h2>
-            </div>
-            <div class="card">
-              <div class="card-info">
-                <h2>PSP-IRIS-Hinode Joint Observation Plan</h2>
-                <p>Constructed a PSP-IRIS-Hinode joint observing plan for Parker Solar Probe’s fourthperihelion</p>
-              </div>
-              <h2 class="percentage">2020</h2>
-            </div>
-          </div>
-
-          <div class="programmingskills">
-            <h4>Programming Skills</h4>
-            <div class="card">
-              <div class="card-info">
-                <h2>Python, IDL and Latex</h2>
-                <!-- <p>Constructed a VLA-IRIS-Hinode joint observing plan for the investigation of the corre-lation between solar variability and radio signal</p> -->
-              </div>
-              <h2 class="percentage">Professional Proficiency</h2>
-            </div>
-            <div class="card">
-              <div class="card-info">
-                <h2>Javascript, HTML and CSS</h2>
-                <!-- <p>Constructed  a  PSP-IRIS-Hinode  joint  observing  plan  for  Parker  Solar  Probe’s  fourthperihelion</p> -->
-              </div>
-              <h2 class="percentage">Working Proficiency</h2>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <div class="circle1"></div>
-    <!-- <div class="circle2"></div> -->
   </body>
 </html>
