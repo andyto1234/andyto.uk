@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@400;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
@@ -40,6 +40,10 @@
 
     <main id="main-content" class="container page-layout">
       <aside class="profile-card">
+        <p class="section-tag">
+          <span class="section-tag__dot" aria-hidden="true"></span>
+          <span>Profile</span>
+        </p>
         <img
           class="profile-card__avatar"
           src="./images/avatar.jpg"
@@ -50,7 +54,6 @@
         <h1 class="profile-card__name">Andy Shu Ho To</h1>
         <p class="profile-card__role">ESA Research Fellow in Space Science</p>
         <p class="profile-card__affiliation">
-          Directorate of Science<br />
           European Space Agency, ESTEC<br />
           Noordwijk, Netherlands
         </p>
@@ -67,10 +70,10 @@
           </li>
           <li>
             <a
-              href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0003-0774-9084&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+              href="https://ui.adsabs.harvard.edu/user/libraries/9ZO21vKyRQqj28TcnHH9GQ"
               target="_blank"
               rel="noreferrer noopener"
-              >ADS bibliography</a
+              >ADS library</a
             >
           </li>
           <li>
@@ -89,52 +92,82 @@
 
       <div class="content-column">
         <section class="content-section intro-section" id="about">
+          <p class="section-tag">
+            <span class="section-tag__dot" aria-hidden="true"></span>
+            <span>Overview</span>
+          </p>
           <h2>About</h2>
           <div class="intro-grid">
-            <div>
-              <p>
+            <div class="about-copy">
+              <p class="lead">
                 I am an ESA Research Fellow in Space Science at ESTEC in
                 Noordwijk, Netherlands.
               </p>
-              <p>
-                Before joining ESA in 2023, I completed a PhD in Solar Physics
-                at Mullard Space Science Laboratory, University College London.
-              </p>
-              <p>
-                My work uses spectroscopy and coordinated observations to study
-                coronal plasma composition, solar flares, and related solar
-                activity.
-              </p>
+              <div class="about-blocks">
+                <div class="about-block">
+                  <p class="about-block__label">Background</p>
+                  <p>
+                    Before joining ESA in 2023, I completed a PhD in Solar
+                    Physics at Mullard Space Science Laboratory, University
+                    College London.
+                  </p>
+                </div>
+                <div class="about-block">
+                  <p class="about-block__label">Research approach</p>
+                  <p>
+                    My work uses spectroscopy and coordinated observations to
+                    study coronal plasma composition, solar flares, and related
+                    solar activity.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="fact-box">
-              <h3>Current appointment</h3>
-              <ul class="compact-list">
-                <li>ESA Research Fellow in Space Science</li>
-                <li>Directorate of Science, European Space Agency</li>
-                <li>ESTEC, Noordwijk, Netherlands</li>
-                <li>Since September 2023</li>
+            <div class="fact-box fact-box--appointment">
+              <p class="appointment-card__label">Current appointment</p>
+              <h3 class="appointment-card__title">
+                ESA Research Fellow in Space Science
+              </h3>
+              <ul class="appointment-card__meta">
+                <li>
+                  <span class="appointment-card__meta-label">Institution</span>
+                  <span>European Space Agency, ESTEC</span>
+                </li>
+                <li>
+                  <span class="appointment-card__meta-label">Location</span>
+                  <span>Noordwijk, Netherlands</span>
+                </li>
+                <li>
+                  <span class="appointment-card__meta-label">Since</span>
+                  <span>September 2023</span>
+                </li>
               </ul>
             </div>
           </div>
         </section>
 
         <section class="content-section" id="science-interests">
+          <p class="section-tag">
+            <span class="section-tag__dot" aria-hidden="true"></span>
+            <span>Research</span>
+          </p>
           <h2>Science interests</h2>
-          <ul class="simple-list">
-            <li>Coronal plasma composition and first ionisation potential bias.</li>
-            <li>Spectroscopic signatures of flare onset and flare evolution.</li>
-            <li>
-              Coordinated observations across Solar Orbiter, Hinode, IRIS, JVLA,
-              GREGOR, and SST.
-            </li>
-            <li>
-              Public datasets and comparative analysis of Hinode/EIS flare
-              spectroscopy.
-            </li>
-          </ul>
+          <div class="interest-grid">
+            <article class="interest-card">
+              <p class="interest-card__label">Composition</p>
+              <p>Coronal plasma composition and first ionisation potential bias.</p>
+            </article>
+            <article class="interest-card">
+              <p class="interest-card__label">Flares</p>
+              <p>Spectroscopic signatures of flare onset and flare evolution.</p>
+            </article>
+          </div>
         </section>
 
         <section class="content-section" id="current-work">
+          <p class="section-tag">
+            <span class="section-tag__dot" aria-hidden="true"></span>
+            <span>Current</span>
+          </p>
           <h2>Current work</h2>
           <dl class="fact-grid">
             <div class="fact-grid__item">
@@ -176,6 +209,10 @@
         </section>
 
         <section class="content-section" id="brief-cv">
+          <p class="section-tag">
+            <span class="section-tag__dot" aria-hidden="true"></span>
+            <span>CV</span>
+          </p>
           <h2>Brief CV</h2>
           <div class="timeline">
             <div class="timeline__row">
@@ -214,12 +251,21 @@
         </section>
 
         <section class="content-section" id="selected-publications">
+          <p class="section-tag">
+            <span class="section-tag__dot" aria-hidden="true"></span>
+            <span>Publications</span>
+          </p>
           <h2>Selected publications</h2>
           <ol class="publication-list">
             <li>
               <p class="publication-list__title">
-                Chromospheric dynamics and turbulence regulate the solar FIP
-                effect.
+                <a
+                  href="https://doi.org/10.1098/rsta.2025.0374"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Chromospheric dynamics and turbulence regulate the solar FIP
+                  effect.</a
+                >
               </p>
               <p>
                 To, Andy S. H., Laming, J. M., Reep, J., Finley, A. J. Accepted
@@ -230,7 +276,7 @@
             <li>
               <p class="publication-list__title">
                 <a
-                  href="https://doi.org/10.3847/1538-4357/ae07de"
+                  href="https://ui.adsabs.harvard.edu/abs/2025ApJ...993..102T/abstract"
                   target="_blank"
                   rel="noreferrer noopener"
                   >Systematic non-thermal velocity increase preceding soft X-ray
@@ -244,8 +290,13 @@
             </li>
             <li>
               <p class="publication-list__title">
-                Spatially resolved plasma composition evolution in a solar flare
-                - The effect of reconnection outflow.
+                <a
+                  href="https://ui.adsabs.harvard.edu/abs/2024A%26A...691A..95T/abstract"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Spatially resolved plasma composition evolution in a solar
+                  flare - The effect of reconnection outflow.</a
+                >
               </p>
               <p>
                 To, Andy S. H., Brooks, D. H., Imada, S., French, R. J., van
@@ -255,8 +306,13 @@
             </li>
             <li>
               <p class="publication-list__title">
-                Understanding the relationship between solar coronal abundances
-                and F10.7 cm radio emission.
+                <a
+                  href="https://ui.adsabs.harvard.edu/abs/2023ApJ...948..121T/abstract"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Understanding the relationship between solar coronal
+                  abundances and F10.7 cm radio emission.</a
+                >
               </p>
               <p>
                 To, Andy S. H., James, A. W., Bastian, T. S., van
@@ -266,7 +322,12 @@
             </li>
             <li>
               <p class="publication-list__title">
-                The evolution of plasma composition during a solar flare.
+                <a
+                  href="https://ui.adsabs.harvard.edu/abs/2021ApJ...911...86T/abstract"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >The evolution of plasma composition during a solar flare.</a
+                >
               </p>
               <p>
                 To, Andy S. H., Long, D. M., Baker, D., Brooks, D. H., van
@@ -278,10 +339,10 @@
           <p class="content-note">
             A fuller bibliography is available through
             <a
-              href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0003-0774-9084&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+              href="https://ui.adsabs.harvard.edu/user/libraries/9ZO21vKyRQqj28TcnHH9GQ"
               target="_blank"
               rel="noreferrer noopener"
-              >NASA ADS</a
+              >ADS library</a
             >,
             <a
               href="https://orcid.org/0000-0003-0774-9084"
@@ -293,36 +354,44 @@
         </section>
 
         <section class="content-section" id="academic-roles">
+          <p class="section-tag">
+            <span class="section-tag__dot" aria-hidden="true"></span>
+            <span>Activities</span>
+          </p>
           <h2>Teaching, supervision, and service</h2>
           <div class="columns-3">
-            <div>
+            <article class="role-card">
               <h3>Teaching</h3>
-              <ul class="simple-list simple-list--compact">
+              <ul class="activity-list">
                 <li>Guest lecturer, "Space Weather", Leiden University (2025, 2026).</li>
                 <li>Mentor, Solar Orbiter Hackathon, ESA/ESTEC (2025).</li>
                 <li>Python tutor, MSSL work experience week (2020-2022).</li>
                 <li>UCL Solar Physics Course Lecturer Assistant (2021-2022).</li>
               </ul>
-            </div>
-            <div>
+            </article>
+            <article class="role-card">
               <h3>Supervision</h3>
-              <ul class="simple-list simple-list--compact">
+              <ul class="activity-list">
                 <li>Internship and project supervision at ESA/ESTEC and Dublin City University (2024-2026).</li>
                 <li>Supervision topics include flare prediction, Hinode analysis, and composition diagnostics.</li>
               </ul>
-            </div>
-            <div>
+            </article>
+            <article class="role-card">
               <h3>Service</h3>
-              <ul class="simple-list simple-list--compact">
+              <ul class="activity-list">
                 <li>Reviewer for Astronomy &amp; Astrophysics, Philosophical Transactions A, and The Astrophysical Journal.</li>
                 <li>SunPy advisory board.</li>
                 <li>Local and Scientific Organising Committee, ESA Space Science Workshop 17.</li>
               </ul>
-            </div>
+            </article>
           </div>
         </section>
 
         <section class="content-section" id="links">
+          <p class="section-tag">
+            <span class="section-tag__dot" aria-hidden="true"></span>
+            <span>Contact</span>
+          </p>
           <h2>Links</h2>
           <ul class="link-grid">
             <li>
@@ -340,12 +409,12 @@
             </li>
             <li>
               <a
-                href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0003-0774-9084&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+                href="https://ui.adsabs.harvard.edu/user/libraries/9ZO21vKyRQqj28TcnHH9GQ"
                 target="_blank"
                 rel="noreferrer noopener"
-                >NASA ADS bibliography</a
+                >ADS library</a
               >
-              <span>Full publication list</span>
+              <span>Actively maintained library</span>
             </li>
             <li>
               <a
