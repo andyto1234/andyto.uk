@@ -176,6 +176,28 @@ div[id] {
   padding: 2rem 0 3rem;
 }
 
+.cursor-satellite {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 12;
+  display: none;
+  width: clamp(3.15rem, 4.15vw, 3.95rem);
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0;
+  filter: drop-shadow(0 10px 16px rgba(15, 23, 42, 0.18));
+  transform: translate3d(-200%, -200%, 0);
+  transform-origin: 42% 44%;
+  will-change: transform, opacity;
+  transition: opacity 180ms ease;
+}
+
+.cursor-satellite.is-visible {
+  opacity: 0.96;
+}
+
 .section-tag {
   display: inline-flex;
   align-items: center;
@@ -783,11 +805,44 @@ div[id] {
 }
 
 .publication-list {
-  margin-left: 1.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.publication-list li + li {
-  margin-top: 1rem;
+.publication-list__item + .publication-list__item {
+  margin-top: 0;
+}
+
+.publication-card {
+  border-top: 1px solid var(--line);
+  padding: 0.08rem 0;
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.publication-list__item:first-child .publication-card {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.publication-card:hover {
+  border-color: rgba(0, 82, 255, 0.22);
+  background: rgba(0, 82, 255, 0.02);
+}
+
+.publication-card__header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.85rem;
+  align-items: start;
+  padding: 0.85rem 0;
+  cursor: pointer;
+}
+
+.publication-card__copy {
+  min-width: 0;
 }
 
 .publication-list__title {
@@ -795,6 +850,12 @@ div[id] {
   font-weight: 700;
   color: var(--text);
   letter-spacing: -0.01em;
+}
+
+.publication-card__meta {
+  margin-top: 0.22rem;
+  color: var(--muted);
+  line-height: 1.48;
 }
 
 .publication-list__title a {
@@ -807,6 +868,93 @@ div[id] {
   color: var(--link-hover);
   text-decoration: underline;
   text-decoration-thickness: 1px;
+}
+
+.publication-card__toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  min-height: 2.2rem;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface-alt);
+  color: var(--muted);
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+.publication-card__toggle svg {
+  width: 1rem;
+  height: 1rem;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 180ms ease;
+}
+
+.publication-card__toggle:hover,
+.publication-card__toggle:focus-visible {
+  color: var(--text);
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+.publication-card.is-open .publication-card__toggle {
+  color: var(--text);
+  background: rgba(0, 82, 255, 0.06);
+  border-color: rgba(0, 82, 255, 0.22);
+  box-shadow: var(--shadow-sm);
+}
+
+.publication-card.is-open .publication-card__toggle svg {
+  transform: rotate(180deg);
+}
+
+.publication-card__abstract {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  margin-top: 0;
+  transition:
+    grid-template-rows 220ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 180ms ease,
+    margin-top 180ms ease;
+}
+
+.publication-card.is-open .publication-card__abstract {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  margin-top: 0.1rem;
+}
+
+.publication-card__abstract-inner {
+  min-height: 0;
+  overflow: hidden;
+  padding-left: 1rem;
+  border-left: 2px solid transparent;
+  transition: border-color 180ms ease;
+}
+
+.publication-card.is-open .publication-card__abstract-inner {
+  border-left-color: var(--line-strong);
+}
+
+.publication-card__abstract-label {
+  margin: 0.25rem 0 0.3rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .content-note {
@@ -1061,6 +1209,12 @@ div[id] {
   max-width: 46rem;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .cursor-satellite {
+    display: block;
+  }
+}
+
 @media (max-width: 64rem) {
   .page-layout {
     grid-template-columns: 1fr;
@@ -1106,6 +1260,19 @@ div[id] {
   .profile-card__tag .section-tag__dot {
     animation: none;
     box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.16);
+  }
+
+  .publication-card,
+  .publication-card__toggle,
+  .publication-card__toggle svg,
+  .publication-card__abstract,
+  .publication-card__abstract-inner,
+  .cursor-satellite {
+    transition: none;
+  }
+
+  .cursor-satellite {
+    display: none;
   }
 }
 
