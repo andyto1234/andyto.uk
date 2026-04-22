@@ -480,11 +480,17 @@ div[id] {
   border-radius: var(--radius-md);
   background: var(--surface-alt);
   box-shadow: var(--shadow-sm);
+  animation: interest-card-float 7.5s ease-in-out infinite;
   transition:
     transform 180ms ease,
     box-shadow 180ms ease,
     border-color 180ms ease,
     background-color 180ms ease;
+  will-change: transform, translate, box-shadow;
+}
+
+.interest-card:nth-child(2) {
+  animation-delay: 1.6s;
 }
 
 .interest-card:hover,
@@ -506,6 +512,17 @@ div[id] {
 
 .interest-card p:last-child {
   line-height: 1.58;
+}
+
+@keyframes interest-card-float {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -0.38rem;
+  }
 }
 
 .compact-list,
@@ -912,6 +929,17 @@ div[id] {
   .interest-grid,
   .figure-showcase__grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .interest-card {
+    animation: none;
+    translate: 0 0;
   }
 }
 
