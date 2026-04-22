@@ -100,7 +100,7 @@
 
     <main id="main-content" class="container page-layout">
       <aside class="profile-card">
-        <p class="section-tag section-tag--inverted">
+        <p class="section-tag section-tag--inverted profile-card__tag">
           <span class="section-tag__dot" aria-hidden="true"></span>
           <span>Profile</span>
         </p>
@@ -113,10 +113,20 @@
         />
         <h1 class="profile-card__name">Andy Shu Ho To</h1>
         <p class="profile-card__role">ESA Research Fellow</p>
-        <p class="profile-card__affiliation">
-          European Space Agency, ESTEC<br />
-          Noordwijk, Netherlands
-        </p>
+        <div class="profile-card__appointment">
+          <p class="appointment-card__label">Current appointment</p>
+          <h3 class="appointment-card__title">European Space Agency, ESTEC</h3>
+          <ul class="appointment-card__meta">
+            <li>
+              <span class="appointment-card__meta-label">Location</span>
+              <span>Noordwijk, Netherlands</span>
+            </li>
+            <li>
+              <span class="appointment-card__meta-label">Since</span>
+              <span>September 2023</span>
+            </li>
+          </ul>
+        </div>
 
         <ul class="compact-list profile-card__links">
           <li>
@@ -156,72 +166,47 @@
             <span>Overview</span>
           </p>
           <h2>About</h2>
-          <div class="intro-grid">
-            <div class="about-copy">
-              <p class="lead">
-                I am an ESA Research Fellow in Space Science at ESTEC in
-                Noordwijk, Netherlands.
-              </p>
-              <div class="about-blocks">
-                <div class="about-block">
-                  <p class="about-block__label">Background</p>
-                  <p>
-                    Before joining ESA in 2023, I completed a PhD in Solar
-                    Physics at Mullard Space Science Laboratory, University
-                    College London.
-                  </p>
-                </div>
-                <div class="about-block">
-                  <p class="about-block__label">Research approach</p>
-                  <p>
-                    My work uses spectroscopy and coordinated observations to
-                    study coronal plasma composition, solar flares, and related
-                    solar activity.
-                  </p>
-                </div>
+          <div class="about-copy about-copy--wide">
+            <p class="lead">
+              I work on solar physics using spectroscopy at ESTEC in Noordwijk,
+              Netherlands.
+            </p>
+            <p class="about-intro">
+              My current work focuses on two related threads:
+            </p>
+            <div class="interest-grid" id="science-interests">
+              <article class="interest-card">
+                <p class="interest-card__label">Composition</p>
+                <p>
+                  Coronal EUV plasma composition and first ionisation potential
+                  bias in active regions and flares.
+                </p>
+              </article>
+              <article class="interest-card">
+                <p class="interest-card__label">Flares</p>
+                <p>
+                  Spectroscopic signatures of flare onset and flare evolution.
+                </p>
+              </article>
+            </div>
+            <div class="about-blocks">
+              <div class="about-block">
+                <p class="about-block__label">Background</p>
+                <p>
+                  Before joining ESA in 2023, I completed a PhD in Solar
+                  Physics at Mullard Space Science Laboratory, University
+                  College London.
+                </p>
+              </div>
+              <div class="about-block">
+                <p class="about-block__label">Research approach</p>
+                <p>
+                  I combine EUV spectroscopy with coordinated observations to
+                  study plasma composition, flare onset, and flare evolution in
+                  their wider solar context.
+                </p>
               </div>
             </div>
-            <div class="fact-box fact-box--appointment">
-              <p class="appointment-card__label">Current appointment</p>
-              <h3 class="appointment-card__title">
-                ESA Research Fellow in Space Science
-              </h3>
-              <ul class="appointment-card__meta">
-                <li>
-                  <span class="appointment-card__meta-label">Institution</span>
-                  <span>European Space Agency, ESTEC</span>
-                </li>
-                <li>
-                  <span class="appointment-card__meta-label">Location</span>
-                  <span>Noordwijk, Netherlands</span>
-                </li>
-                <li>
-                  <span class="appointment-card__meta-label">Since</span>
-                  <span>September 2023</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section class="content-section" id="science-interests">
-          <p class="section-tag">
-            <span class="section-tag__dot" aria-hidden="true"></span>
-            <span>Research</span>
-          </p>
-          <h2>Science interests</h2>
-          <div class="interest-grid">
-            <article class="interest-card">
-              <p class="interest-card__label">Composition</p>
-              <p>
-                Coronal EUV plasma composition and first ionisation potential
-                bias.
-              </p>
-            </article>
-            <article class="interest-card">
-              <p class="interest-card__label">Flares</p>
-              <p>Spectroscopic signatures of flare onset and flare evolution.</p>
-            </article>
           </div>
         </section>
 
