@@ -181,6 +181,17 @@ dd {
   box-shadow: 0 0 0 4px rgba(0, 82, 255, 0.12);
 }
 
+.section-tag--inverted {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+.section-tag--inverted .section-tag__dot {
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.16);
+}
+
 .profile-card {
   position: sticky;
   top: 5.25rem;
@@ -192,11 +203,13 @@ dd {
 }
 
 .profile-card__avatar {
-  width: 112px;
-  height: 112px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
+  object-position: center 36%;
   border: 2px solid rgba(0, 82, 255, 0.16);
   border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
 }
 
 .profile-card__name {
@@ -457,9 +470,57 @@ dd {
 }
 
 .fact-grid dt {
-  font-weight: 700;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.7rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.fact-grid__detail {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.fact-grid__entry {
+  display: grid;
+  gap: 0.22rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--line);
+}
+
+.fact-grid__entry:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.fact-grid__headline {
   color: var(--text);
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.fact-grid__headline a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.fact-grid__headline a:hover,
+.fact-grid__headline a:focus-visible {
+  color: var(--link-hover);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.fact-grid__support {
+  color: var(--muted);
+}
+
+.fact-grid__entry > p:not(.fact-grid__headline) {
+  color: var(--muted);
+  line-height: 1.55;
 }
 
 .timeline__row {
@@ -487,6 +548,18 @@ dd {
 .timeline__title {
   font-weight: 700;
   letter-spacing: -0.01em;
+}
+
+.timeline__detail {
+  line-height: 1.5;
+}
+
+.timeline__subdetail {
+  margin-top: 0.45rem;
+  padding-left: 0.85rem;
+  border-left: 2px solid var(--line-strong);
+  color: var(--muted);
+  line-height: 1.55;
 }
 
 .publication-list {
