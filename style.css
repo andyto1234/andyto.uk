@@ -252,7 +252,7 @@ div[id] {
 }
 
 .cursor-satellite[data-instrument="iris"] .cursor-satellite__image {
-  width: clamp(2.68rem, 3.62vw, 3.62rem);
+  width: clamp(2.54rem, 3.42vw, 3.42rem);
 }
 
 .cursor-satellite[data-instrument="none"] .cursor-satellite__image {
@@ -355,6 +355,7 @@ div[id] {
 
 .cursor-satellite[data-raster-mode="iris"] .cursor-satellite__raster {
   width: 3.24rem;
+  left: calc(100% + 0.28rem);
 }
 
 .cursor-satellite[data-raster-mode="iris"] .cursor-satellite__raster-viewport {
