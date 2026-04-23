@@ -166,38 +166,50 @@
       <div class="container site-header__inner">
         <a class="site-title" href="./">Andy Shu Ho To</a>
         <nav class="site-nav" aria-label="Primary">
-          <a href="./index.html#about">About</a>
-          <a href="./index.html#current-work">Current work</a>
-          <a href="./index.html#brief-cv">Brief CV</a>
-          <a href="./index.html#selected-publications">Selected publications</a>
+          <a href="./">Home</a>
+          <a href="./publications.html">Publications</a>
           <a href="./figures.html" aria-current="page">Figures</a>
-          <a href="./index.html#links">Links</a>
         </nav>
       </div>
     </header>
 
-    <main id="main-content" class="container simple-page figure-page">
-      <section class="content-section">
-        <p class="section-tag">
+    <main id="main-content" class="container page-layout figure-page-layout">
+      <aside class="profile-card figure-rail">
+        <p class="section-tag section-tag--inverted profile-card__tag">
           <span class="section-tag__dot" aria-hidden="true"></span>
           <span>Figures</span>
         </p>
-        <h1 class="page-heading">Figures from first-author solar-physics papers</h1>
-        <p>
-          A visual guide to five first-author solar-physics papers. Each
-          section shows one representative figure from the paper PDF, together
-          with a short note on the science question and what the figure shows.
+        <h1 class="profile-card__name figure-rail__title">Figures</h1>
+        <p class="profile-card__role figure-rail__role">
+          First-author papers and representative figures
         </p>
-        <ul class="figure-index">
-          <li><a href="#paper-2026">2026</a></li>
-          <li><a href="#paper-2025">2025</a></li>
-          <li><a href="#paper-2024">2024</a></li>
-          <li><a href="#paper-2023">2023</a></li>
-          <li><a href="#paper-2021">2021</a></li>
-        </ul>
-      </section>
+        <p class="figure-rail__summary">
+          A visual guide to five first-author solar-physics papers. Each
+          section shows one representative figure together with a short note on
+          the science question and what the figure shows.
+        </p>
+        <div class="figure-rail__block">
+          <p class="figure-rail__label">Browse by year</p>
+          <ul class="figure-index figure-index--rail">
+            <li><a href="#paper-2026">2026</a></li>
+            <li><a href="#paper-2025">2025</a></li>
+            <li><a href="#paper-2024">2024</a></li>
+            <li><a href="#paper-2023">2023</a></li>
+            <li><a href="#paper-2021">2021</a></li>
+          </ul>
+        </div>
+        <div class="figure-rail__record">
+          <p class="figure-rail__label">Related pages</p>
+          <p class="figure-rail__note">
+            The full <a href="./publications.html">publications page</a>
+            includes the complete bibliography, ADS-linked summaries, and the
+            public flare dataset.
+          </p>
+        </div>
+      </aside>
 
-      <section class="content-section figure-showcase" id="paper-2026">
+      <div class="content-column">
+        <section class="content-section figure-showcase" id="paper-2026">
         <p class="section-tag">
           <span class="section-tag__dot" aria-hidden="true"></span>
           <span>2026</span>
@@ -253,7 +265,7 @@
         </div>
       </section>
 
-      <section class="content-section figure-showcase" id="paper-2025">
+        <section class="content-section figure-showcase" id="paper-2025">
         <p class="section-tag">
           <span class="section-tag__dot" aria-hidden="true"></span>
           <span>2025</span>
@@ -308,7 +320,7 @@
         </div>
       </section>
 
-      <section class="content-section figure-showcase" id="paper-2024">
+        <section class="content-section figure-showcase" id="paper-2024">
         <p class="section-tag">
           <span class="section-tag__dot" aria-hidden="true"></span>
           <span>2024</span>
@@ -366,7 +378,7 @@
         </div>
       </section>
 
-      <section class="content-section figure-showcase" id="paper-2023">
+        <section class="content-section figure-showcase" id="paper-2023">
         <p class="section-tag">
           <span class="section-tag__dot" aria-hidden="true"></span>
           <span>2023</span>
@@ -420,7 +432,7 @@
         </div>
       </section>
 
-      <section class="content-section figure-showcase" id="paper-2021">
+        <section class="content-section figure-showcase" id="paper-2021">
         <p class="section-tag">
           <span class="section-tag__dot" aria-hidden="true"></span>
           <span>2021</span>
@@ -472,6 +484,7 @@
           </div>
         </div>
       </section>
+      </div>
     </main>
     <script src="./cursor-satellite.js"></script>
   </body>
