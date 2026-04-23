@@ -168,49 +168,98 @@
       </div>
     </header>
 
-    <main id="main-content" class="container simple-page publication-page">
-      <section class="content-section">
-        <p class="section-tag">
+    <main id="main-content" class="container page-layout publication-page-layout">
+      <aside class="profile-card publication-rail">
+        <p class="section-tag section-tag--inverted profile-card__tag">
           <span class="section-tag__dot" aria-hidden="true"></span>
           <span>Bibliography</span>
         </p>
-        <h1 class="page-heading">Publications</h1>
-        <p>
-          This page follows the bibliography in my current CV and links
-          published papers to ADS abstracts or DOI records where available.
-          The homepage keeps a shorter selected list, while the figures page
-          collects one representative figure from each first-author paper.
+        <h1 class="profile-card__name publication-rail__title">Publications</h1>
+        <p class="profile-card__role publication-rail__role">
+          Solar-physics papers and dataset
         </p>
-        <ul class="page-index">
-          <li><a href="#first-author">First author</a></li>
-          <li><a href="#collaborative">Collaborative</a></li>
-          <li><a href="#dataset">Dataset</a></li>
-          <li><a href="#links">Links</a></li>
-        </ul>
-        <p class="content-note">
-          For the record I update most actively, see the
-          <a
-            href="https://ui.adsabs.harvard.edu/user/libraries/9ZO21vKyRQqj28TcnHH9GQ"
-            target="_blank"
-            rel="noreferrer noopener"
-            >ADS library</a
-          >.
-          The <a href="./documents/andy-shu-ho-to-cv.pdf" download>PDF CV</a>
-          remains the source for the bibliography shown below.
+        <p class="publication-rail__summary">
+          This page follows the bibliography in my current CV. Papers are shown
+          in a single inverse-chronological list, with summaries based on ADS
+          abstracts where public records are available and on the current CV
+          for manuscripts that are still in submission.
         </p>
-      </section>
+        <div class="publication-rail__block">
+          <p class="publication-rail__label">Browse</p>
+          <div
+            class="publication-filter-bar publication-filter-bar--rail"
+            role="group"
+            aria-label="Publication page sections and ordering"
+          >
+            <button
+              class="publication-filter"
+              type="button"
+              id="all"
+              data-publication-order="all"
+              aria-pressed="true"
+            >
+              All
+            </button>
+            <button
+              class="publication-filter"
+              type="button"
+              id="first-author"
+              data-publication-order="first-author"
+              aria-pressed="false"
+            >
+              First author
+            </button>
+            <button
+              class="publication-filter"
+              type="button"
+              id="collaborative"
+              data-publication-order="collaborative"
+              aria-pressed="false"
+            >
+              Collaborative
+            </button>
+            <a class="publication-filter-link" href="#dataset">Dataset</a>
+            <a class="publication-filter-link" href="#links">Links</a>
+          </div>
+        </div>
+        <div class="publication-rail__record">
+          <p class="publication-rail__label">Record</p>
+          <p class="publication-rail__note">
+            For the record I update most actively, see the
+            <a
+              href="https://ui.adsabs.harvard.edu/user/libraries/9ZO21vKyRQqj28TcnHH9GQ"
+              target="_blank"
+              rel="noreferrer noopener"
+              >ADS library</a
+            >. The
+            <a href="./documents/andy-shu-ho-to-cv.pdf" download>PDF CV</a>
+            remains the source for the bibliography shown below.
+          </p>
+        </div>
+      </aside>
 
-      <section class="content-section" id="first-author">
+      <div class="content-column">
+        <section class="content-section" id="papers">
         <p class="section-tag">
           <span class="section-tag__dot" aria-hidden="true"></span>
-          <span>First author</span>
+          <span>Papers</span>
         </p>
-        <h2>First-author papers</h2>
-        <ol class="publication-list">
-          <li class="publication-list__item">
+        <h2>Papers</h2>
+        <p>
+          The list below is shown in inverse chronological order by default.
+          Use the rail on the left to bring first-author or collaborative
+          papers to the front without changing the underlying record.
+        </p>
+        <ol class="publication-list publication-list--master" data-publication-list>
+          <li
+            class="publication-list__item"
+            data-kind="first-author"
+            data-year="2026"
+          >
             <article class="publication-card publication-card--bibliography">
               <div class="publication-card__header" data-publication-trigger>
                 <div class="publication-card__copy">
+                  <p class="publication-card__eyebrow">2026 · First author</p>
                   <p class="publication-list__title">
                     <a
                       href="https://ui.adsabs.harvard.edu/abs/2026arXiv260413174T/abstract"
@@ -221,11 +270,12 @@
                     >
                   </p>
                   <p class="publication-card__authors">
-                    To, Andy S. H., Laming, J. M., Reep, J., Finley, A. J.
+                    <span class="author-highlight">To, Andy S. H.</span>,
+                    Laming, J. M., Reep, J., Finley, A. J.
                   </p>
                   <p class="publication-card__meta">
-                    Accepted for publication in Philosophical Transactions of
-                    the Royal Society A.
+                    Philosophical Transactions of the Royal Society A · accepted
+                    for publication (2026)
                   </p>
                 </div>
                 <div class="publication-card__actions">
@@ -241,7 +291,7 @@
                     class="publication-card__toggle"
                     type="button"
                     aria-expanded="false"
-                    aria-controls="pub-summary-2026"
+                    aria-controls="pub-summary-2026-fa"
                     aria-label="Show summary for Chromospheric dynamics and turbulence regulate the solar FIP effect"
                   >
                     <span class="publication-card__toggle-label">Summary</span>
@@ -251,25 +301,400 @@
                   </button>
                 </div>
               </div>
-              <div class="publication-card__abstract" id="pub-summary-2026">
+              <div class="publication-card__abstract" id="pub-summary-2026-fa">
                 <div class="publication-card__abstract-inner">
                   <p class="publication-card__abstract-label">Summary</p>
                   <p>
-                    This paper examines how chromospheric dynamics affect FIP
-                    bias in ponderomotive-force models. By combining HYDRAD
-                    with FIPpy, it finds that dynamic heating can still
-                    reproduce fractionation, while lower acoustic flux and
-                    stronger turbulence can materially alter or suppress the
-                    predicted FIP pattern.
+                    This paper examines how chromospheric dynamics alter
+                    elemental fractionation in ponderomotive-force models of
+                    the FIP effect. By coupling HYDRAD atmospheres with FIPpy
+                    calculations, it shows that dynamic heating can preserve
+                    the overall model, while reduced acoustic flux and enhanced
+                    turbulence can change or suppress fractionation, including
+                    under flare conditions.
                   </p>
                 </div>
               </div>
             </article>
           </li>
-          <li class="publication-list__item">
+          <li
+            class="publication-list__item"
+            data-kind="collaborative"
+            data-year="2026"
+          >
             <article class="publication-card publication-card--bibliography">
               <div class="publication-card__header" data-publication-trigger>
                 <div class="publication-card__copy">
+                  <p class="publication-card__eyebrow">2026 · Collaborative</p>
+                  <p class="publication-list__title">
+                    Radiative hydrodynamic simulations of FIP fractionation in
+                    solar flares.
+                  </p>
+                  <p class="publication-card__authors">
+                    Reep, J. W., Fushimi Benavitz, L.,
+                    <span class="author-highlight">To, Andy S. H.</span>,
+                    et al.
+                  </p>
+                  <p class="publication-card__meta">
+                    Submitted to Philosophical Transactions of the Royal Society
+                    A (2026)
+                  </p>
+                </div>
+                <div class="publication-card__actions">
+                  <span class="bibliography-entry__chip">Submitted</span>
+                  <button
+                    class="publication-card__toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="pub-summary-2026-co-1"
+                    aria-label="Show summary for Radiative hydrodynamic simulations of FIP fractionation in solar flares"
+                  >
+                    <span class="publication-card__toggle-label">Summary</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8 10l4 4 4-4"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="publication-card__abstract" id="pub-summary-2026-co-1">
+                <div class="publication-card__abstract-inner">
+                  <p class="publication-card__abstract-label">Summary</p>
+                  <p>
+                    This manuscript uses radiative hydrodynamic flare
+                    simulations to follow how flare heating and chromospheric
+                    evaporation modify elemental fractionation. It connects
+                    time-dependent flare atmospheres with expected FIP-bias
+                    evolution and provides a theoretical comparison point for
+                    recent observational flare-composition studies.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li
+            class="publication-list__item"
+            data-kind="collaborative"
+            data-year="2026"
+          >
+            <article class="publication-card publication-card--bibliography">
+              <div class="publication-card__header" data-publication-trigger>
+                <div class="publication-card__copy">
+                  <p class="publication-card__eyebrow">2026 · Collaborative</p>
+                  <p class="publication-list__title">
+                    Signs of Sulphur fractionation under high magnetic field
+                    strength.
+                  </p>
+                  <p class="publication-card__authors">
+                    Orlovskij, D.,
+                    <span class="author-highlight">To, Andy S. H.</span>,
+                    et al.
+                  </p>
+                  <p class="publication-card__meta">
+                    Submitted to Philosophical Transactions of the Royal Society
+                    A (2026)
+                  </p>
+                </div>
+                <div class="publication-card__actions">
+                  <span class="bibliography-entry__chip">Submitted</span>
+                  <button
+                    class="publication-card__toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="pub-summary-2026-co-2"
+                    aria-label="Show summary for Signs of Sulphur fractionation under high magnetic field strength"
+                  >
+                    <span class="publication-card__toggle-label">Summary</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8 10l4 4 4-4"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="publication-card__abstract" id="pub-summary-2026-co-2">
+                <div class="publication-card__abstract-inner">
+                  <p class="publication-card__abstract-label">Summary</p>
+                  <p>
+                    This manuscript examines whether sulphur, with intermediate
+                    first ionisation potential, shows measurable fractionation
+                    in strong-field solar structures. The aim is to test how
+                    intermediate-FIP elements behave where standard low- and
+                    high-FIP trends may diverge.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li
+            class="publication-list__item"
+            data-kind="collaborative"
+            data-year="2026"
+          >
+            <article class="publication-card publication-card--bibliography">
+              <div class="publication-card__header" data-publication-trigger>
+                <div class="publication-card__copy">
+                  <p class="publication-card__eyebrow">2026 · Collaborative</p>
+                  <p class="publication-list__title">
+                    Dynamic modeling of coronal abundances during flares on
+                    M-dwarf stars.
+                  </p>
+                  <p class="publication-card__authors">
+                    Brooks, D. H., Reep, J. W.,
+                    <span class="author-highlight">To, Andy S. H.</span>,
+                    et al.
+                  </p>
+                  <p class="publication-card__meta">
+                    Submitted to Philosophical Transactions of the Royal Society
+                    A (2026)
+                  </p>
+                </div>
+                <div class="publication-card__actions">
+                  <span class="bibliography-entry__chip">Submitted</span>
+                  <button
+                    class="publication-card__toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="pub-summary-2026-co-3"
+                    aria-label="Show summary for Dynamic modeling of coronal abundances during flares on M-dwarf stars"
+                  >
+                    <span class="publication-card__toggle-label">Summary</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8 10l4 4 4-4"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="publication-card__abstract" id="pub-summary-2026-co-3">
+                <div class="publication-card__abstract-inner">
+                  <p class="publication-card__abstract-label">Summary</p>
+                  <p>
+                    This manuscript extends flare-composition modelling to
+                    M-dwarf atmospheres, where abundance anomalies can differ
+                    from the solar case. It explores how dynamic flare
+                    evolution shapes coronal abundance diagnostics in active
+                    stars.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li
+            class="publication-list__item"
+            data-kind="collaborative"
+            data-year="2026"
+          >
+            <article class="publication-card publication-card--bibliography">
+              <div class="publication-card__header" data-publication-trigger>
+                <div class="publication-card__copy">
+                  <p class="publication-card__eyebrow">2026 · Collaborative</p>
+                  <p class="publication-list__title">
+                    Inverse FIP plasma in the solar atmosphere: a synthesis of
+                    current understanding and new insights.
+                  </p>
+                  <p class="publication-card__authors">
+                    Baker, D., Brooks, D. H., Long, D. M.,
+                    <span class="author-highlight">To, Andy S. H.</span>,
+                    et al.
+                  </p>
+                  <p class="publication-card__meta">
+                    Submitted to Philosophical Transactions of the Royal Society
+                    A (2026)
+                  </p>
+                </div>
+                <div class="publication-card__actions">
+                  <span class="bibliography-entry__chip">Submitted</span>
+                  <button
+                    class="publication-card__toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="pub-summary-2026-co-4"
+                    aria-label="Show summary for Inverse FIP plasma in the solar atmosphere"
+                  >
+                    <span class="publication-card__toggle-label">Summary</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8 10l4 4 4-4"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="publication-card__abstract" id="pub-summary-2026-co-4">
+                <div class="publication-card__abstract-inner">
+                  <p class="publication-card__abstract-label">Summary</p>
+                  <p>
+                    This review manuscript brings together recent solar
+                    observations and theoretical work on inverse-FIP plasma. It
+                    summarizes the main physical interpretations, observational
+                    signatures, and open questions about where and how
+                    inverse-FIP composition is produced.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li
+            class="publication-list__item"
+            data-kind="collaborative"
+            data-year="2026"
+          >
+            <article class="publication-card publication-card--bibliography">
+              <div class="publication-card__header" data-publication-trigger>
+                <div class="publication-card__copy">
+                  <p class="publication-card__eyebrow">2026 · Collaborative</p>
+                  <p class="publication-list__title">
+                    Sulfur fractionation in coronal plumes as observed by Solar
+                    Orbiter/SPICE.
+                  </p>
+                  <p class="publication-card__authors">
+                    Mzerguat, S., Janvier, M., Buchlin, É., Baker, D.,
+                    <span class="author-highlight">To, Andy S. H.</span>,
+                    et al.
+                  </p>
+                  <p class="publication-card__meta">
+                    Submitted to Philosophical Transactions of the Royal Society
+                    A (2026)
+                  </p>
+                </div>
+                <div class="publication-card__actions">
+                  <span class="bibliography-entry__chip">Submitted</span>
+                  <button
+                    class="publication-card__toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="pub-summary-2026-co-5"
+                    aria-label="Show summary for Sulfur fractionation in coronal plumes as observed by Solar Orbiter SPICE"
+                  >
+                    <span class="publication-card__toggle-label">Summary</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8 10l4 4 4-4"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="publication-card__abstract" id="pub-summary-2026-co-5">
+                <div class="publication-card__abstract-inner">
+                  <p class="publication-card__abstract-label">Summary</p>
+                  <p>
+                    This manuscript uses Solar Orbiter/SPICE observations to
+                    examine sulfur fractionation in coronal plumes. It tests
+                    how an intermediate-FIP element behaves in plume plasma and
+                    how those measurements compare with more common coronal
+                    abundance diagnostics.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li
+            class="publication-list__item"
+            data-kind="collaborative"
+            data-year="2026"
+          >
+            <article class="publication-card publication-card--bibliography">
+              <div class="publication-card__header" data-publication-trigger>
+                <div class="publication-card__copy">
+                  <p class="publication-card__eyebrow">2026 · Collaborative</p>
+                  <p class="publication-list__title">
+                    Comparing First Ionisation Potential bias diagnostics in the
+                    solar atmosphere.
+                  </p>
+                  <p class="publication-card__authors">
+                    Spruksta, K. D., Long, D. M.,
+                    <span class="author-highlight">To, Andy S. H.</span>
+                  </p>
+                  <p class="publication-card__meta">
+                    Submitted to Philosophical Transactions of the Royal Society
+                    A (2026)
+                  </p>
+                </div>
+                <div class="publication-card__actions">
+                  <span class="bibliography-entry__chip">Submitted</span>
+                  <button
+                    class="publication-card__toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="pub-summary-2026-co-6"
+                    aria-label="Show summary for Comparing First Ionisation Potential bias diagnostics in the solar atmosphere"
+                  >
+                    <span class="publication-card__toggle-label">Summary</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8 10l4 4 4-4"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="publication-card__abstract" id="pub-summary-2026-co-6">
+                <div class="publication-card__abstract-inner">
+                  <p class="publication-card__abstract-label">Summary</p>
+                  <p>
+                    This manuscript compares several commonly used FIP-bias
+                    diagnostics across solar observations. The goal is to show
+                    where different line pairs give consistent results and where
+                    interpretation depends on temperature response or local
+                    plasma conditions.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li
+            class="publication-list__item"
+            data-kind="collaborative"
+            data-year="2026"
+          >
+            <article class="publication-card publication-card--bibliography">
+              <div class="publication-card__header" data-publication-trigger>
+                <div class="publication-card__copy">
+                  <p class="publication-card__eyebrow">2026 · Collaborative</p>
+                  <p class="publication-list__title">
+                    Identifying spectroscopic signatures of the ponderomotive
+                    force in the solar chromosphere.
+                  </p>
+                  <p class="publication-card__authors">
+                    Long, D. M., Baker, D., Yardley, S. L., Stangalini, M.,
+                    <span class="author-highlight">To, Andy S. H.</span>
+                  </p>
+                  <p class="publication-card__meta">
+                    Submitted to Astronomy &amp; Astrophysics (2026)
+                  </p>
+                </div>
+                <div class="publication-card__actions">
+                  <span class="bibliography-entry__chip">Submitted</span>
+                  <button
+                    class="publication-card__toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="pub-summary-2026-co-7"
+                    aria-label="Show summary for Identifying spectroscopic signatures of the ponderomotive force in the solar chromosphere"
+                  >
+                    <span class="publication-card__toggle-label">Summary</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8 10l4 4 4-4"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="publication-card__abstract" id="pub-summary-2026-co-7">
+                <div class="publication-card__abstract-inner">
+                  <p class="publication-card__abstract-label">Summary</p>
+                  <p>
+                    This manuscript looks for chromospheric observables that
+                    can be directly associated with the ponderomotive force
+                    thought to drive solar abundance fractionation. It links
+                    spectroscopic behaviour in the lower atmosphere to the
+                    processes that later shape coronal composition.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li
+            class="publication-list__item"
+            data-kind="first-author"
+            data-year="2025"
+          >
+            <article class="publication-card publication-card--bibliography">
+              <div class="publication-card__header" data-publication-trigger>
+                <div class="publication-card__copy">
+                  <p class="publication-card__eyebrow">2025 · First author</p>
                   <p class="publication-list__title">
                     <a
                       href="https://ui.adsabs.harvard.edu/abs/2025ApJ...993..102T/abstract"
@@ -280,13 +705,14 @@
                     >
                   </p>
                   <p class="publication-card__authors">
-                    To, Andy S. H., Burden, A., Baker, D., Eklund, H., Brooks,
-                    D. H., Hayes, L. A., Martinez-Sykora, J., Testa, P., Reep,
-                    J., Janvier, M., Imada, S., Hernandez Camero, J., Long,
-                    D. M., Mihailescu, T., Weberg, M. J.
+                    <span class="author-highlight">To, Andy S. H.</span>,
+                    Burden, A., Baker, D., Eklund, H., Brooks, D. H., Hayes,
+                    L. A., Martínez-Sykora, J., Testa, P., Reep, J., Janvier,
+                    M., Imada, S., Hernandez Camero, J., Long, D. M.,
+                    Mihailescu, T., Weberg, M. J.
                   </p>
                   <p class="publication-card__meta">
-                    The Astrophysical Journal, 993, 102 (2025).
+                    The Astrophysical Journal, 993, 102 (2025)
                   </p>
                 </div>
                 <div class="publication-card__actions">
@@ -301,7 +727,7 @@
                     class="publication-card__toggle"
                     type="button"
                     aria-expanded="false"
-                    aria-controls="pub-summary-2025"
+                    aria-controls="pub-summary-2025-fa"
                     aria-label="Show summary for Systematic non-thermal velocity increase preceding soft X-ray flare onset"
                   >
                     <span class="publication-card__toggle-label">Summary</span>
@@ -311,25 +737,95 @@
                   </button>
                 </div>
               </div>
-              <div class="publication-card__abstract" id="pub-summary-2025">
+              <div class="publication-card__abstract" id="pub-summary-2025-fa">
                 <div class="publication-card__abstract-inner">
                   <p class="publication-card__abstract-label">Summary</p>
                   <p>
-                    Using a Hinode/EIS catalogue of 1449 flares from 2011 to
-                    2024, this study shows that non-thermal velocities at flare
-                    footpoints typically rise 4-25 minutes before GOES soft
-                    X-ray start in C and M flares. It also finds earlier and
-                    more extended precursor broadening in many M-class events,
-                    especially CME-associated eruptions.
+                    Using a Hinode/EIS catalogue of 1,449 flares from
+                    2011-2024, this paper measures how EUV non-thermal
+                    velocities evolve before soft X-ray flare onset across C-,
+                    M-, and X-class events. It finds that line broadening
+                    typically begins 4-25 minutes before GOES start in C and M
+                    flares, with earlier and more extended precursor behaviour
+                    in many eruptive M-class events.
                   </p>
                 </div>
               </div>
             </article>
           </li>
-          <li class="publication-list__item">
+          <li
+            class="publication-list__item"
+            data-kind="collaborative"
+            data-year="2025"
+          >
             <article class="publication-card publication-card--bibliography">
               <div class="publication-card__header" data-publication-trigger>
                 <div class="publication-card__copy">
+                  <p class="publication-card__eyebrow">2025 · Collaborative</p>
+                  <p class="publication-list__title">
+                    <a
+                      href="https://doi.org/10.3847/1538-4357/ae019d"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      >Spatiotemporal Low FIP Abundance: A Catalyst for Coronal
+                      Condensation.</a
+                    >
+                  </p>
+                  <p class="publication-card__authors">
+                    Fushimi Benavitz, L., Reep, J. W., Tarr, L. A.,
+                    <span class="author-highlight">To, Andy S. H.</span>
+                  </p>
+                  <p class="publication-card__meta">
+                    The Astrophysical Journal, 992, 4 (2025)
+                  </p>
+                </div>
+                <div class="publication-card__actions">
+                  <a
+                    class="bibliography-entry__link"
+                    href="https://doi.org/10.3847/1538-4357/ae019d"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >DOI</a
+                  >
+                  <button
+                    class="publication-card__toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="pub-summary-2025-co-1"
+                    aria-label="Show summary for Spatiotemporal Low FIP Abundance A Catalyst for Coronal Condensation"
+                  >
+                    <span class="publication-card__toggle-label">Summary</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8 10l4 4 4-4"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="publication-card__abstract" id="pub-summary-2025-co-1">
+                <div class="publication-card__abstract-inner">
+                  <p class="publication-card__abstract-label">Summary</p>
+                  <p>
+                    This paper introduces spatiotemporally varying elemental
+                    abundances into radiative hydrodynamic flare simulations to
+                    test how local composition changes feed back on loop
+                    cooling. It shows that abundance shifts driven by
+                    evaporation can modify radiative losses enough to promote
+                    condensations in impulsively heated loops, linking low-FIP
+                    enrichment to coronal rain formation.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li
+            class="publication-list__item"
+            data-kind="first-author"
+            data-year="2024"
+          >
+            <article class="publication-card publication-card--bibliography">
+              <div class="publication-card__header" data-publication-trigger>
+                <div class="publication-card__copy">
+                  <p class="publication-card__eyebrow">2024 · First author</p>
                   <p class="publication-list__title">
                     <a
                       href="https://ui.adsabs.harvard.edu/abs/2024A%26A...691A..95T/abstract"
@@ -340,12 +836,13 @@
                     >
                   </p>
                   <p class="publication-card__authors">
-                    To, Andy S. H., Brooks, D. H., Imada, S., French, R. J.,
-                    van Driel-Gesztelyi, L., Baker, D., Long, D. M., Ashfield,
-                    W., Hayes, L. A.
+                    <span class="author-highlight">To, Andy S. H.</span>,
+                    Brooks, D. H., Imada, S., French, R. J.,
+                    van Driel-Gesztelyi, L., Baker, D., Long, D. M.,
+                    Ashfield, W., Hayes, L. A.
                   </p>
                   <p class="publication-card__meta">
-                    Astronomy &amp; Astrophysics, 691, A95 (2024).
+                    Astronomy &amp; Astrophysics, 691, A95 (2024)
                   </p>
                 </div>
                 <div class="publication-card__actions">
@@ -360,7 +857,7 @@
                     class="publication-card__toggle"
                     type="button"
                     aria-expanded="false"
-                    aria-controls="pub-summary-2024"
+                    aria-controls="pub-summary-2024-fa"
                     aria-label="Show summary for Spatially resolved plasma composition evolution in a solar flare"
                   >
                     <span class="publication-card__toggle-label">Summary</span>
@@ -370,25 +867,223 @@
                   </button>
                 </div>
               </div>
-              <div class="publication-card__abstract" id="pub-summary-2024">
+              <div class="publication-card__abstract" id="pub-summary-2024-fa">
                 <div class="publication-card__abstract-inner">
                   <p class="publication-card__abstract-label">Summary</p>
                   <p>
-                    Using 12 Hinode/EIS rasters over 3.5 hours, this paper
-                    tracks FIP bias through the 2017 September 10 X8.2 flare.
-                    It finds persistently high FIP bias at loop tops and
-                    near-photospheric values at footpoints, consistent with
-                    mixing between high-FIP-bias plasma-sheet downflows and
-                    low-FIP-bias chromospheric evaporation.
+                    This paper tracks FIP bias through the 2017 September 10
+                    X8.2 flare using 12 Hinode/EIS rasters and two abundance
+                    diagnostics. It finds persistent high-FIP-bias plasma near
+                    loop tops and near-photospheric values at footpoints,
+                    consistent with mixing between reconnection-downflow plasma
+                    and chromospheric evaporation.
                   </p>
                 </div>
               </div>
             </article>
           </li>
-          <li class="publication-list__item">
+          <li
+            class="publication-list__item"
+            data-kind="collaborative"
+            data-year="2024"
+          >
             <article class="publication-card publication-card--bibliography">
               <div class="publication-card__header" data-publication-trigger>
                 <div class="publication-card__copy">
+                  <p class="publication-card__eyebrow">2024 · Collaborative</p>
+                  <p class="publication-list__title">
+                    <a
+                      href="https://ui.adsabs.harvard.edu/abs/2024ApJ...970...39B/abstract"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      >Searching for Evidence of Subchromospheric Magnetic
+                      Reconnection on the Sun.</a
+                    >
+                  </p>
+                  <p class="publication-card__authors">
+                    Baker, D., van Driel-Gesztelyi, L., James, A. W., Démoulin,
+                    P., <span class="author-highlight">To, Andy S. H.</span>,
+                    et al.
+                  </p>
+                  <p class="publication-card__meta">
+                    The Astrophysical Journal, 970, 39 (2024)
+                  </p>
+                </div>
+                <div class="publication-card__actions">
+                  <a
+                    class="bibliography-entry__link"
+                    href="https://ui.adsabs.harvard.edu/abs/2024ApJ...970...39B/abstract"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >ADS abstract</a
+                  >
+                  <button
+                    class="publication-card__toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="pub-summary-2024-co-1"
+                    aria-label="Show summary for Searching for Evidence of Subchromospheric Magnetic Reconnection on the Sun"
+                  >
+                    <span class="publication-card__toggle-label">Summary</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8 10l4 4 4-4"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="publication-card__abstract" id="pub-summary-2024-co-1">
+                <div class="publication-card__abstract-inner">
+                  <p class="publication-card__abstract-label">Summary</p>
+                  <p>
+                    This paper investigates localized inverse-FIP plasma in
+                    complex active regions and asks whether subchromospheric
+                    reconnection can generate the waves needed for this
+                    fractionation pattern. The results point to strong light
+                    bridges and coalescing sunspot umbrae as favored sites,
+                    with flare-driven evaporation helping the inverse-FIP plasma
+                    become visible in the corona.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li
+            class="publication-list__item"
+            data-kind="collaborative"
+            data-year="2024"
+          >
+            <article class="publication-card publication-card--bibliography">
+              <div class="publication-card__header" data-publication-trigger>
+                <div class="publication-card__copy">
+                  <p class="publication-card__eyebrow">2024 · Collaborative</p>
+                  <p class="publication-list__title">
+                    <a
+                      href="https://ui.adsabs.harvard.edu/abs/2024PhRvL.132u5201M/abstract"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      >Observation of Alfvén Wave Reflection in the Solar
+                      Chromosphere: Ponderomotive Force and First Ionization
+                      Potential Effect.</a
+                    >
+                  </p>
+                  <p class="publication-card__authors">
+                    Murabito, M., Stangalini, M., Laming, J. M., Baker, D.,
+                    <span class="author-highlight">To, Andy S. H.</span>, et
+                    al.
+                  </p>
+                  <p class="publication-card__meta">
+                    Physical Review Letters, 132, 215201 (2024)
+                  </p>
+                </div>
+                <div class="publication-card__actions">
+                  <a
+                    class="bibliography-entry__link"
+                    href="https://ui.adsabs.harvard.edu/abs/2024PhRvL.132u5201M/abstract"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >ADS abstract</a
+                  >
+                  <button
+                    class="publication-card__toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="pub-summary-2024-co-2"
+                    aria-label="Show summary for Observation of Alfvén Wave Reflection in the Solar Chromosphere"
+                  >
+                    <span class="publication-card__toggle-label">Summary</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8 10l4 4 4-4"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="publication-card__abstract" id="pub-summary-2024-co-2">
+                <div class="publication-card__abstract-inner">
+                  <p class="publication-card__abstract-label">Summary</p>
+                  <p>
+                    This paper measures upward and downward propagating Alfvén
+                    waves in the chromosphere and finds clear evidence for wave
+                    reflection. The observed differences between resonant and
+                    nonresonant cases connect chromospheric wave behaviour to
+                    ponderomotive-force fractionation and the solar FIP effect.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li
+            class="publication-list__item"
+            data-kind="collaborative"
+            data-year="2024"
+          >
+            <article class="publication-card publication-card--bibliography">
+              <div class="publication-card__header" data-publication-trigger>
+                <div class="publication-card__copy">
+                  <p class="publication-card__eyebrow">2024 · Collaborative</p>
+                  <p class="publication-list__title">
+                    <a
+                      href="https://ui.adsabs.harvard.edu/abs/2024ApJ...965...63L/abstract"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      >Identifying Plasma Fractionation Processes in the
+                      Chromosphere Using IRIS.</a
+                    >
+                  </p>
+                  <p class="publication-card__authors">
+                    Long, D. M., Baker, D.,
+                    <span class="author-highlight">To, Andy S. H.</span>, et
+                    al.
+                  </p>
+                  <p class="publication-card__meta">
+                    The Astrophysical Journal, 965, 63 (2024)
+                  </p>
+                </div>
+                <div class="publication-card__actions">
+                  <a
+                    class="bibliography-entry__link"
+                    href="https://ui.adsabs.harvard.edu/abs/2024ApJ...965...63L/abstract"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >ADS abstract</a
+                  >
+                  <button
+                    class="publication-card__toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="pub-summary-2024-co-3"
+                    aria-label="Show summary for Identifying Plasma Fractionation Processes in the Chromosphere Using IRIS"
+                  >
+                    <span class="publication-card__toggle-label">Summary</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8 10l4 4 4-4"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="publication-card__abstract" id="pub-summary-2024-co-3">
+                <div class="publication-card__abstract-inner">
+                  <p class="publication-card__abstract-label">Summary</p>
+                  <p>
+                    This paper combines Hinode/EIS and IRIS observations of AR
+                    12759 to look for direct chromospheric signatures of plasma
+                    fractionation. Differences between the leading and
+                    following polarities in both coronal FIP bias and IRIS line
+                    widths are consistent with resonant and nonresonant
+                    wave-driven fractionation in the chromosphere.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li
+            class="publication-list__item"
+            data-kind="first-author"
+            data-year="2023"
+          >
+            <article class="publication-card publication-card--bibliography">
+              <div class="publication-card__header" data-publication-trigger>
+                <div class="publication-card__copy">
+                  <p class="publication-card__eyebrow">2023 · First author</p>
                   <p class="publication-list__title">
                     <a
                       href="https://ui.adsabs.harvard.edu/abs/2023ApJ...948..121T/abstract"
@@ -399,12 +1094,13 @@
                     >
                   </p>
                   <p class="publication-card__authors">
-                    To, Andy S. H., James, A. W., Bastian, T. S.,
+                    <span class="author-highlight">To, Andy S. H.</span>,
+                    James, A. W., Bastian, T. S.,
                     van Driel-Gesztelyi, L., Long, D. M., Baker, D., Brooks,
                     D. H., Lomuscio, S., Stansby, D., Valori, G.
                   </p>
                   <p class="publication-card__meta">
-                    The Astrophysical Journal, 948, 121 (2023).
+                    The Astrophysical Journal, 948, 121 (2023)
                   </p>
                 </div>
                 <div class="publication-card__actions">
@@ -419,7 +1115,7 @@
                     class="publication-card__toggle"
                     type="button"
                     aria-expanded="false"
-                    aria-controls="pub-summary-2023"
+                    aria-controls="pub-summary-2023-fa"
                     aria-label="Show summary for Understanding the relationship between solar coronal abundances and F10.7 cm radio emission"
                   >
                     <span class="publication-card__toggle-label">Summary</span>
@@ -429,26 +1125,359 @@
                   </button>
                 </div>
               </div>
-              <div class="publication-card__abstract" id="pub-summary-2023">
+              <div class="publication-card__abstract" id="pub-summary-2023-fa">
                 <div class="publication-card__abstract-inner">
                   <p class="publication-card__abstract-label">Summary</p>
                   <p>
-                    This paper investigates why the correlation between
-                    Sun-as-a-star coronal composition and F10.7 becomes
-                    nonlinear at higher solar activity. Joint JVLA,
-                    Hinode/EIS, and SDO observations show that strong magnetic
-                    concentrations and gyroresonance above sunspots change the
-                    local relationship between radio emission and coronal
-                    abundances.
+                    This paper tests why the Sun-as-a-star correlation between
+                    coronal composition and F10.7 becomes nonlinear during
+                    higher activity. Using coordinated JVLA, Hinode/EIS, and
+                    SDO observations, it shows that strong magnetic
+                    concentrations and gyroresonance above sunspots alter the
+                    local relationship between radio flux and coronal abundance.
                   </p>
                 </div>
               </div>
             </article>
           </li>
-          <li class="publication-list__item">
+          <li
+            class="publication-list__item"
+            data-kind="collaborative"
+            data-year="2023"
+          >
             <article class="publication-card publication-card--bibliography">
               <div class="publication-card__header" data-publication-trigger>
                 <div class="publication-card__copy">
+                  <p class="publication-card__eyebrow">2023 · Collaborative</p>
+                  <p class="publication-list__title">
+                    <a
+                      href="https://ui.adsabs.harvard.edu/abs/2023ApJS..267...11Y/abstract"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      >Slow Solar Wind Connection Science during Solar
+                      Orbiter's First Close Perihelion Passage.</a
+                    >
+                  </p>
+                  <p class="publication-card__authors">
+                    Yardley, S. L., Owen, C. J., Long, D. M., Baker, D.,
+                    Brooks, D. H., Polito, V., Green, L. M., Matthews, S.,
+                    Owens, M., Lockwood, M., Stansby, D., James, A. W., Valori,
+                    G., Giunta, A., Janvier, M., Ngampoopun, N., Mihailescu,
+                    T., <span class="author-highlight">To, Andy S. H.</span>,
+                    et al.
+                  </p>
+                  <p class="publication-card__meta">
+                    The Astrophysical Journal Supplement Series, 267, 11 (2023)
+                  </p>
+                </div>
+                <div class="publication-card__actions">
+                  <a
+                    class="bibliography-entry__link"
+                    href="https://ui.adsabs.harvard.edu/abs/2023ApJS..267...11Y/abstract"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >ADS abstract</a
+                  >
+                  <button
+                    class="publication-card__toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="pub-summary-2023-co-1"
+                    aria-label="Show summary for Slow Solar Wind Connection Science during Solar Orbiters First Close Perihelion Passage"
+                  >
+                    <span class="publication-card__toggle-label">Summary</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8 10l4 4 4-4"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="publication-card__abstract" id="pub-summary-2023-co-1">
+                <div class="publication-card__abstract-inner">
+                  <p class="publication-card__abstract-label">Summary</p>
+                  <p>
+                    This coordination paper describes the Slow Wind Solar
+                    Orbiter Observing Plan and its joint remote-sensing and in
+                    situ campaign around the first close perihelion passage.
+                    Post-observation analysis showed that slow wind from two of
+                    the three target regions reached the spacecraft, providing a
+                    template for future magnetically guided observing campaigns.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li
+            class="publication-list__item"
+            data-kind="collaborative"
+            data-year="2023"
+          >
+            <article class="publication-card publication-card--bibliography">
+              <div class="publication-card__header" data-publication-trigger>
+                <div class="publication-card__copy">
+                  <p class="publication-card__eyebrow">2023 · Collaborative</p>
+                  <p class="publication-list__title">
+                    <a
+                      href="https://ui.adsabs.harvard.edu/abs/2023ApJ...950..150N/abstract"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      >The Merging of a Coronal Dimming and the Southern Polar
+                      Coronal Hole.</a
+                    >
+                  </p>
+                  <p class="publication-card__authors">
+                    Ngampoopun, N., Long, D. M., Baker, D., Green, L. M.,
+                    Yardley, S. L., James, A. W.,
+                    <span class="author-highlight">To, Andy S. H.</span>
+                  </p>
+                  <p class="publication-card__meta">
+                    The Astrophysical Journal, 950, 150 (2023)
+                  </p>
+                </div>
+                <div class="publication-card__actions">
+                  <a
+                    class="bibliography-entry__link"
+                    href="https://ui.adsabs.harvard.edu/abs/2023ApJ...950..150N/abstract"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >ADS abstract</a
+                  >
+                  <button
+                    class="publication-card__toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="pub-summary-2023-co-2"
+                    aria-label="Show summary for The Merging of a Coronal Dimming and the Southern Polar Coronal Hole"
+                  >
+                    <span class="publication-card__toggle-label">Summary</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8 10l4 4 4-4"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="publication-card__abstract" id="pub-summary-2023-co-2">
+                <div class="publication-card__abstract-inner">
+                  <p class="publication-card__abstract-label">Summary</p>
+                  <p>
+                    This paper studies a 2022 March 18 event in which a coronal
+                    dimming merged with the southern polar coronal hole for at
+                    least 72 hr. Multi-spacecraft imaging, Hinode/EIS
+                    spectroscopy, and magnetic-field analysis show that the
+                    merged region took on coronal-hole-like flow properties and
+                    point to component reconnection as the mechanism that
+                    allowed the dimming to intrude onto the coronal-hole
+                    boundary.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li
+            class="publication-list__item"
+            data-kind="collaborative"
+            data-year="2023"
+          >
+            <article class="publication-card publication-card--bibliography">
+              <div class="publication-card__header" data-publication-trigger>
+                <div class="publication-card__copy">
+                  <p class="publication-card__eyebrow">2023 · Collaborative</p>
+                  <p class="publication-list__title">
+                    <a
+                      href="https://ui.adsabs.harvard.edu/abs/2023ApJ...950...65B/abstract"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      >Observational Evidence of S-web Source of the Slow Solar
+                      Wind.</a
+                    >
+                  </p>
+                  <p class="publication-card__authors">
+                    Baker, D., Démoulin, P., Yardley, S. L., Mihailescu, T.,
+                    van Driel-Gesztelyi, L., D'Amicis, R., Long, D. M.,
+                    <span class="author-highlight">To, Andy S. H.</span>, et
+                    al.
+                  </p>
+                  <p class="publication-card__meta">
+                    The Astrophysical Journal, 950, 65 (2023)
+                  </p>
+                </div>
+                <div class="publication-card__actions">
+                  <a
+                    class="bibliography-entry__link"
+                    href="https://ui.adsabs.harvard.edu/abs/2023ApJ...950...65B/abstract"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >ADS abstract</a
+                  >
+                  <button
+                    class="publication-card__toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="pub-summary-2023-co-3"
+                    aria-label="Show summary for Observational Evidence of S web Source of the Slow Solar Wind"
+                  >
+                    <span class="publication-card__toggle-label">Summary</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8 10l4 4 4-4"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="publication-card__abstract" id="pub-summary-2023-co-3">
+                <div class="publication-card__abstract-inner">
+                  <p class="publication-card__abstract-label">Summary</p>
+                  <p>
+                    This paper tracks NOAA AR 12967 simultaneously from Solar
+                    Orbiter and Earth to test whether an S-web magnetic
+                    corridor can supply the slow solar wind. Blueshifted upflows
+                    along a narrow open-field corridor and magnetic modelling
+                    support the interpretation that S-web structure provided a
+                    source region for the observed wind.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li
+            class="publication-list__item"
+            data-kind="collaborative"
+            data-year="2022"
+          >
+            <article class="publication-card publication-card--bibliography">
+              <div class="publication-card__header" data-publication-trigger>
+                <div class="publication-card__copy">
+                  <p class="publication-card__eyebrow">2022 · Collaborative</p>
+                  <p class="publication-list__title">
+                    <a
+                      href="https://ui.adsabs.harvard.edu/abs/2022ApJ...933..245M/abstract"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      >What Determines Active Region Coronal Plasma
+                      Composition?</a
+                    >
+                  </p>
+                  <p class="publication-card__authors">
+                    Mihailescu, T., Baker, D., Green, L. M.,
+                    van Driel-Gesztelyi, L., Long, D. M., Brooks, D. H.,
+                    <span class="author-highlight">To, Andy S. H.</span>
+                  </p>
+                  <p class="publication-card__meta">
+                    The Astrophysical Journal, 933, 245 (2022)
+                  </p>
+                </div>
+                <div class="publication-card__actions">
+                  <a
+                    class="bibliography-entry__link"
+                    href="https://ui.adsabs.harvard.edu/abs/2022ApJ...933..245M/abstract"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >ADS abstract</a
+                  >
+                  <button
+                    class="publication-card__toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="pub-summary-2022-co-1"
+                    aria-label="Show summary for What Determines Active Region Coronal Plasma Composition"
+                  >
+                    <span class="publication-card__toggle-label">Summary</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8 10l4 4 4-4"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="publication-card__abstract" id="pub-summary-2022-co-1">
+                <div class="publication-card__abstract-inner">
+                  <p class="publication-card__abstract-label">Summary</p>
+                  <p>
+                    This survey paper measures FIP bias in 28 active regions
+                    with Hinode/EIS and compares the results with age, flux,
+                    and evolutionary state. It finds no simple dependence on
+                    total unsigned flux or age, but does find weaker trends with
+                    evolutionary stage and magnetic flux density, indicating
+                    that active-region composition depends on a combination of
+                    local processes.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li
+            class="publication-list__item"
+            data-kind="collaborative"
+            data-year="2022"
+          >
+            <article class="publication-card publication-card--bibliography">
+              <div class="publication-card__header" data-publication-trigger>
+                <div class="publication-card__copy">
+                  <p class="publication-card__eyebrow">2022 · Collaborative</p>
+                  <p class="publication-list__title">
+                    <a
+                      href="https://ui.adsabs.harvard.edu/abs/2022ApJ...924...17B/abstract"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      >Evolution of Plasma Composition in an Eruptive Flux
+                      Rope.</a
+                    >
+                  </p>
+                  <p class="publication-card__authors">
+                    Baker, D., Green, L. M., Brooks, D. H., Démoulin, P.,
+                    van Driel-Gesztelyi, L., Mihailescu, T.,
+                    <span class="author-highlight">To, Andy S. H.</span>, et
+                    al.
+                  </p>
+                  <p class="publication-card__meta">
+                    The Astrophysical Journal, 924, 17 (2022)
+                  </p>
+                </div>
+                <div class="publication-card__actions">
+                  <a
+                    class="bibliography-entry__link"
+                    href="https://ui.adsabs.harvard.edu/abs/2022ApJ...924...17B/abstract"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >ADS abstract</a
+                  >
+                  <button
+                    class="publication-card__toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="pub-summary-2022-co-2"
+                    aria-label="Show summary for Evolution of Plasma Composition in an Eruptive Flux Rope"
+                  >
+                    <span class="publication-card__toggle-label">Summary</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8 10l4 4 4-4"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="publication-card__abstract" id="pub-summary-2022-co-2">
+                <div class="publication-card__abstract-inner">
+                  <p class="publication-card__abstract-label">Summary</p>
+                  <p>
+                    This paper follows plasma composition as a sigmoid formed
+                    into a flux rope and later erupted as a CME.
+                    Photospheric-composition plasma appeared near the polarity
+                    inversion line during strong flux cancellation, while the
+                    core field remained more coronal, supporting flux-rope
+                    formation through photospheric cancellation and
+                    reconnection.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li
+            class="publication-list__item"
+            data-kind="first-author"
+            data-year="2021"
+          >
+            <article class="publication-card publication-card--bibliography">
+              <div class="publication-card__header" data-publication-trigger>
+                <div class="publication-card__copy">
+                  <p class="publication-card__eyebrow">2021 · First author</p>
                   <p class="publication-list__title">
                     <a
                       href="https://ui.adsabs.harvard.edu/abs/2021ApJ...911...86T/abstract"
@@ -458,11 +1487,12 @@
                     >
                   </p>
                   <p class="publication-card__authors">
-                    To, Andy S. H., Long, D. M., Baker, D., Brooks, D. H.,
-                    van Driel-Gesztelyi, L., Laming, J. M., Valori, G.
+                    <span class="author-highlight">To, Andy S. H.</span>, Long,
+                    D. M., Baker, D., Brooks, D. H., van Driel-Gesztelyi, L.,
+                    Laming, J. M., Valori, G.
                   </p>
                   <p class="publication-card__meta">
-                    The Astrophysical Journal, 911, 86 (2021).
+                    The Astrophysical Journal, 911, 86 (2021)
                   </p>
                 </div>
                 <div class="publication-card__actions">
@@ -477,7 +1507,7 @@
                     class="publication-card__toggle"
                     type="button"
                     aria-expanded="false"
-                    aria-controls="pub-summary-2021"
+                    aria-controls="pub-summary-2021-fa"
                     aria-label="Show summary for The evolution of plasma composition during a solar flare"
                   >
                     <span class="publication-card__toggle-label">Summary</span>
@@ -487,15 +1517,211 @@
                   </button>
                 </div>
               </div>
-              <div class="publication-card__abstract" id="pub-summary-2021">
+              <div class="publication-card__abstract" id="pub-summary-2021-fa">
                 <div class="publication-card__abstract-inner">
                   <p class="publication-card__abstract-label">Summary</p>
                   <p>
-                    This paper studies coronal elemental abundances during a
-                    small flare with Hinode/EIS. It finds a strong flare-time
-                    increase in the Ca/Ar diagnostic, while Si/S remains
-                    comparatively unchanged, and discusses dynamic fractionation
-                    and flare heating as possible explanations.
+                    Using Hinode/EIS observations of a small flare, this paper
+                    compares abundance diagnostics before and during the event.
+                    It finds a strong flare-time increase in the Ca XIV/Ar XIV
+                    ratio while Si X/S X remains comparatively unchanged, and
+                    discusses how flare heating and chromospheric plasma
+                    injection may affect different diagnostics.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li
+            class="publication-list__item"
+            data-kind="collaborative"
+            data-year="2021"
+          >
+            <article class="publication-card publication-card--bibliography">
+              <div class="publication-card__header" data-publication-trigger>
+                <div class="publication-card__copy">
+                  <p class="publication-card__eyebrow">2021 · Collaborative</p>
+                  <p class="publication-list__title">
+                    <a
+                      href="https://ui.adsabs.harvard.edu/abs/2021RSPTA.37900216S/abstract"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      >Spectropolarimetric fluctuations in a sunspot
+                      chromosphere.</a
+                    >
+                  </p>
+                  <p class="publication-card__authors">
+                    Stangalini, M., Baker, D., Valori, G., Jess, D. B.,
+                    Jafarzadeh, S., Murabito, M.,
+                    <span class="author-highlight">To, Andy S. H.</span>, et
+                    al.
+                  </p>
+                  <p class="publication-card__meta">
+                    Philosophical Transactions of the Royal Society A, 379
+                    (2021)
+                  </p>
+                </div>
+                <div class="publication-card__actions">
+                  <a
+                    class="bibliography-entry__link"
+                    href="https://ui.adsabs.harvard.edu/abs/2021RSPTA.37900216S/abstract"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >ADS abstract</a
+                  >
+                  <button
+                    class="publication-card__toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="pub-summary-2021-co-1"
+                    aria-label="Show summary for Spectropolarimetric fluctuations in a sunspot chromosphere"
+                  >
+                    <span class="publication-card__toggle-label">Summary</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8 10l4 4 4-4"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="publication-card__abstract" id="pub-summary-2021-co-1">
+                <div class="publication-card__abstract-inner">
+                  <p class="publication-card__abstract-label">Summary</p>
+                  <p>
+                    This paper uses high-resolution spectropolarimetry to study
+                    intensity and circular-polarization fluctuations in a
+                    sunspot chromosphere. It finds a clear link between the two
+                    signals over a narrow range of field inclinations,
+                    consistent with Alfvénic perturbations in the sunspot.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li
+            class="publication-list__item"
+            data-kind="collaborative"
+            data-year="2021"
+          >
+            <article class="publication-card publication-card--bibliography">
+              <div class="publication-card__header" data-publication-trigger>
+                <div class="publication-card__copy">
+                  <p class="publication-card__eyebrow">2021 · Collaborative</p>
+                  <p class="publication-list__title">
+                    <a
+                      href="https://ui.adsabs.harvard.edu/abs/2021ApJ...907...16B/abstract"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      >Alfvénic Perturbations in a Sunspot Chromosphere Linked
+                      to Fractionated Plasma in the Corona.</a
+                    >
+                  </p>
+                  <p class="publication-card__authors">
+                    Baker, D., Stangalini, M., Valori, G., Brooks, D. H.,
+                    <span class="author-highlight">To, Andy S. H.</span>, et
+                    al.
+                  </p>
+                  <p class="publication-card__meta">
+                    The Astrophysical Journal, 907, 16 (2021)
+                  </p>
+                </div>
+                <div class="publication-card__actions">
+                  <a
+                    class="bibliography-entry__link"
+                    href="https://ui.adsabs.harvard.edu/abs/2021ApJ...907...16B/abstract"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >ADS abstract</a
+                  >
+                  <button
+                    class="publication-card__toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="pub-summary-2021-co-2"
+                    aria-label="Show summary for Alfvénic Perturbations in a Sunspot Chromosphere Linked to Fractionated Plasma in the Corona"
+                  >
+                    <span class="publication-card__toggle-label">Summary</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8 10l4 4 4-4"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="publication-card__abstract" id="pub-summary-2021-co-2">
+                <div class="publication-card__abstract-inner">
+                  <p class="publication-card__abstract-label">Summary</p>
+                  <p>
+                    This paper combines photospheric, chromospheric, and
+                    coronal observations with magnetic modelling to map
+                    composition structure around a large sunspot. It finds that
+                    fractionated coronal plasma is magnetically linked to
+                    locations of chromospheric Alfvénic fluctuations, tying
+                    sunspot wave activity to observable coronal abundance
+                    variation.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li
+            class="publication-list__item"
+            data-kind="collaborative"
+            data-year="2020"
+          >
+            <article class="publication-card publication-card--bibliography">
+              <div class="publication-card__header" data-publication-trigger>
+                <div class="publication-card__copy">
+                  <p class="publication-card__eyebrow">2020 · Collaborative</p>
+                  <p class="publication-list__title">
+                    <a
+                      href="https://ui.adsabs.harvard.edu/abs/2020ApJ...894...35B/abstract"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      >Can Subphotospheric Magnetic Reconnection Change the
+                      Elemental Composition in the Solar Corona?</a
+                    >
+                  </p>
+                  <p class="publication-card__authors">
+                    Baker, D., van Driel-Gesztelyi, L., Brooks, D. H.,
+                    Démoulin, P., Valori, G., Long, D. M., Laming, J. M.,
+                    <span class="author-highlight">To, Andy S. H.</span>, et
+                    al.
+                  </p>
+                  <p class="publication-card__meta">
+                    The Astrophysical Journal, 894, 35 (2020)
+                  </p>
+                </div>
+                <div class="publication-card__actions">
+                  <a
+                    class="bibliography-entry__link"
+                    href="https://ui.adsabs.harvard.edu/abs/2020ApJ...894...35B/abstract"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >ADS abstract</a
+                  >
+                  <button
+                    class="publication-card__toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="pub-summary-2020-co-1"
+                    aria-label="Show summary for Can Subphotospheric Magnetic Reconnection Change the Elemental Composition in the Solar Corona"
+                  >
+                    <span class="publication-card__toggle-label">Summary</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8 10l4 4 4-4"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="publication-card__abstract" id="pub-summary-2020-co-1">
+                <div class="publication-card__abstract-inner">
+                  <p class="publication-card__abstract-label">Summary</p>
+                  <p>
+                    This paper studies inverse-FIP patches in the complex
+                    active region AR 12673 and links them to strong light
+                    bridges and coalescing sunspots. The results support a
+                    scenario in which subphotospheric reconnection generates
+                    waves below the chromosphere, while flare evaporation lifts
+                    the resulting inverse-FIP plasma into the corona.
                   </p>
                 </div>
               </div>
@@ -503,958 +1729,12 @@
           </li>
         </ol>
         <p class="content-note">
-          Representative figures for these papers are collected on the
-          <a href="./figures.html">figures page</a>.
+          Representative figures for the first-author papers are collected on
+          the <a href="./figures.html">figures page</a>.
         </p>
       </section>
 
-      <section class="content-section" id="collaborative">
-        <p class="section-tag">
-          <span class="section-tag__dot" aria-hidden="true"></span>
-          <span>Collaborative</span>
-        </p>
-        <h2>Collaborative papers</h2>
-        <p>
-          Published papers link to ADS abstracts or DOI records. Author lists
-          are abbreviated here for readability, and submitted manuscripts
-          follow the current CV until a public record is available.
-        </p>
-
-        <div class="bibliography-group">
-          <h3 class="bibliography-group__title">Submitted and in review</h3>
-          <ol class="publication-list">
-            <li class="publication-list__item">
-              <article class="publication-card publication-card--bibliography">
-                <div class="publication-card__header" data-publication-trigger>
-                  <div class="publication-card__copy">
-                    <p class="publication-list__title">
-                      Radiative hydrodynamic simulations of FIP fractionation in
-                      solar flares.
-                    </p>
-                    <p class="publication-card__authors">Reep, J. W., et al.</p>
-                    <p class="publication-card__meta">
-                      Submitted to Philosophical Transactions of the Royal
-                      Society A.
-                    </p>
-                  </div>
-                  <div class="publication-card__actions">
-                    <span class="bibliography-entry__chip">Submitted</span>
-                    <button
-                      class="publication-card__toggle"
-                      type="button"
-                      aria-expanded="false"
-                      aria-controls="pub-summary-co-1"
-                      aria-label="Show summary for Radiative hydrodynamic simulations of FIP fractionation in solar flares"
-                    >
-                      <span class="publication-card__toggle-label">Summary</span>
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 10l4 4 4-4"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="publication-card__abstract" id="pub-summary-co-1">
-                  <div class="publication-card__abstract-inner">
-                    <p class="publication-card__abstract-label">Summary</p>
-                    <p>
-                      This paper uses radiative hydrodynamic flare simulations
-                      to test how elemental fractionation develops in flare
-                      atmospheres.
-                    </p>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="publication-list__item">
-              <article class="publication-card publication-card--bibliography">
-                <div class="publication-card__header" data-publication-trigger>
-                  <div class="publication-card__copy">
-                    <p class="publication-list__title">
-                      Signs of Sulphur fractionation under high magnetic field
-                      strength.
-                    </p>
-                    <p class="publication-card__authors">
-                      Orlovskij, D., To, Andy S. H., and Long, D. M.
-                    </p>
-                    <p class="publication-card__meta">
-                      Submitted to Philosophical Transactions of the Royal
-                      Society A.
-                    </p>
-                  </div>
-                  <div class="publication-card__actions">
-                    <span class="bibliography-entry__chip">Submitted</span>
-                    <button
-                      class="publication-card__toggle"
-                      type="button"
-                      aria-expanded="false"
-                      aria-controls="pub-summary-co-2"
-                      aria-label="Show summary for Signs of Sulphur fractionation under high magnetic field strength"
-                    >
-                      <span class="publication-card__toggle-label">Summary</span>
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 10l4 4 4-4"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="publication-card__abstract" id="pub-summary-co-2">
-                  <div class="publication-card__abstract-inner">
-                    <p class="publication-card__abstract-label">Summary</p>
-                    <p>
-                      This work examines sulphur fractionation under strong
-                      magnetic field conditions to test intermediate-FIP
-                      behaviour in active solar plasma.
-                    </p>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="publication-list__item">
-              <article class="publication-card publication-card--bibliography">
-                <div class="publication-card__header" data-publication-trigger>
-                  <div class="publication-card__copy">
-                    <p class="publication-list__title">
-                      Dynamic modeling of coronal abundances during flares on
-                      M-dwarf stars.
-                    </p>
-                    <p class="publication-card__authors">
-                      Brooks, D. H., et al.
-                    </p>
-                    <p class="publication-card__meta">
-                      Submitted to Philosophical Transactions of the Royal
-                      Society A.
-                    </p>
-                  </div>
-                  <div class="publication-card__actions">
-                    <span class="bibliography-entry__chip">Submitted</span>
-                    <button
-                      class="publication-card__toggle"
-                      type="button"
-                      aria-expanded="false"
-                      aria-controls="pub-summary-co-3"
-                      aria-label="Show summary for Dynamic modeling of coronal abundances during flares on M-dwarf stars"
-                    >
-                      <span class="publication-card__toggle-label">Summary</span>
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 10l4 4 4-4"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="publication-card__abstract" id="pub-summary-co-3">
-                  <div class="publication-card__abstract-inner">
-                    <p class="publication-card__abstract-label">Summary</p>
-                    <p>
-                      This study extends flare-abundance modeling to M-dwarf
-                      stars and examines how dynamic flare evolution shapes
-                      coronal composition diagnostics.
-                    </p>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="publication-list__item">
-              <article class="publication-card publication-card--bibliography">
-                <div class="publication-card__header" data-publication-trigger>
-                  <div class="publication-card__copy">
-                    <p class="publication-list__title">
-                      Inverse FIP plasma in the solar atmosphere: a synthesis of
-                      current understanding and new insights.
-                    </p>
-                    <p class="publication-card__authors">Baker, D., et al.</p>
-                    <p class="publication-card__meta">
-                      Submitted to Philosophical Transactions of the Royal
-                      Society A.
-                    </p>
-                  </div>
-                  <div class="publication-card__actions">
-                    <span class="bibliography-entry__chip">Submitted</span>
-                    <button
-                      class="publication-card__toggle"
-                      type="button"
-                      aria-expanded="false"
-                      aria-controls="pub-summary-co-4"
-                      aria-label="Show summary for Inverse FIP plasma in the solar atmosphere"
-                    >
-                      <span class="publication-card__toggle-label">Summary</span>
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 10l4 4 4-4"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="publication-card__abstract" id="pub-summary-co-4">
-                  <div class="publication-card__abstract-inner">
-                    <p class="publication-card__abstract-label">Summary</p>
-                    <p>
-                      This synthesis reviews inverse-FIP observations, physical
-                      interpretations, and open questions across the solar
-                      atmosphere.
-                    </p>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="publication-list__item">
-              <article class="publication-card publication-card--bibliography">
-                <div class="publication-card__header" data-publication-trigger>
-                  <div class="publication-card__copy">
-                    <p class="publication-list__title">
-                      Sulfur fractionation in coronal plumes as observed by
-                      Solar Orbiter/SPICE.
-                    </p>
-                    <p class="publication-card__authors">
-                      Mzerguat, S., et al.
-                    </p>
-                    <p class="publication-card__meta">
-                      Submitted to Philosophical Transactions of the Royal
-                      Society A.
-                    </p>
-                  </div>
-                  <div class="publication-card__actions">
-                    <span class="bibliography-entry__chip">Submitted</span>
-                    <button
-                      class="publication-card__toggle"
-                      type="button"
-                      aria-expanded="false"
-                      aria-controls="pub-summary-co-5"
-                      aria-label="Show summary for Sulfur fractionation in coronal plumes as observed by Solar Orbiter SPICE"
-                    >
-                      <span class="publication-card__toggle-label">Summary</span>
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 10l4 4 4-4"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="publication-card__abstract" id="pub-summary-co-5">
-                  <div class="publication-card__abstract-inner">
-                    <p class="publication-card__abstract-label">Summary</p>
-                    <p>
-                      This paper uses Solar Orbiter/SPICE observations to study
-                      sulphur fractionation in coronal plumes.
-                    </p>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="publication-list__item">
-              <article class="publication-card publication-card--bibliography">
-                <div class="publication-card__header" data-publication-trigger>
-                  <div class="publication-card__copy">
-                    <p class="publication-list__title">
-                      Comparing First Ionisation Potential bias diagnostics in
-                      the solar atmosphere.
-                    </p>
-                    <p class="publication-card__authors">
-                      Spruksta, K. D., Long, D. M., and To, Andy S. H.
-                    </p>
-                    <p class="publication-card__meta">
-                      Submitted to Philosophical Transactions of the Royal
-                      Society A.
-                    </p>
-                  </div>
-                  <div class="publication-card__actions">
-                    <span class="bibliography-entry__chip">Submitted</span>
-                    <button
-                      class="publication-card__toggle"
-                      type="button"
-                      aria-expanded="false"
-                      aria-controls="pub-summary-co-6"
-                      aria-label="Show summary for Comparing First Ionisation Potential bias diagnostics in the solar atmosphere"
-                    >
-                      <span class="publication-card__toggle-label">Summary</span>
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 10l4 4 4-4"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="publication-card__abstract" id="pub-summary-co-6">
-                  <div class="publication-card__abstract-inner">
-                    <p class="publication-card__abstract-label">Summary</p>
-                    <p>
-                      This study compares commonly used FIP-bias diagnostics and
-                      how consistently they trace abundance variation in the
-                      solar atmosphere.
-                    </p>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="publication-list__item">
-              <article class="publication-card publication-card--bibliography">
-                <div class="publication-card__header" data-publication-trigger>
-                  <div class="publication-card__copy">
-                    <p class="publication-list__title">
-                      Identifying spectroscopic signatures of the ponderomotive
-                      force in the solar chromosphere.
-                    </p>
-                    <p class="publication-card__authors">Long, D. M., et al.</p>
-                    <p class="publication-card__meta">
-                      Submitted to Astronomy &amp; Astrophysics.
-                    </p>
-                  </div>
-                  <div class="publication-card__actions">
-                    <span class="bibliography-entry__chip">Submitted</span>
-                    <button
-                      class="publication-card__toggle"
-                      type="button"
-                      aria-expanded="false"
-                      aria-controls="pub-summary-co-7"
-                      aria-label="Show summary for Identifying spectroscopic signatures of the ponderomotive force in the solar chromosphere"
-                    >
-                      <span class="publication-card__toggle-label">Summary</span>
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 10l4 4 4-4"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="publication-card__abstract" id="pub-summary-co-7">
-                  <div class="publication-card__abstract-inner">
-                    <p class="publication-card__abstract-label">Summary</p>
-                    <p>
-                      This work looks for chromospheric spectroscopic observables
-                      associated with the ponderomotive force and fractionation.
-                    </p>
-                  </div>
-                </div>
-              </article>
-            </li>
-          </ol>
-        </div>
-
-        <div class="bibliography-group">
-          <h3 class="bibliography-group__title">Published</h3>
-          <ol class="publication-list">
-            <li class="publication-list__item">
-              <article class="publication-card publication-card--bibliography">
-                <div class="publication-card__header" data-publication-trigger>
-                  <div class="publication-card__copy">
-                    <p class="publication-list__title">
-                      <a
-                        href="https://doi.org/10.3847/1538-4357/ae019d"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        >Spatiotemporal Low FIP Abundance: A Catalyst for Coronal
-                        Condensation.</a
-                      >
-                    </p>
-                    <p class="publication-card__authors">
-                      Fushimi Benavitz, L., et al.
-                    </p>
-                    <p class="publication-card__meta">
-                      The Astrophysical Journal, 992, 4 (2025).
-                    </p>
-                  </div>
-                  <div class="publication-card__actions">
-                    <a
-                      class="bibliography-entry__link"
-                      href="https://doi.org/10.3847/1538-4357/ae019d"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      >DOI</a
-                    >
-                    <button
-                      class="publication-card__toggle"
-                      type="button"
-                      aria-expanded="false"
-                      aria-controls="pub-summary-co-8"
-                      aria-label="Show summary for Spatiotemporal Low FIP Abundance A Catalyst for Coronal Condensation"
-                    >
-                      <span class="publication-card__toggle-label">Summary</span>
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 10l4 4 4-4"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="publication-card__abstract" id="pub-summary-co-8">
-                  <div class="publication-card__abstract-inner">
-                    <p class="publication-card__abstract-label">Summary</p>
-                    <p>
-                      This paper studies low-FIP abundance structure in time and
-                      space and its connection to coronal condensation.
-                    </p>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="publication-list__item">
-              <article class="publication-card publication-card--bibliography">
-                <div class="publication-card__header" data-publication-trigger>
-                  <div class="publication-card__copy">
-                    <p class="publication-list__title">
-                      <a
-                        href="https://ui.adsabs.harvard.edu/abs/2024ApJ...970...39B/abstract"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        >Searching for Evidence of Subchromospheric Magnetic
-                        Reconnection on the Sun.</a
-                      >
-                    </p>
-                    <p class="publication-card__authors">Baker, D., et al.</p>
-                    <p class="publication-card__meta">
-                      The Astrophysical Journal, 970, 39 (2024).
-                    </p>
-                  </div>
-                  <div class="publication-card__actions">
-                    <a
-                      class="bibliography-entry__link"
-                      href="https://ui.adsabs.harvard.edu/abs/2024ApJ...970...39B/abstract"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      >ADS abstract</a
-                    >
-                    <button
-                      class="publication-card__toggle"
-                      type="button"
-                      aria-expanded="false"
-                      aria-controls="pub-summary-co-9"
-                      aria-label="Show summary for Searching for Evidence of Subchromospheric Magnetic Reconnection on the Sun"
-                    >
-                      <span class="publication-card__toggle-label">Summary</span>
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 10l4 4 4-4"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="publication-card__abstract" id="pub-summary-co-9">
-                  <div class="publication-card__abstract-inner">
-                    <p class="publication-card__abstract-label">Summary</p>
-                    <p>
-                      This study tests whether subchromospheric magnetic
-                      reconnection can be identified observationally and linked
-                      to composition changes.
-                    </p>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="publication-list__item">
-              <article class="publication-card publication-card--bibliography">
-                <div class="publication-card__header" data-publication-trigger>
-                  <div class="publication-card__copy">
-                    <p class="publication-list__title">
-                      <a
-                        href="https://ui.adsabs.harvard.edu/abs/2024PhRvL.132u5201M/abstract"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        >Observation of Alfven Wave Reflection in the Solar
-                        Chromosphere: Ponderomotive Force and First Ionization
-                        Potential Effect.</a
-                      >
-                    </p>
-                    <p class="publication-card__authors">Murabito, M., et al.</p>
-                    <p class="publication-card__meta">
-                      Physical Review Letters, 132 (2024).
-                    </p>
-                  </div>
-                  <div class="publication-card__actions">
-                    <a
-                      class="bibliography-entry__link"
-                      href="https://ui.adsabs.harvard.edu/abs/2024PhRvL.132u5201M/abstract"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      >ADS abstract</a
-                    >
-                    <button
-                      class="publication-card__toggle"
-                      type="button"
-                      aria-expanded="false"
-                      aria-controls="pub-summary-co-10"
-                      aria-label="Show summary for Observation of Alfven Wave Reflection in the Solar Chromosphere"
-                    >
-                      <span class="publication-card__toggle-label">Summary</span>
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 10l4 4 4-4"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="publication-card__abstract" id="pub-summary-co-10">
-                  <div class="publication-card__abstract-inner">
-                    <p class="publication-card__abstract-label">Summary</p>
-                    <p>
-                      This paper reports observational evidence of Alfven wave
-                      reflection in the chromosphere and discusses its connection
-                      to the FIP effect.
-                    </p>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="publication-list__item">
-              <article class="publication-card publication-card--bibliography">
-                <div class="publication-card__header" data-publication-trigger>
-                  <div class="publication-card__copy">
-                    <p class="publication-list__title">
-                      <a
-                        href="https://ui.adsabs.harvard.edu/abs/2024ApJ...965...63L/abstract"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        >Identifying Plasma Fractionation Processes in the
-                        Chromosphere Using IRIS.</a
-                      >
-                    </p>
-                    <p class="publication-card__authors">Long, D. M., et al.</p>
-                    <p class="publication-card__meta">
-                      The Astrophysical Journal, 965, 63 (2024).
-                    </p>
-                  </div>
-                  <div class="publication-card__actions">
-                    <a
-                      class="bibliography-entry__link"
-                      href="https://ui.adsabs.harvard.edu/abs/2024ApJ...965...63L/abstract"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      >ADS abstract</a
-                    >
-                    <button
-                      class="publication-card__toggle"
-                      type="button"
-                      aria-expanded="false"
-                      aria-controls="pub-summary-co-11"
-                      aria-label="Show summary for Identifying Plasma Fractionation Processes in the Chromosphere Using IRIS"
-                    >
-                      <span class="publication-card__toggle-label">Summary</span>
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 10l4 4 4-4"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="publication-card__abstract" id="pub-summary-co-11">
-                  <div class="publication-card__abstract-inner">
-                    <p class="publication-card__abstract-label">Summary</p>
-                    <p>
-                      This work uses IRIS spectroscopy to identify
-                      chromospheric signatures of plasma fractionation
-                      processes.
-                    </p>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="publication-list__item">
-              <article class="publication-card publication-card--bibliography">
-                <div class="publication-card__header" data-publication-trigger>
-                  <div class="publication-card__copy">
-                    <p class="publication-list__title">
-                      <a
-                        href="https://ui.adsabs.harvard.edu/abs/2023ApJS..267...11Y/abstract"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        >Slow Solar Wind Connection Science during Solar
-                        Orbiter's First Close Perihelion Passage.</a
-                      >
-                    </p>
-                    <p class="publication-card__authors">Yardley, S. L., et al.</p>
-                    <p class="publication-card__meta">
-                      The Astrophysical Journal Supplement Series, 267, 11
-                      (2023).
-                    </p>
-                  </div>
-                  <div class="publication-card__actions">
-                    <a
-                      class="bibliography-entry__link"
-                      href="https://ui.adsabs.harvard.edu/abs/2023ApJS..267...11Y/abstract"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      >ADS abstract</a
-                    >
-                    <button
-                      class="publication-card__toggle"
-                      type="button"
-                      aria-expanded="false"
-                      aria-controls="pub-summary-co-12"
-                      aria-label="Show summary for Slow Solar Wind Connection Science during Solar Orbiters First Close Perihelion Passage"
-                    >
-                      <span class="publication-card__toggle-label">Summary</span>
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 10l4 4 4-4"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="publication-card__abstract" id="pub-summary-co-12">
-                  <div class="publication-card__abstract-inner">
-                    <p class="publication-card__abstract-label">Summary</p>
-                    <p>
-                      This paper connects Solar Orbiter remote-sensing and
-                      in situ measurements during the first close perihelion
-                      passage to study slow-solar-wind source regions.
-                    </p>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="publication-list__item">
-              <article class="publication-card publication-card--bibliography">
-                <div class="publication-card__header" data-publication-trigger>
-                  <div class="publication-card__copy">
-                    <p class="publication-list__title">
-                      <a
-                        href="https://ui.adsabs.harvard.edu/abs/2023ApJ...950..150N/abstract"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        >The Merging of a Coronal Dimming and the Southern Polar
-                        Coronal Hole.</a
-                      >
-                    </p>
-                    <p class="publication-card__authors">Ngampoopun, N., et al.</p>
-                    <p class="publication-card__meta">
-                      The Astrophysical Journal, 950, 150 (2023).
-                    </p>
-                  </div>
-                  <div class="publication-card__actions">
-                    <a
-                      class="bibliography-entry__link"
-                      href="https://ui.adsabs.harvard.edu/abs/2023ApJ...950..150N/abstract"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      >ADS abstract</a
-                    >
-                    <button
-                      class="publication-card__toggle"
-                      type="button"
-                      aria-expanded="false"
-                      aria-controls="pub-summary-co-13"
-                      aria-label="Show summary for The Merging of a Coronal Dimming and the Southern Polar Coronal Hole"
-                    >
-                      <span class="publication-card__toggle-label">Summary</span>
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 10l4 4 4-4"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="publication-card__abstract" id="pub-summary-co-13">
-                  <div class="publication-card__abstract-inner">
-                    <p class="publication-card__abstract-label">Summary</p>
-                    <p>
-                      This study follows the evolution and merging of a coronal
-                      dimming with the southern polar coronal hole.
-                    </p>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="publication-list__item">
-              <article class="publication-card publication-card--bibliography">
-                <div class="publication-card__header" data-publication-trigger>
-                  <div class="publication-card__copy">
-                    <p class="publication-list__title">
-                      <a
-                        href="https://ui.adsabs.harvard.edu/abs/2023ApJ...950...65B/abstract"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        >Observational Evidence of S-web Source of the Slow Solar
-                        Wind.</a
-                      >
-                    </p>
-                    <p class="publication-card__authors">Baker, D., et al.</p>
-                    <p class="publication-card__meta">
-                      The Astrophysical Journal, 950, 65 (2023).
-                    </p>
-                  </div>
-                  <div class="publication-card__actions">
-                    <a
-                      class="bibliography-entry__link"
-                      href="https://ui.adsabs.harvard.edu/abs/2023ApJ...950...65B/abstract"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      >ADS abstract</a
-                    >
-                    <button
-                      class="publication-card__toggle"
-                      type="button"
-                      aria-expanded="false"
-                      aria-controls="pub-summary-co-14"
-                      aria-label="Show summary for Observational Evidence of S web Source of the Slow Solar Wind"
-                    >
-                      <span class="publication-card__toggle-label">Summary</span>
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 10l4 4 4-4"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="publication-card__abstract" id="pub-summary-co-14">
-                  <div class="publication-card__abstract-inner">
-                    <p class="publication-card__abstract-label">Summary</p>
-                    <p>
-                      This paper presents observational evidence that S-web
-                      magnetic structure contributes to the slow solar wind.
-                    </p>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="publication-list__item">
-              <article class="publication-card publication-card--bibliography">
-                <div class="publication-card__header" data-publication-trigger>
-                  <div class="publication-card__copy">
-                    <p class="publication-list__title">
-                      <a
-                        href="https://ui.adsabs.harvard.edu/abs/2022ApJ...933..245M/abstract"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        >What Determines Active Region Coronal Plasma
-                        Composition?</a
-                      >
-                    </p>
-                    <p class="publication-card__authors">Mihailescu, T., et al.</p>
-                    <p class="publication-card__meta">
-                      The Astrophysical Journal, 933, 245 (2022).
-                    </p>
-                  </div>
-                  <div class="publication-card__actions">
-                    <a
-                      class="bibliography-entry__link"
-                      href="https://ui.adsabs.harvard.edu/abs/2022ApJ...933..245M/abstract"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      >ADS abstract</a
-                    >
-                    <button
-                      class="publication-card__toggle"
-                      type="button"
-                      aria-expanded="false"
-                      aria-controls="pub-summary-co-15"
-                      aria-label="Show summary for What Determines Active Region Coronal Plasma Composition"
-                    >
-                      <span class="publication-card__toggle-label">Summary</span>
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 10l4 4 4-4"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="publication-card__abstract" id="pub-summary-co-15">
-                  <div class="publication-card__abstract-inner">
-                    <p class="publication-card__abstract-label">Summary</p>
-                    <p>
-                      This study examines the magnetic and coronal conditions
-                      associated with active-region plasma composition.
-                    </p>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="publication-list__item">
-              <article class="publication-card publication-card--bibliography">
-                <div class="publication-card__header" data-publication-trigger>
-                  <div class="publication-card__copy">
-                    <p class="publication-list__title">
-                      <a
-                        href="https://ui.adsabs.harvard.edu/abs/2022ApJ...924...17B/abstract"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        >Evolution of Plasma Composition in an Eruptive Flux
-                        Rope.</a
-                      >
-                    </p>
-                    <p class="publication-card__authors">Baker, D., et al.</p>
-                    <p class="publication-card__meta">
-                      The Astrophysical Journal, 924, 17 (2022).
-                    </p>
-                  </div>
-                  <div class="publication-card__actions">
-                    <a
-                      class="bibliography-entry__link"
-                      href="https://ui.adsabs.harvard.edu/abs/2022ApJ...924...17B/abstract"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      >ADS abstract</a
-                    >
-                    <button
-                      class="publication-card__toggle"
-                      type="button"
-                      aria-expanded="false"
-                      aria-controls="pub-summary-co-16"
-                      aria-label="Show summary for Evolution of Plasma Composition in an Eruptive Flux Rope"
-                    >
-                      <span class="publication-card__toggle-label">Summary</span>
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 10l4 4 4-4"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="publication-card__abstract" id="pub-summary-co-16">
-                  <div class="publication-card__abstract-inner">
-                    <p class="publication-card__abstract-label">Summary</p>
-                    <p>
-                      This paper tracks how plasma composition changes during an
-                      eruptive flux-rope event.
-                    </p>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="publication-list__item">
-              <article class="publication-card publication-card--bibliography">
-                <div class="publication-card__header" data-publication-trigger>
-                  <div class="publication-card__copy">
-                    <p class="publication-list__title">
-                      <a
-                        href="https://ui.adsabs.harvard.edu/abs/2021RSPTA.37900216S/abstract"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        >Spectropolarimetric fluctuations in a sunspot
-                        chromosphere.</a
-                      >
-                    </p>
-                    <p class="publication-card__authors">Stangalini, M., et al.</p>
-                    <p class="publication-card__meta">
-                      Philosophical Transactions of the Royal Society A, 379
-                      (2021).
-                    </p>
-                  </div>
-                  <div class="publication-card__actions">
-                    <a
-                      class="bibliography-entry__link"
-                      href="https://ui.adsabs.harvard.edu/abs/2021RSPTA.37900216S/abstract"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      >ADS abstract</a
-                    >
-                    <button
-                      class="publication-card__toggle"
-                      type="button"
-                      aria-expanded="false"
-                      aria-controls="pub-summary-co-17"
-                      aria-label="Show summary for Spectropolarimetric fluctuations in a sunspot chromosphere"
-                    >
-                      <span class="publication-card__toggle-label">Summary</span>
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 10l4 4 4-4"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="publication-card__abstract" id="pub-summary-co-17">
-                  <div class="publication-card__abstract-inner">
-                    <p class="publication-card__abstract-label">Summary</p>
-                    <p>
-                      This study analyzes sunspot chromospheric
-                      spectropolarimetric fluctuations and their wave behaviour.
-                    </p>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="publication-list__item">
-              <article class="publication-card publication-card--bibliography">
-                <div class="publication-card__header" data-publication-trigger>
-                  <div class="publication-card__copy">
-                    <p class="publication-list__title">
-                      <a
-                        href="https://ui.adsabs.harvard.edu/abs/2021ApJ...907...16B/abstract"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        >Alfvenic Perturbations in a Sunspot Chromosphere Linked
-                        to Fractionated Plasma in the Corona.</a
-                      >
-                    </p>
-                    <p class="publication-card__authors">Baker, D., et al.</p>
-                    <p class="publication-card__meta">
-                      The Astrophysical Journal, 907, 16 (2021).
-                    </p>
-                  </div>
-                  <div class="publication-card__actions">
-                    <a
-                      class="bibliography-entry__link"
-                      href="https://ui.adsabs.harvard.edu/abs/2021ApJ...907...16B/abstract"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      >ADS abstract</a
-                    >
-                    <button
-                      class="publication-card__toggle"
-                      type="button"
-                      aria-expanded="false"
-                      aria-controls="pub-summary-co-18"
-                      aria-label="Show summary for Alfvenic Perturbations in a Sunspot Chromosphere Linked to Fractionated Plasma in the Corona"
-                    >
-                      <span class="publication-card__toggle-label">Summary</span>
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 10l4 4 4-4"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="publication-card__abstract" id="pub-summary-co-18">
-                  <div class="publication-card__abstract-inner">
-                    <p class="publication-card__abstract-label">Summary</p>
-                    <p>
-                      This paper links sunspot chromospheric Alfvenic
-                      perturbations to fractionated plasma measured higher in
-                      the corona.
-                    </p>
-                  </div>
-                </div>
-              </article>
-            </li>
-            <li class="publication-list__item">
-              <article class="publication-card publication-card--bibliography">
-                <div class="publication-card__header" data-publication-trigger>
-                  <div class="publication-card__copy">
-                    <p class="publication-list__title">
-                      <a
-                        href="https://ui.adsabs.harvard.edu/abs/2020ApJ...894...35B/abstract"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        >Can Subphotospheric Magnetic Reconnection Change the
-                        Elemental Composition in the Solar Corona?</a
-                      >
-                    </p>
-                    <p class="publication-card__authors">Baker, D., et al.</p>
-                    <p class="publication-card__meta">
-                      The Astrophysical Journal, 894, 35 (2020).
-                    </p>
-                  </div>
-                  <div class="publication-card__actions">
-                    <a
-                      class="bibliography-entry__link"
-                      href="https://ui.adsabs.harvard.edu/abs/2020ApJ...894...35B/abstract"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      >ADS abstract</a
-                    >
-                    <button
-                      class="publication-card__toggle"
-                      type="button"
-                      aria-expanded="false"
-                      aria-controls="pub-summary-co-19"
-                      aria-label="Show summary for Can Subphotospheric Magnetic Reconnection Change the Elemental Composition in the Solar Corona"
-                    >
-                      <span class="publication-card__toggle-label">Summary</span>
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8 10l4 4 4-4"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="publication-card__abstract" id="pub-summary-co-19">
-                  <div class="publication-card__abstract-inner">
-                    <p class="publication-card__abstract-label">Summary</p>
-                    <p>
-                      This work tests whether subphotospheric magnetic
-                      reconnection can modify coronal elemental composition.
-                    </p>
-                  </div>
-                </div>
-              </article>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section class="content-section" id="dataset">
+        <section class="content-section" id="dataset">
         <p class="section-tag">
           <span class="section-tag__dot" aria-hidden="true"></span>
           <span>Dataset</span>
@@ -1494,50 +1774,53 @@
         </ol>
       </section>
 
-      <section class="content-section content-section--footer" id="links">
-        <h2>Links</h2>
-        <div class="link-footer">
-          <div class="link-footer__group">
-            <h3>Research record</h3>
-            <ul class="link-footer__list">
-              <li>
-                <a
-                  href="https://ui.adsabs.harvard.edu/user/libraries/9ZO21vKyRQqj28TcnHH9GQ"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  >ADS library</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://orcid.org/0000-0003-0774-9084"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  >ORCID</a
-                >
-              </li>
-            </ul>
+        <section class="content-section content-section--footer" id="links">
+          <h2>Links</h2>
+          <div class="link-footer">
+            <div class="link-footer__group">
+              <h3>Research record</h3>
+              <ul class="link-footer__list">
+                <li>
+                  <a
+                    href="https://ui.adsabs.harvard.edu/user/libraries/9ZO21vKyRQqj28TcnHH9GQ"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >ADS library</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://orcid.org/0000-0003-0774-9084"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >ORCID</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="link-footer__group">
+              <h3>Pages</h3>
+              <ul class="link-footer__list">
+                <li><a href="./figures.html">Figures</a></li>
+                <li><a href="./">Homepage</a></li>
+              </ul>
+            </div>
+            <div class="link-footer__group">
+              <h3>Documents</h3>
+              <ul class="link-footer__list">
+                <li>
+                  <a href="./documents/andy-shu-ho-to-cv.pdf" download>PDF CV</a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="link-footer__group">
-            <h3>Pages</h3>
-            <ul class="link-footer__list">
-              <li><a href="./figures.html">Figures</a></li>
-              <li><a href="./">Homepage</a></li>
-            </ul>
-          </div>
-          <div class="link-footer__group">
-            <h3>Documents</h3>
-            <ul class="link-footer__list">
-              <li>
-                <a href="./documents/andy-shu-ho-to-cv.pdf" download>PDF CV</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
     <script>
-      document.querySelectorAll(".publication-card").forEach((card) => {
+      const publicationCards = document.querySelectorAll(".publication-card");
+
+      publicationCards.forEach((card) => {
         const header = card.querySelector("[data-publication-trigger]");
         const button = card.querySelector(".publication-card__toggle");
 
@@ -1565,6 +1848,141 @@
           toggleExpanded();
         });
       });
+
+      const publicationList = document.querySelector("[data-publication-list]");
+      const publicationFilters = Array.from(
+        document.querySelectorAll("[data-publication-order]")
+      );
+
+      if (publicationList && publicationFilters.length) {
+        const publicationItems = Array.from(publicationList.children);
+        const reduceMotionQuery = window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        );
+
+        publicationItems.forEach((item, index) => {
+          item.dataset.originalIndex = String(index);
+        });
+
+        const updateFilterState = (mode) => {
+          publicationFilters.forEach((filter) => {
+            const isActive = filter.dataset.publicationOrder === mode;
+            filter.setAttribute("aria-pressed", String(isActive));
+          });
+        };
+
+        const getPriority = (item, mode) => {
+          const kind = item.dataset.kind;
+
+          if (mode === "first-author") {
+            return kind === "first-author" ? 0 : 1;
+          }
+
+          if (mode === "collaborative") {
+            return kind === "collaborative" ? 0 : 1;
+          }
+
+          return kind === "first-author" ? 0 : 1;
+        };
+
+        const compareItems = (a, b, mode) => {
+          const modePriority = getPriority(a, mode) - getPriority(b, mode);
+
+          if (mode !== "all" && modePriority !== 0) {
+            return modePriority;
+          }
+
+          const yearDelta = Number(b.dataset.year) - Number(a.dataset.year);
+          if (yearDelta !== 0) {
+            return yearDelta;
+          }
+
+          if (mode === "all" && modePriority !== 0) {
+            return modePriority;
+          }
+
+          return (
+            Number(a.dataset.originalIndex) - Number(b.dataset.originalIndex)
+          );
+        };
+
+        let currentMode = "all";
+        updateFilterState(currentMode);
+
+        publicationFilters.forEach((filter) => {
+          filter.addEventListener("click", () => {
+            const nextMode = filter.dataset.publicationOrder;
+
+            if (!nextMode || nextMode === currentMode) {
+              return;
+            }
+
+            const firstRects = new Map(
+              publicationItems.map((item) => [item, item.getBoundingClientRect()])
+            );
+
+            const sortedItems = [...publicationItems].sort((a, b) =>
+              compareItems(a, b, nextMode)
+            );
+
+            sortedItems.forEach((item) => {
+              publicationList.appendChild(item);
+            });
+
+            updateFilterState(nextMode);
+
+            if (!reduceMotionQuery.matches) {
+              const lastRects = new Map(
+                publicationItems.map((item) => [item, item.getBoundingClientRect()])
+              );
+
+              publicationList.animate(
+                [
+                  { opacity: 0.92, transform: "translateY(6px)" },
+                  { opacity: 1, transform: "translateY(0)" }
+                ],
+                {
+                  duration: 260,
+                  easing: "cubic-bezier(0.16, 1, 0.3, 1)"
+                }
+              );
+
+              publicationItems.forEach((item) => {
+                const firstRect = firstRects.get(item);
+                const lastRect = lastRects.get(item);
+                const deltaY = firstRect.top - lastRect.top;
+
+                if (Math.abs(deltaY) < 1) {
+                  item.animate(
+                    [{ opacity: 0.84 }, { opacity: 1 }],
+                    {
+                      duration: 220,
+                      easing: "cubic-bezier(0.16, 1, 0.3, 1)"
+                    }
+                  );
+                  return;
+                }
+
+                item.animate(
+                  [
+                    {
+                      transform: `translateY(${deltaY}px)`,
+                      opacity: 0.86
+                    },
+                    { transform: "translateY(0)", opacity: 1 }
+                  ],
+                  {
+                    duration: 320,
+                    easing: "cubic-bezier(0.16, 1, 0.3, 1)"
+                  }
+                );
+              });
+            }
+
+            currentMode = nextMode;
+          });
+        });
+      }
     </script>
     <script src="./cursor-satellite.js"></script>
   </body>
