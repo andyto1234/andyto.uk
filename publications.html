@@ -12,6 +12,12 @@
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#fafafa" />
     <link
+      rel="icon"
+      type="image/png"
+      href="./images/decorations/about-sun.png"
+    />
+    <link rel="apple-touch-icon" href="./images/decorations/about-sun.png" />
+    <link
       rel="canonical"
       href="https://andyto1234.github.io/andyto.uk/publications.html"
     />
@@ -217,7 +223,6 @@
               Collaborative
             </button>
             <a class="publication-filter-link" href="#dataset">Dataset</a>
-            <a class="publication-filter-link" href="#links">Links</a>
           </div>
         </div>
         <div class="publication-rail__record">
@@ -1915,6 +1920,8 @@
               return;
             }
 
+            const scrollBeforeReorder = window.scrollY;
+
             const firstRects = new Map(
               publicationItems.map((item) => [item, item.getBoundingClientRect()])
             );
@@ -1978,6 +1985,13 @@
             }
 
             currentMode = nextMode;
+
+            window.requestAnimationFrame(() => {
+              window.scrollTo({
+                top: scrollBeforeReorder,
+                behavior: "auto"
+              });
+            });
           });
         });
       }

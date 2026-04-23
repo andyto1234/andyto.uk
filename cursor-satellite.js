@@ -6,19 +6,48 @@
     return;
   }
 
-  const existing = document.querySelector(".cursor-satellite");
-  const cursorSatellite = existing || document.createElement("img");
+  const aboutSun = document.querySelector(".about-header__sun");
 
-  if (!existing) {
-    cursorSatellite.className = "cursor-satellite";
-    cursorSatellite.src = "./images/cursor/hinode-cursor.png";
-    cursorSatellite.alt = "";
-    cursorSatellite.setAttribute("aria-hidden", "true");
-    cursorSatellite.width = 58;
-    cursorSatellite.height = 46;
-    cursorSatellite.decoding = "async";
-    document.body.appendChild(cursorSatellite);
-  }
+  const cursorSatellite = document.createElement("div");
+  cursorSatellite.className = "cursor-satellite";
+  cursorSatellite.setAttribute("aria-hidden", "true");
+
+  const satelliteImage = document.createElement("img");
+  satelliteImage.className = "cursor-satellite__image";
+  satelliteImage.src = "./images/cursor/hinode-cursor.png";
+  satelliteImage.alt = "";
+  satelliteImage.width = 58;
+  satelliteImage.height = 46;
+  satelliteImage.decoding = "async";
+
+  const rasterPanel = document.createElement("div");
+  rasterPanel.className = "cursor-satellite__raster";
+
+  const rasterFrame = document.createElement("div");
+  rasterFrame.className = "cursor-satellite__raster-frame";
+
+  const rasterViewport = document.createElement("div");
+  rasterViewport.className = "cursor-satellite__raster-viewport";
+
+  const rasterImage = document.createElement("img");
+  rasterImage.className = "cursor-satellite__raster-image";
+  rasterImage.src = "./images/easter-eggs/eis-raster-pixel.png";
+  rasterImage.alt = "";
+  rasterImage.width = 26;
+  rasterImage.height = 27;
+  rasterImage.decoding = "async";
+
+  const rasterSlit = document.createElement("span");
+  rasterSlit.className = "cursor-satellite__raster-slit";
+  rasterSlit.setAttribute("aria-hidden", "true");
+
+  rasterViewport.appendChild(rasterImage);
+  rasterViewport.appendChild(rasterSlit);
+  rasterFrame.appendChild(rasterViewport);
+  rasterPanel.appendChild(rasterFrame);
+  cursorSatellite.appendChild(satelliteImage);
+  cursorSatellite.appendChild(rasterPanel);
+  document.body.appendChild(cursorSatellite);
 
   let pointerX = window.innerWidth * 0.5;
   let pointerY = window.innerHeight * 0.5;
@@ -26,6 +55,27 @@
   let satelliteY = pointerY;
   let isVisible = false;
   let lastMoveTime = performance.now();
+
+  const easterEgg = {
+    active: false,
+    hoverTimer: null,
+    isHoveringSun: false,
+    playedThisHover: false,
+    startTime: 0
+  };
+
+  const scanTiming = {
+    hoverDelay: 220,
+    fadeIn: 140,
+    scan: 1180,
+    linger: 320,
+    fadeOut: 240
+  };
+
+  const updateRasterSide = () => {
+    const needsLeftPanel = pointerX > window.innerWidth - 170;
+    cursorSatellite.classList.toggle("is-raster-left", needsLeftPanel);
+  };
 
   const showSatellite = () => {
     if (!isVisible) {
@@ -37,13 +87,133 @@
   const hideSatellite = () => {
     cursorSatellite.classList.remove("is-visible");
     isVisible = false;
+    resetEasterEgg(true);
+  };
+
+  const clearHoverTimer = () => {
+    if (easterEgg.hoverTimer) {
+      window.clearTimeout(easterEgg.hoverTimer);
+      easterEgg.hoverTimer = null;
+    }
+  };
+
+  const setSunHovering = (isHovering) => {
+    if (!aboutSun || easterEgg.isHoveringSun === isHovering) {
+      return;
+    }
+
+    easterEgg.isHoveringSun = isHovering;
+
+    if (isHovering) {
+      clearHoverTimer();
+      if (!easterEgg.playedThisHover) {
+        easterEgg.hoverTimer = window.setTimeout(
+          startEasterEgg,
+          scanTiming.hoverDelay
+        );
+      }
+      return;
+    }
+
+    clearHoverTimer();
+    easterEgg.playedThisHover = false;
+
+    if (!easterEgg.active) {
+      aboutSun.classList.remove("is-scanning");
+      aboutSun.style.removeProperty("--sun-scan-x");
+    }
+  };
+
+  const resetRasterReveal = () => {
+    rasterViewport.style.setProperty("--raster-mask-left", "100%");
+    rasterSlit.style.opacity = "0";
+  };
+
+  const resetEasterEgg = (resetHoverState = false) => {
+    clearHoverTimer();
+    easterEgg.active = false;
+    easterEgg.startTime = 0;
+
+    if (resetHoverState) {
+      easterEgg.isHoveringSun = false;
+      easterEgg.playedThisHover = false;
+    }
+
+    cursorSatellite.classList.remove("is-eis-active");
+    rasterPanel.style.removeProperty("opacity");
+    aboutSun?.classList.remove("is-scanning");
+    aboutSun?.style.removeProperty("--sun-scan-x");
+    resetRasterReveal();
+  };
+
+  const startEasterEgg = () => {
+    if (!aboutSun || easterEgg.active || easterEgg.playedThisHover) {
+      return;
+    }
+
+    easterEgg.active = true;
+    easterEgg.playedThisHover = true;
+    easterEgg.startTime = performance.now();
+    cursorSatellite.classList.add("is-eis-active");
+    aboutSun.classList.add("is-scanning");
   };
 
   const updateTarget = (event) => {
     pointerX = event.clientX;
     pointerY = event.clientY;
     lastMoveTime = performance.now();
+    updateRasterSide();
     showSatellite();
+
+    if (aboutSun) {
+      const rect = aboutSun.getBoundingClientRect();
+      const hitInset = 16;
+      const isHoveringSun =
+        event.clientX >= rect.left - hitInset &&
+        event.clientX <= rect.right + hitInset &&
+        event.clientY >= rect.top - hitInset &&
+        event.clientY <= rect.bottom + hitInset;
+
+      setSunHovering(isHoveringSun);
+    }
+  };
+
+  const updateEasterEgg = (time) => {
+    if (!aboutSun || !easterEgg.active) {
+      return;
+    }
+
+    const elapsed = time - easterEgg.startTime;
+    const total =
+      scanTiming.fadeIn + scanTiming.scan + scanTiming.linger + scanTiming.fadeOut;
+
+    if (elapsed >= total) {
+      resetEasterEgg();
+      return;
+    }
+
+    const scanElapsed = Math.max(0, elapsed - scanTiming.fadeIn);
+    const scanProgress = Math.min(1, scanElapsed / scanTiming.scan);
+    const revealPercent = Math.max(0, Math.min(100, scanProgress * 100));
+    const maskLeft = 100 - revealPercent;
+
+    rasterViewport.style.setProperty("--raster-mask-left", `${maskLeft}%`);
+    rasterSlit.style.opacity =
+      revealPercent > 0 && revealPercent < 100 ? "1" : "0";
+
+    const sunScanX = 24 + 46 * (1 - revealPercent / 100);
+    aboutSun.style.setProperty("--sun-scan-x", `${sunScanX}%`);
+
+    let opacity = 1;
+    if (elapsed < scanTiming.fadeIn) {
+      opacity = elapsed / scanTiming.fadeIn;
+    } else if (elapsed > scanTiming.fadeIn + scanTiming.scan + scanTiming.linger) {
+      const fadeElapsed =
+        elapsed - (scanTiming.fadeIn + scanTiming.scan + scanTiming.linger);
+      opacity = 1 - fadeElapsed / scanTiming.fadeOut;
+    }
+
+    rasterPanel.style.opacity = `${Math.max(0, Math.min(1, opacity))}`;
   };
 
   const animateSatellite = (time) => {
@@ -75,11 +245,13 @@
       satelliteY + driftY
     }px, 0) rotate(${tilt}deg) scale(${scale})`;
 
+    updateEasterEgg(time);
     window.requestAnimationFrame(animateSatellite);
   };
 
   document.addEventListener("pointermove", updateTarget, { passive: true });
   document.addEventListener("pointerdown", updateTarget, { passive: true });
+  window.addEventListener("resize", updateRasterSide);
   window.addEventListener("blur", hideSatellite);
   window.addEventListener("mouseout", (event) => {
     if (!event.relatedTarget) {
@@ -87,5 +259,25 @@
     }
   });
 
+  if (aboutSun) {
+    aboutSun.addEventListener("pointerenter", () => {
+      setSunHovering(true);
+    });
+
+    aboutSun.addEventListener("pointerleave", () => {
+      setSunHovering(false);
+    });
+
+    aboutSun.addEventListener("mouseenter", () => {
+      setSunHovering(true);
+    });
+
+    aboutSun.addEventListener("mouseleave", () => {
+      setSunHovering(false);
+    });
+  }
+
+  resetRasterReveal();
+  updateRasterSide();
   window.requestAnimationFrame(animateSatellite);
 })();
