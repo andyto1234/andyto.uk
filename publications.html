@@ -1874,6 +1874,26 @@
           });
         };
 
+        const updateGroupBreak = (mode) => {
+          publicationItems.forEach((item) => {
+            item.classList.remove("is-group-break");
+          });
+
+          if (mode !== "first-author" && mode !== "collaborative") {
+            return;
+          }
+
+          const matchingItems = publicationItems.filter(
+            (item) => item.dataset.kind === mode
+          );
+
+          const lastMatchingItem = matchingItems.at(-1);
+
+          if (lastMatchingItem) {
+            lastMatchingItem.classList.add("is-group-break");
+          }
+        };
+
         const getPriority = (item, mode) => {
           const kind = item.dataset.kind;
 
@@ -1911,6 +1931,7 @@
 
         let currentMode = "all";
         updateFilterState(currentMode);
+        updateGroupBreak(currentMode);
 
         publicationFilters.forEach((filter) => {
           filter.addEventListener("click", () => {
@@ -1935,6 +1956,7 @@
             });
 
             updateFilterState(nextMode);
+            updateGroupBreak(nextMode);
 
             if (!reduceMotionQuery.matches) {
               const lastRects = new Map(

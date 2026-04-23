@@ -1487,32 +1487,135 @@ div[id] {
 }
 
 .publication-card--bibliography .publication-card__header {
-  gap: 0.7rem 1rem;
-  padding: 0.7rem 0;
+  gap: 0.58rem 0.9rem;
+  padding: 0.58rem 0;
 }
 
 .publication-card--bibliography .publication-card__authors {
-  margin-top: 0.18rem;
-  font-size: 0.95rem;
-  line-height: 1.45;
+  margin-top: 0.14rem;
+  font-size: 0.92rem;
+  line-height: 1.4;
 }
 
 .publication-card--bibliography .publication-card__meta {
-  margin-top: 0.18rem;
-  font-size: 0.93rem;
-  line-height: 1.42;
+  margin-top: 0.14rem;
+  font-size: 0.9rem;
+  line-height: 1.38;
 }
 
 .publication-card--bibliography .publication-card__toggle {
-  min-height: 2rem;
+  min-height: 1.9rem;
 }
 
 .publication-card--bibliography .publication-card__actions {
-  gap: 0.45rem;
+  gap: 0.38rem;
 }
 
 .publication-card--bibliography .publication-card__abstract-inner {
-  padding-left: 0.85rem;
+  padding-left: 0.76rem;
+}
+
+.publication-card--bibliography .publication-card__eyebrow {
+  margin-bottom: 0.32rem;
+  font-size: 0.65rem;
+}
+
+.publication-card--bibliography .publication-list__title {
+  font-size: 1.02rem;
+  line-height: 1.34;
+}
+
+.publication-card--bibliography .bibliography-entry__chip,
+.publication-card--bibliography .bibliography-entry__link,
+.publication-card--bibliography .publication-card__toggle {
+  font-size: 0.63rem;
+}
+
+.publication-card--bibliography .bibliography-entry__chip,
+.publication-card--bibliography .bibliography-entry__link {
+  min-height: 1.9rem;
+  padding: 0.28rem 0.62rem;
+}
+
+.publication-card--bibliography.is-open .publication-card__abstract {
+  margin-top: 0.06rem;
+}
+
+.publication-card--bibliography .publication-card__abstract-label {
+  margin: 0.18rem 0 0.24rem;
+  font-size: 0.69rem;
+}
+
+#selected-publications .publication-list {
+  margin-top: -0.15rem;
+}
+
+#selected-publications .publication-card--bibliography .publication-card__header {
+  gap: 0.5rem 0.85rem;
+  padding: 0.5rem 0;
+}
+
+#selected-publications .publication-card__eyebrow {
+  margin-bottom: 0.28rem;
+  font-size: 0.64rem;
+}
+
+#selected-publications .publication-list__title {
+  font-size: 1rem;
+  line-height: 1.32;
+}
+
+#selected-publications .publication-card__authors {
+  margin-top: 0.12rem;
+  font-size: 0.9rem;
+  line-height: 1.38;
+}
+
+#selected-publications .publication-card__meta {
+  margin-top: 0.12rem;
+  font-size: 0.89rem;
+  line-height: 1.36;
+}
+
+#selected-publications .publication-card__actions {
+  gap: 0.38rem;
+}
+
+#selected-publications .bibliography-entry__chip,
+#selected-publications .bibliography-entry__link,
+#selected-publications .publication-card__toggle {
+  min-height: 1.9rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 0.62rem;
+}
+
+#selected-publications .bibliography-entry__chip,
+#selected-publications .bibliography-entry__link {
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+}
+
+#selected-publications .publication-card__abstract {
+  margin-top: 0;
+}
+
+#selected-publications .publication-card.is-open .publication-card__abstract {
+  margin-top: 0.04rem;
+}
+
+#selected-publications .publication-card__abstract-inner {
+  padding-left: 0.72rem;
+}
+
+#selected-publications .publication-card__abstract-label {
+  margin: 0.18rem 0 0.22rem;
+  font-size: 0.68rem;
+}
+
+#selected-publications .content-note {
+  margin-top: 0.75rem;
+  padding-top: 0.7rem;
 }
 
 .content-note {
@@ -1656,6 +1759,11 @@ div[id] {
 
 .publication-list--master .publication-list__item {
   will-change: transform, opacity;
+}
+
+.publication-list--master .publication-list__item.is-group-break .publication-card {
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.2rem;
 }
 
 .bibliography-group + .bibliography-group {
