@@ -252,7 +252,7 @@ div[id] {
 }
 
 .cursor-satellite[data-instrument="iris"] .cursor-satellite__image {
-  width: clamp(2.54rem, 3.42vw, 3.42rem);
+  width: clamp(2.42rem, 3.24vw, 3.24rem);
 }
 
 .cursor-satellite[data-instrument="none"] .cursor-satellite__image {
@@ -931,7 +931,7 @@ div[id] {
 }
 
 .about-sun-easter-egg[data-instrument="iris"] .about-sun-easter-egg__satellite {
-  width: 2.18rem;
+  width: 2.08rem;
 }
 
 .about-sun-easter-egg[data-instrument="none"] {
@@ -2641,7 +2641,7 @@ div[id] {
   }
 
   .about-sun-easter-egg[data-instrument="iris"] .about-sun-easter-egg__satellite {
-    width: 1.96rem;
+    width: 1.88rem;
   }
 
   .about-sun-easter-egg__raster {
