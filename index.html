@@ -134,7 +134,6 @@
         <a class="site-title" href="./">Andy Shu Ho To</a>
         <nav class="site-nav" aria-label="Primary">
           <a href="#about">About</a>
-          <a href="#science-interests">Science interests</a>
           <a href="#current-work">Current work</a>
           <a href="#brief-cv">Brief CV</a>
           <a href="#selected-publications">Selected publications</a>
@@ -271,70 +270,140 @@
           </p>
           <h2>About</h2>
           <div class="about-copy about-copy--wide">
-            <p class="lead">
+            <p class="about-summary">
               I work on solar physics using spectroscopy at ESTEC in Noordwijk,
-              Netherlands.
+              Netherlands. I study how plasma composition and non-thermal line
+              broadening evolve through solar activity, especially in active
+              regions and flares. Before joining ESA in 2023, I completed a PhD
+              in Solar Physics at Mullard Space Science Laboratory, University
+              College London.
             </p>
-            <div class="about-figure-preview">
-              <a
-                class="about-figure-preview__media"
-                href="./figures.html#paper-2024"
-              >
-                <img
-                  src="./images/figures/to-2024-flare-composition-evolution.png"
-                  alt="Flare-composition maps and light curves from the 2017 September 10 X8.2 flare."
-                  width="465"
-                  height="572"
-                />
-              </a>
-              <div class="about-figure-preview__body">
-                <p class="about-figure-preview__label">Featured solar figure</p>
-                <p>
-                  This figure from To et al. (2024) follows plasma composition
-                  through the 2017 September 10 X8.2 flare, showing how
-                  footpoints and loop-top regions evolve differently during the
-                  event.
-                </p>
-                <p class="about-figure-preview__meta">
-                  Astronomy &amp; Astrophysics, 2024 ·
-                  <a href="./figures.html#paper-2024">View figure notes</a>
-                </p>
+            <div class="about-focus">
+              <p class="about-focus__label">Current themes</p>
+              <div class="interest-grid" id="science-interests">
+                <article class="interest-card">
+                  <p class="interest-card__label">Coronal composition</p>
+                  <p>
+                    Coronal EUV plasma composition and first ionisation
+                    potential bias in active regions and flares.
+                  </p>
+                </article>
+                <article class="interest-card">
+                  <p class="interest-card__label">Flare spectroscopy</p>
+                  <p>
+                    Spectroscopic signatures of flare onset and flare evolution.
+                  </p>
+                </article>
               </div>
             </div>
-            <p class="about-intro">
-              My current work focuses on two related threads:
-            </p>
-            <div class="interest-grid" id="science-interests">
-              <article class="interest-card">
-                <p class="interest-card__label">Composition</p>
-                <p>
-                  Coronal EUV plasma composition and first ionisation potential
-                  bias in active regions and flares.
-                </p>
-              </article>
-              <article class="interest-card">
-                <p class="interest-card__label">Flares</p>
-                <p>
-                  Spectroscopic signatures of flare onset and flare evolution.
-                </p>
-              </article>
-            </div>
-            <div class="about-blocks">
-              <div class="about-block">
-                <p class="about-block__label">Background</p>
-                <p>
-                  Before joining ESA in 2023, I completed a PhD in Solar
-                  Physics at Mullard Space Science Laboratory, University
-                  College London.
-                </p>
-              </div>
-              <div class="about-block">
-                <p class="about-block__label">Research approach</p>
-                <p>
-                  I combine EUV spectroscopy with coordinated observations to
-                  study plasma composition, flare onset, and flare evolution in
-                  their wider solar context.
-                </p>
+            <div class="about-support">
+              <div class="research-highlight" data-highlight-switcher>
+                <div class="research-highlight__header">
+                  <p class="research-highlight__label">Featured work</p>
+                  <div class="research-highlight__tabs" aria-label="Research highlight views">
+                    <button
+                      class="research-highlight__tab is-active"
+                      type="button"
+                      aria-pressed="true"
+                      data-highlight-target="aas"
+                    >
+                      Science highlight
+                    </button>
+                    <button
+                      class="research-highlight__tab"
+                      type="button"
+                      aria-pressed="false"
+                      data-highlight-target="figure"
+                    >
+                      Figure
+                    </button>
+                  </div>
+                </div>
+                <div class="research-highlight__stage" data-highlight-stage>
+                  <div
+                    class="research-highlight__panel is-active"
+                    data-highlight-panel="aas"
+                  >
+                    <div class="research-highlight__feature">
+                      <a
+                        class="research-highlight__media"
+                        href="https://aasnova.org/2025/12/01/how-solar-flares-hint-that-theyre-about-to-happen/"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        <img
+                          src="./images/highlights/aas-2025-onset.jpg"
+                          alt="Line plot showing a rise in scaled non-thermal velocity before an M-class flare peak."
+                          width="578"
+                          height="488"
+                        />
+                      </a>
+                      <div class="research-highlight__body">
+                        <p class="research-highlight__eyebrow">Science highlight</p>
+                        <h3>How Solar Flares Hint That They’re About to Happen</h3>
+                        <p>
+                          AAS Nova featured the 2025 paper on non-thermal velocity
+                          increases before flare onset. The article summarises how a
+                          large Hinode/EIS sample shows that line broadening often
+                          begins several minutes before soft X-ray start, and
+                          discusses how precursor emission differs between confined
+                          and eruptive flares.
+                        </p>
+                        <p class="research-highlight__meta">
+                          AAS Nova · 1 December 2025 ·
+                          <a
+                            href="https://aasnova.org/2025/12/01/how-solar-flares-hint-that-theyre-about-to-happen/"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            >Read feature</a
+                          >
+                          ·
+                          <a
+                            href="https://ui.adsabs.harvard.edu/abs/2025ApJ...993..102T/abstract"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            >View paper</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="research-highlight__panel"
+                    data-highlight-panel="figure"
+                    hidden
+                  >
+                    <div class="research-highlight__feature research-highlight__feature--wide-media">
+                      <a
+                        class="research-highlight__media"
+                        href="./figures.html#paper-2024"
+                      >
+                        <img
+                          src="./images/figures/to-2024-downflow-illustration.png"
+                          alt="Illustration of flare-loop downflows, chromospheric evaporation, and high- and low-FIP-bias plasma in reconnected loops."
+                          width="1800"
+                          height="643"
+                        />
+                      </a>
+                      <div class="research-highlight__body">
+                        <p class="research-highlight__eyebrow">Paper figure</p>
+                        <h3>Illustrating reconnection downflows and flare-loop composition</h3>
+                        <p>
+                          This illustration from To et al. (2024) summarizes the
+                          interpretation proposed for the 2017 September 10 flare:
+                          low-FIP-bias chromospheric evaporation fills the lower
+                          flare loops, while high-FIP-bias plasma from reconnection
+                          downflows remains concentrated near the loop top.
+                        </p>
+                        <p class="research-highlight__meta">
+                          Astronomy &amp; Astrophysics, 2024 ·
+                          <a href="./figures.html#paper-2024">View figure notes</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -500,6 +569,7 @@
                     aria-controls="abstract-2026"
                     aria-label="Show summary for Chromospheric dynamics and turbulence regulate the solar FIP effect"
                   >
+                    <span class="publication-card__toggle-label">Summary</span>
                     <svg viewBox="0 0 24 24" aria-hidden="true">
                       <path d="M8 10l4 4 4-4"></path>
                     </svg>
@@ -545,6 +615,7 @@
                     aria-controls="abstract-2025"
                     aria-label="Show summary for Systematic non-thermal velocity increase preceding soft X-ray flare onset"
                   >
+                    <span class="publication-card__toggle-label">Summary</span>
                     <svg viewBox="0 0 24 24" aria-hidden="true">
                       <path d="M8 10l4 4 4-4"></path>
                     </svg>
@@ -591,6 +662,7 @@
                     aria-controls="abstract-2024"
                     aria-label="Show summary for Spatially resolved plasma composition evolution in a solar flare"
                   >
+                    <span class="publication-card__toggle-label">Summary</span>
                     <svg viewBox="0 0 24 24" aria-hidden="true">
                       <path d="M8 10l4 4 4-4"></path>
                     </svg>
@@ -637,6 +709,7 @@
                     aria-controls="abstract-2023"
                     aria-label="Show summary for Understanding the relationship between solar coronal abundances and F10.7 centimetre radio emission"
                   >
+                    <span class="publication-card__toggle-label">Summary</span>
                     <svg viewBox="0 0 24 24" aria-hidden="true">
                       <path d="M8 10l4 4 4-4"></path>
                     </svg>
@@ -684,6 +757,7 @@
                     aria-controls="abstract-2021"
                     aria-label="Show summary for The evolution of plasma composition during a solar flare"
                   >
+                    <span class="publication-card__toggle-label">Summary</span>
                     <svg viewBox="0 0 24 24" aria-hidden="true">
                       <path d="M8 10l4 4 4-4"></path>
                     </svg>
@@ -759,7 +833,7 @@
         <section class="content-section content-section--footer" id="links">
           <p class="section-tag">
             <span class="section-tag__dot" aria-hidden="true"></span>
-            <span>Contact</span>
+            <span>Links</span>
           </p>
           <h2>Links</h2>
           <div class="link-footer">
@@ -809,16 +883,114 @@
         </section>
       </div>
     </main>
-    <img
-      class="cursor-satellite"
-      src="./images/cursor/hinode-cursor.png"
-      alt=""
-      aria-hidden="true"
-      width="72"
-      height="57"
-      decoding="async"
-    />
     <script>
+      document.querySelectorAll("[data-highlight-switcher]").forEach((switcher) => {
+        const buttons = Array.from(
+          switcher.querySelectorAll("[data-highlight-target]")
+        );
+        const panels = Array.from(
+          switcher.querySelectorAll("[data-highlight-panel]")
+        );
+        const stage = switcher.querySelector("[data-highlight-stage]");
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+        let activePanel =
+          panels.find((panel) => panel.classList.contains("is-active")) ||
+          panels.find((panel) => !panel.hidden);
+        let isTransitioning = false;
+        let cleanupTimer = null;
+
+        const setActiveHighlight = (target) => {
+          const nextPanel = panels.find(
+            (panel) => panel.dataset.highlightPanel === target
+          );
+          if (!nextPanel || nextPanel === activePanel || isTransitioning) {
+            return;
+          }
+
+          buttons.forEach((button) => {
+            const isActive = button.dataset.highlightTarget === target;
+            button.classList.toggle("is-active", isActive);
+            button.setAttribute("aria-pressed", String(isActive));
+          });
+
+          if (!stage || reduceMotion.matches || !activePanel) {
+            panels.forEach((panel) => {
+              const isActive = panel === nextPanel;
+              panel.hidden = !isActive;
+              panel.classList.toggle("is-active", isActive);
+              panel.classList.remove("is-entering", "is-leaving");
+            });
+            activePanel = nextPanel;
+            return;
+          }
+
+          isTransitioning = true;
+          const currentPanel = activePanel;
+          const currentFeature = currentPanel.querySelector(
+            ".research-highlight__feature"
+          );
+          const nextFeature = nextPanel.querySelector(
+            ".research-highlight__feature"
+          );
+
+          const finishTransition = () => {
+            if (cleanupTimer) {
+              window.clearTimeout(cleanupTimer);
+              cleanupTimer = null;
+            }
+
+            stage.removeEventListener("transitionend", handleStageTransitionEnd);
+            currentPanel.hidden = true;
+            currentPanel.classList.remove("is-leaving");
+            nextPanel.classList.remove("is-entering");
+            nextPanel.classList.add("is-active");
+            nextPanel.style.visibility = "";
+            stage.classList.remove("is-animating");
+            stage.style.height = "";
+            activePanel = nextPanel;
+            isTransitioning = false;
+          };
+
+          const handleStageTransitionEnd = (event) => {
+            if (event.target === stage && event.propertyName === "height") {
+              finishTransition();
+            }
+          };
+
+          currentPanel.hidden = false;
+          nextPanel.hidden = false;
+          nextPanel.classList.remove("is-leaving");
+          nextPanel.classList.add("is-entering");
+          nextPanel.style.visibility = "hidden";
+
+          const currentHeight =
+            currentFeature?.offsetHeight || currentPanel.offsetHeight;
+          const nextHeight = nextFeature?.offsetHeight || nextPanel.offsetHeight;
+
+          stage.style.height = `${currentHeight}px`;
+          stage.getBoundingClientRect();
+          stage.classList.add("is-animating");
+          stage.addEventListener("transitionend", handleStageTransitionEnd);
+
+          window.requestAnimationFrame(() => {
+            nextPanel.style.visibility = "";
+            currentPanel.classList.remove("is-active");
+            currentPanel.classList.add("is-leaving");
+            nextPanel.classList.remove("is-entering");
+            nextPanel.classList.add("is-active");
+            stage.style.height = `${nextHeight}px`;
+          });
+
+          cleanupTimer = window.setTimeout(finishTransition, 420);
+        };
+
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => {
+            setActiveHighlight(button.dataset.highlightTarget);
+          });
+        });
+      });
+
       document.querySelectorAll(".publication-card").forEach((card) => {
         const header = card.querySelector("[data-publication-trigger]");
         const button = card.querySelector(".publication-card__toggle");
@@ -843,81 +1015,7 @@
           toggleExpanded();
         });
       });
-
-      const cursorSatellite = document.querySelector(".cursor-satellite");
-      const hasFinePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
-      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-      if (cursorSatellite && hasFinePointer.matches && !prefersReducedMotion.matches) {
-        let pointerX = window.innerWidth * 0.5;
-        let pointerY = window.innerHeight * 0.5;
-        let satelliteX = pointerX;
-        let satelliteY = pointerY;
-        let isVisible = false;
-        let lastMoveTime = performance.now();
-
-        const showSatellite = () => {
-          if (!isVisible) {
-            cursorSatellite.classList.add("is-visible");
-            isVisible = true;
-          }
-        };
-
-        const hideSatellite = () => {
-          cursorSatellite.classList.remove("is-visible");
-          isVisible = false;
-        };
-
-        const updateTarget = (event) => {
-          pointerX = event.clientX;
-          pointerY = event.clientY;
-          lastMoveTime = performance.now();
-          showSatellite();
-        };
-
-        const animateSatellite = (time) => {
-          const idleTime = Math.max(0, time - lastMoveTime);
-          const idleStrength = Math.min(1, Math.max(0, (idleTime - 120) / 1200));
-          const targetX = pointerX + 16;
-          const targetY = pointerY + 12;
-          satelliteX += (targetX - satelliteX) * 0.17;
-          satelliteY += (targetY - satelliteY) * 0.15;
-
-          const velocityX = targetX - satelliteX;
-          const velocityY = targetY - satelliteY;
-          const driftX =
-            Math.sin(time / 560) * (1.8 + idleStrength * 1.9) +
-            Math.cos(time / 1240) * (0.6 + idleStrength * 0.7);
-          const driftY =
-            Math.cos(time / 720) * (1.5 + idleStrength * 2.1) +
-            Math.sin(time / 1100) * (0.45 + idleStrength * 0.55);
-          const tilt =
-            Math.max(-7, Math.min(7, velocityX * 0.18)) +
-            velocityY * 0.05 +
-            Math.sin(time / 900) * (0.7 + idleStrength * 0.9);
-          const scale =
-            1 +
-            Math.min(0.03, Math.hypot(velocityX, velocityY) * 0.0026) +
-            idleStrength * 0.012;
-
-          cursorSatellite.style.transform = `translate3d(${satelliteX + driftX}px, ${
-            satelliteY + driftY
-          }px, 0) rotate(${tilt}deg) scale(${scale})`;
-
-          window.requestAnimationFrame(animateSatellite);
-        };
-
-        document.addEventListener("pointermove", updateTarget, { passive: true });
-        document.addEventListener("pointerdown", updateTarget, { passive: true });
-        window.addEventListener("blur", hideSatellite);
-        window.addEventListener("mouseout", (event) => {
-          if (!event.relatedTarget) {
-            hideSatellite();
-          }
-        });
-
-        window.requestAnimationFrame(animateSatellite);
-      }
     </script>
+    <script src="./cursor-satellite.js"></script>
   </body>
 </html>
