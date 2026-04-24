@@ -449,7 +449,6 @@ div[id] {
   padding: 1.8rem 1.25rem 1.25rem;
   overflow: visible;
   transition:
-    transform var(--motion-fast) ease,
     box-shadow var(--motion-base) var(--ease-standard),
     border-color var(--motion-fast) ease;
 }
@@ -467,7 +466,6 @@ div[id] {
 }
 
 .profile-card:hover {
-  transform: translateY(-1px);
   border-color: rgba(0, 82, 255, 0.28);
   box-shadow:
     0 14px 28px rgba(0, 82, 255, 0.1),
@@ -490,13 +488,10 @@ div[id] {
   right: 1rem;
   margin-bottom: 0;
   box-shadow: 0 8px 18px rgba(0, 82, 255, 0.16);
-  transition:
-    transform var(--motion-fast) ease,
-    box-shadow var(--motion-fast) ease;
+  transition: box-shadow var(--motion-fast) ease;
 }
 
 .profile-card:hover .profile-card__tag {
-  transform: translateY(-1px);
   box-shadow: 0 10px 22px rgba(0, 82, 255, 0.18);
 }
 

@@ -2,6 +2,31 @@
   const hasFinePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
+  const syncRailStickyOffset = () => {
+    const header = document.querySelector(".site-header");
+    const layout = document.querySelector(".page-layout");
+
+    if (!header || !layout) {
+      return;
+    }
+
+    const layoutStyle = window.getComputedStyle(layout);
+    const paddingTop = parseFloat(layoutStyle.paddingTop) || 0;
+    const offset = Math.ceil(header.getBoundingClientRect().height + paddingTop);
+    document.documentElement.style.setProperty("--rail-sticky-offset", `${offset}px`);
+  };
+
+  const scheduleRailStickyOffsetSync = () => {
+    window.requestAnimationFrame(syncRailStickyOffset);
+  };
+
+  syncRailStickyOffset();
+  window.addEventListener("resize", scheduleRailStickyOffsetSync, { passive: true });
+
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(syncRailStickyOffset).catch(() => {});
+  }
+
   if (!document.body || prefersReducedMotion.matches) {
     return;
   }
