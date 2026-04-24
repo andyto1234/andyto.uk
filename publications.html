@@ -202,7 +202,8 @@
               data-publication-order="all"
               aria-pressed="true"
             >
-              All
+              <span>All</span>
+              <span class="publication-filter__count" aria-label="25 records">25</span>
             </button>
             <button
               class="publication-filter"
@@ -211,7 +212,8 @@
               data-publication-order="first-author"
               aria-pressed="false"
             >
-              First author
+              <span>First author</span>
+              <span class="publication-filter__count" aria-label="5 first-author papers">5</span>
             </button>
             <button
               class="publication-filter"
@@ -220,9 +222,19 @@
               data-publication-order="collaborative"
               aria-pressed="false"
             >
-              Collaborative
+              <span>Collaborative</span>
+              <span class="publication-filter__count" aria-label="19 collaborative papers">19</span>
             </button>
-            <a class="publication-filter-link" href="#dataset">Dataset</a>
+            <button
+              class="publication-filter"
+              type="button"
+              id="dataset-filter"
+              data-publication-order="dataset"
+              aria-pressed="false"
+            >
+              <span>Dataset</span>
+              <span class="publication-filter__count" aria-label="1 dataset">1</span>
+            </button>
           </div>
         </div>
         <div class="publication-rail__record">
@@ -250,10 +262,11 @@
         <h2>Papers</h2>
         <p>
           The list below is shown in inverse chronological order by default.
-          Use the rail on the left to bring first-author or collaborative
-          papers to the front without changing the underlying record.
+          Use the rail on the left to bring first-author papers,
+          collaborative papers, or the dataset record to the front without
+          changing the underlying record.
         </p>
-        <ol class="publication-list publication-list--master" data-publication-list>
+        <ol class="publication-list publication-list--master publication-list--numbered" data-publication-list>
           <li
             class="publication-list__item"
             data-kind="first-author"
@@ -752,6 +765,45 @@
                     flares, with earlier and more extended precursor behaviour
                     in many eruptive M-class events.
                   </p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li
+            class="publication-list__item"
+            id="dataset"
+            data-kind="dataset"
+            data-year="2025"
+          >
+            <article class="publication-card publication-card--bibliography">
+              <div class="publication-card__header">
+                <div class="publication-card__copy">
+                  <p class="publication-card__eyebrow">2025 · Dataset</p>
+                  <p class="publication-list__title">
+                    <a
+                      href="https://doi.org/10.5281/zenodo.15613861"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      >Hinode/EIS Solar Flare Footpoint Non-Thermal Velocity
+                      Dataset (2011-2024).</a
+                    >
+                  </p>
+                  <p class="publication-card__authors">
+                    <span class="author-highlight">To, Andy S. H.</span>
+                  </p>
+                  <p class="publication-card__meta">
+                    Zenodo data set (2025).
+                  </p>
+                </div>
+                <div class="publication-card__actions">
+                  <span class="bibliography-entry__chip">Dataset</span>
+                  <a
+                    class="bibliography-entry__link"
+                    href="https://doi.org/10.5281/zenodo.15613861"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >DOI</a
+                  >
                 </div>
               </div>
             </article>
@@ -1733,48 +1785,9 @@
         </ol>
         <p class="content-note">
           Representative figures for the first-author papers are collected on
-          the <a href="./figures.html">figures page</a>.
+          the <a href="./figures.html">figures page</a>. The public dataset is
+          included in this list as a research output.
         </p>
-      </section>
-
-        <section class="content-section" id="dataset">
-        <p class="section-tag">
-          <span class="section-tag__dot" aria-hidden="true"></span>
-          <span>Dataset</span>
-        </p>
-        <h2>Public dataset</h2>
-        <ol class="publication-list">
-          <li class="publication-list__item">
-            <article class="publication-card publication-card--bibliography">
-              <div class="publication-card__header">
-                <div class="publication-card__copy">
-                  <p class="publication-list__title">
-                    <a
-                      href="https://doi.org/10.5281/zenodo.15613861"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      >Hinode/EIS Solar Flare Footpoint Non-Thermal Velocity
-                      Dataset (2011-2024).</a
-                    >
-                  </p>
-                  <p class="publication-card__authors">To, Andy S. H.</p>
-                  <p class="publication-card__meta">
-                    Zenodo data set (2025).
-                  </p>
-                </div>
-                <div class="publication-card__actions">
-                  <a
-                    class="bibliography-entry__link"
-                    href="https://doi.org/10.5281/zenodo.15613861"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    >DOI</a
-                  >
-                </div>
-              </div>
-            </article>
-          </li>
-        </ol>
       </section>
 
         <section class="content-section content-section--footer" id="links">
@@ -1879,7 +1892,11 @@
             item.classList.remove("is-group-break");
           });
 
-          if (mode !== "first-author" && mode !== "collaborative") {
+          if (
+            mode !== "first-author" &&
+            mode !== "collaborative" &&
+            mode !== "dataset"
+          ) {
             return;
           }
 
@@ -1903,6 +1920,10 @@
 
           if (mode === "collaborative") {
             return kind === "collaborative" ? 0 : 1;
+          }
+
+          if (mode === "dataset") {
+            return kind === "dataset" ? 0 : 1;
           }
 
           return kind === "first-author" ? 0 : 1;
