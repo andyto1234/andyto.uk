@@ -26,6 +26,7 @@
   --motion-base: 240ms;
   --motion-slow: 320ms;
   --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+  --rail-sticky-offset: 6.5rem;
 }
 
 *,
@@ -219,7 +220,7 @@ div[id] {
 
 .rail-column {
   position: sticky;
-  top: 5.9rem;
+  top: var(--rail-sticky-offset);
   display: grid;
   gap: 0.95rem;
   align-self: start;
@@ -438,7 +439,7 @@ div[id] {
 
 .profile-card {
   position: sticky;
-  top: 5.9rem;
+  top: var(--rail-sticky-offset);
   background: var(--surface);
   border: 1px solid rgba(0, 82, 255, 0.22);
   border-radius: var(--radius-lg);
