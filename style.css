@@ -2813,12 +2813,14 @@ div[id] {
   }
 }
 
-@media (min-width: 64.01rem) and (max-height: 42rem) {
+@media (min-width: 64.01rem) and (max-height: 62rem) {
   .rail-column,
   .publication-page-layout > .profile-card,
   .figure-page-layout > .profile-card {
     position: relative;
     top: 0;
+    max-height: none;
+    overflow: visible;
   }
 }
 
