@@ -223,6 +223,14 @@ div[id] {
   display: grid;
   gap: 0.95rem;
   align-self: start;
+  max-height: calc(100dvh - 6.35rem);
+  margin: -1rem -0.45rem -0.45rem;
+  padding: 1rem 0.45rem 0.45rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 116, 139, 0.35) transparent;
 }
 
 .cursor-satellite {
@@ -2634,6 +2642,10 @@ div[id] {
   .rail-column {
     position: static;
     top: auto;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
   }
 
   .profile-card {
