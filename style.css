@@ -355,7 +355,7 @@ div[id] {
 }
 
 .cursor-satellite[data-raster-mode="iris"] .cursor-satellite__raster {
-  width: 3.24rem;
+  width: 3.58rem;
   left: calc(100% + 0.28rem);
 }
 
@@ -1028,7 +1028,7 @@ div[id] {
 }
 
 .about-sun-easter-egg[data-raster-mode="iris"] .about-sun-easter-egg__raster {
-  width: 2.58rem;
+  width: 2.9rem;
 }
 
 .about-sun-easter-egg[data-raster-mode="iris"] .about-sun-easter-egg__viewport {
@@ -2696,7 +2696,7 @@ div[id] {
   }
 
   .about-sun-easter-egg[data-raster-mode="iris"] .about-sun-easter-egg__raster {
-    width: 3.88rem;
+    width: 4.28rem;
   }
 
   .about-sun-easter-egg__raster::before {
@@ -2756,7 +2756,7 @@ div[id] {
   }
 
   .about-sun-easter-egg[data-raster-mode="iris"] .about-sun-easter-egg__raster {
-    width: 3.92rem;
+    width: 4.32rem;
   }
 
   .intro-grid,
