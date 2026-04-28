@@ -223,8 +223,8 @@ div[id] {
 .page-layout > .profile-card,
 .page-layout > .content-column,
 .simple-page {
-  opacity: 0;
-  filter: blur(6px);
+  opacity: 0.2;
+  filter: blur(5px);
   will-change: opacity, transform, filter;
   animation: page-shell-enter 420ms var(--ease-standard) both;
 }
@@ -253,8 +253,8 @@ body.is-leaving .page-layout > .profile-card,
 body.is-leaving .page-layout > .content-column,
 body.is-leaving .simple-page {
   animation: none;
-  opacity: 0;
-  filter: blur(6px);
+  opacity: 0.22;
+  filter: blur(4px);
   transition:
     opacity var(--motion-fast) var(--ease-standard),
     transform var(--motion-base) var(--ease-standard),
@@ -1567,9 +1567,9 @@ body.is-leaving .simple-page {
 
 @keyframes page-shell-enter {
   0% {
-    opacity: 0;
+    opacity: 0.2;
     transform: translate3d(0, 0.95rem, 0);
-    filter: blur(6px);
+    filter: blur(5px);
   }
 
   100% {

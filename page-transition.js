@@ -5,8 +5,8 @@
     return;
   }
 
-  const transitionDelayMs = 190;
-  const resetDelayMs = 520;
+  const transitionDelayMs = 118;
+  const resetDelayMs = 420;
   let isTransitioning = false;
   let resetTimer = 0;
 
