@@ -4,35 +4,35 @@
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
 >
   <url>
-    <loc>https://andyto1234.github.io/andyto.uk/</loc>
+    <loc>https://andyto1234.github.io/</loc>
     <lastmod>2026-04-23</lastmod>
     <image:image>
-      <image:loc>https://andyto1234.github.io/andyto.uk/images/profile-2026.jpg</image:loc>
+      <image:loc>https://andyto1234.github.io/images/profile-2026.jpg</image:loc>
       <image:title>Andy Shu Ho To profile image</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://andyto1234.github.io/andyto.uk/images/figures/to-2024-flare-composition-evolution.png</image:loc>
+      <image:loc>https://andyto1234.github.io/images/figures/to-2024-flare-composition-evolution.png</image:loc>
       <image:title>Solar flare composition figure</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://andyto1234.github.io/andyto.uk/publications.html</loc>
+    <loc>https://andyto1234.github.io/publications.html</loc>
     <lastmod>2026-04-23</lastmod>
     <image:image>
-      <image:loc>https://andyto1234.github.io/andyto.uk/images/figures/to-2024-downflow-illustration.png</image:loc>
+      <image:loc>https://andyto1234.github.io/images/figures/to-2024-downflow-illustration.png</image:loc>
       <image:title>Solar flare plasma downflow illustration</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://andyto1234.github.io/andyto.uk/figures.html</loc>
+    <loc>https://andyto1234.github.io/figures.html</loc>
     <lastmod>2026-04-23</lastmod>
     <image:image>
-      <image:loc>https://andyto1234.github.io/andyto.uk/images/figures/to-2024-flare-composition-evolution.png</image:loc>
+      <image:loc>https://andyto1234.github.io/images/figures/to-2024-flare-composition-evolution.png</image:loc>
       <image:title>Solar flare composition figure</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://andyto1234.github.io/andyto.uk/documents/andy-shu-ho-to-cv.pdf</loc>
+    <loc>https://andyto1234.github.io/documents/andy-shu-ho-to-cv.pdf</loc>
     <lastmod>2026-04-23</lastmod>
   </url>
 </urlset>

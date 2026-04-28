@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://andyto1234.github.io/andyto.uk/sitemap.xml
+Sitemap: https://andyto1234.github.io/sitemap.xml
