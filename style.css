@@ -218,6 +218,64 @@ div[id] {
   padding: 2rem 0 3rem;
 }
 
+.site-header__inner,
+.rail-column,
+.page-layout > .profile-card,
+.page-layout > .content-column,
+.simple-page {
+  opacity: 0;
+  filter: blur(6px);
+  will-change: opacity, transform, filter;
+  animation: page-shell-enter 420ms var(--ease-standard) both;
+}
+
+.site-header__inner {
+  animation-duration: 300ms;
+}
+
+.rail-column,
+.page-layout > .profile-card {
+  animation-delay: 40ms;
+}
+
+.page-layout > .content-column,
+.simple-page {
+  animation-delay: 90ms;
+}
+
+body.is-leaving {
+  overflow: hidden;
+}
+
+body.is-leaving .site-header__inner,
+body.is-leaving .rail-column,
+body.is-leaving .page-layout > .profile-card,
+body.is-leaving .page-layout > .content-column,
+body.is-leaving .simple-page {
+  animation: none;
+  opacity: 0;
+  filter: blur(6px);
+  transition:
+    opacity var(--motion-fast) var(--ease-standard),
+    transform var(--motion-base) var(--ease-standard),
+    filter var(--motion-base) var(--ease-standard);
+  pointer-events: none;
+}
+
+body.is-leaving .site-header__inner {
+  transform: translate3d(0, -0.22rem, 0);
+}
+
+body.is-leaving .rail-column,
+body.is-leaving .page-layout > .profile-card {
+  transform: translate3d(0, 0.55rem, 0);
+}
+
+body.is-leaving .page-layout > .content-column,
+body.is-leaving .simple-page {
+  transform: translate3d(0, 0.8rem, 0);
+}
+
 .rail-column {
   position: sticky;
   top: var(--rail-sticky-offset);
@@ -1504,6 +1562,20 @@ div[id] {
     box-shadow:
       0 0 0 4px rgba(255, 255, 255, 0.16),
       0 0 0 0.55rem rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes page-shell-enter {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0.95rem, 0);
+    filter: blur(6px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
   }
 }
 
@@ -2823,6 +2895,18 @@ div[id] {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .site-header__inner,
+  .rail-column,
+  .page-layout > .profile-card,
+  .page-layout > .content-column,
+  .simple-page {
+    animation: none;
+    opacity: 1;
+    filter: none;
+    transform: none;
+    will-change: auto;
   }
 
   .about-header__sun {
