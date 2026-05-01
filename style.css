@@ -1937,6 +1937,12 @@ body.is-leaving .simple-page {
   text-transform: uppercase;
 }
 
+.publication-card__abstract-inner p:not(.publication-card__abstract-label) {
+  font-size: 0.865rem;
+  line-height: 1.44;
+  color: var(--muted);
+}
+
 .publication-card--bibliography {
   padding: 0;
 }
