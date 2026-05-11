@@ -1,38 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
->
-  <url>
-    <loc>https://andyto1234.github.io/</loc>
-    <lastmod>2026-04-23</lastmod>
-    <image:image>
-      <image:loc>https://andyto1234.github.io/images/profile-2026.jpg</image:loc>
-      <image:title>Andy Shu Ho To profile image</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://andyto1234.github.io/images/figures/to-2024-flare-composition-evolution.png</image:loc>
-      <image:title>Solar flare composition figure</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://andyto1234.github.io/publications.html</loc>
-    <lastmod>2026-04-23</lastmod>
-    <image:image>
-      <image:loc>https://andyto1234.github.io/images/figures/to-2024-downflow-illustration.png</image:loc>
-      <image:title>Solar flare plasma downflow illustration</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://andyto1234.github.io/figures.html</loc>
-    <lastmod>2026-04-23</lastmod>
-    <image:image>
-      <image:loc>https://andyto1234.github.io/images/figures/to-2024-flare-composition-evolution.png</image:loc>
-      <image:title>Solar flare composition figure</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://andyto1234.github.io/documents/andy-shu-ho-to-cv.pdf</loc>
-    <lastmod>2026-04-23</lastmod>
-  </url>
-</urlset>
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:urlset xmlns:ns0="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:ns1="http://www.google.com/schemas/sitemap-image/1.1">
+  <ns0:url>
+    <ns0:loc>https://andyto1234.github.io/</ns0:loc>
+    <ns0:lastmod>2026-05-11</ns0:lastmod>
+    <ns1:image>
+      <ns1:loc>https://andyto1234.github.io/images/profile-2026.jpg</ns1:loc>
+      <ns1:title>Andy Shu Ho To profile image</ns1:title>
+    </ns1:image>
+    <ns1:image>
+      <ns1:loc>https://andyto1234.github.io/images/figures/to-2024-flare-composition-evolution.png</ns1:loc>
+      <ns1:title>Solar flare composition figure</ns1:title>
+    </ns1:image>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://andyto1234.github.io/publications.html</ns0:loc>
+    <ns0:lastmod>2026-05-11</ns0:lastmod>
+    <ns1:image>
+      <ns1:loc>https://andyto1234.github.io/images/figures/to-2024-downflow-illustration.png</ns1:loc>
+      <ns1:title>Solar flare plasma downflow illustration</ns1:title>
+    </ns1:image>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://andyto1234.github.io/figures.html</ns0:loc>
+    <ns0:lastmod>2026-05-11</ns0:lastmod>
+    <ns1:image>
+      <ns1:loc>https://andyto1234.github.io/images/figures/to-2024-flare-composition-evolution.png</ns1:loc>
+      <ns1:title>Solar flare composition figure</ns1:title>
+    </ns1:image>
+  </ns0:url>
+  <ns0:url>
+    <ns0:loc>https://andyto1234.github.io/documents/andy-shu-ho-to-cv.pdf</ns0:loc>
+    <ns0:lastmod>2026-04-23</ns0:lastmod>
+  </ns0:url>
+</ns0:urlset>

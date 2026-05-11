@@ -561,6 +561,13 @@ body.is-leaving .simple-page {
   letter-spacing: 0;
 }
 
+.profile-card__alias {
+  margin-top: 0.38rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+
 .profile-card__role {
   display: block;
   margin-top: 0.7rem;
