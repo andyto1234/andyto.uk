@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-01T15:26:14.440843+00:00",
-  "refresh_date": "2026-05-01",
+  "generated_at": "2026-05-18T08:52:50.428538+00:00",
+  "refresh_date": "2026-05-18",
   "counts": {
     "all": 26,
     "first-author": 5,
@@ -8,9 +8,9 @@
     "dataset": 1
   },
   "page_changes": {
-    "index": true,
-    "publications": true,
-    "figures": true,
+    "index": false,
+    "publications": false,
+    "figures": false,
     "sitemap": true
   },
   "records": [
@@ -42,13 +42,13 @@
       "year": 2026,
       "citation": "Baker, D., Long, D. M., Stangalini, M., Berretti, M., To, Andy S. H., Yardley, S. L., Testa, P. (submitted to the Astrophysical Journal)",
       "status": "submitted",
-      "authors_raw": "Baker, D., Long, D. M., Stangalini, M., Berretti, M., To, Andy S. H., Yardley, S. L., Testa, P",
+      "authors_raw": "Baker, D., Long, D. M., Stangalini, M., Berretti, M., To, Andy S. H. , Yardley, S. L., Testa, P",
       "authors_html": "Baker, D., Long, D. M., Stangalini, M., Berretti, M., <span class=\"author-highlight\">To, Andy S. H.</span>, Yardley, S. L., Testa, P",
       "meta": "Submitted to the Astrophysical Journal (2026)",
       "ads_url": null,
       "doi_url": null,
       "summary": "Summary to be provided later.",
-      "summary_source": "pending",
+      "summary_source": "site",
       "figure_src": null,
       "figure_alt": "",
       "figure_width": null,
@@ -262,13 +262,13 @@
       "year": 2025,
       "citation": "To, Andy S. H. (2025). Zenodo. https://doi.org/10.5281/zenodo.15613861",
       "status": "dataset",
-      "authors_raw": "To, Andy S. H",
+      "authors_raw": "To, Andy S. H.",
       "authors_html": "<span class=\"author-highlight\">To, Andy S. H.</span>",
       "meta": "To, Andy S. H. (2025). Zenodo. https://doi.org/10.5281/zenodo.15613861",
       "ads_url": null,
       "doi_url": null,
       "summary": "Summary to be provided later.",
-      "summary_source": "pending",
+      "summary_source": "site",
       "figure_src": null,
       "figure_alt": "",
       "figure_width": null,
